@@ -20,10 +20,10 @@ linesegment(lines)
 center!(scene)
 # record a video
 io = VideoStream(scene, &quot;.&quot;, &quot;interaction&quot;)
-for i = 1:100
+for i = 1:300
     recordframe!(io)
     yield()
-    sleep(1/40)
+    sleep(1/30)
 end
 finish(io, &quot;mp4&quot;) # could also be gif, webm or mkv
 nothing</code></pre></div><video controls autoplay>

@@ -5,9 +5,9 @@ save(scene, &quot;test.jpg&quot;)</code></pre><p>There is also the option to sav
 scene = Scene(resolution = (500, 500))
 
 f(t, v, s) = (sin(v + t) * s, cos(v + t) * s, (cos(v + t) + sin(v)) * s)
-
-p1 = meshscatter(lift_node(t-&gt; f.(t, linspace(0, 2pi, 50), 1), scene[:time]))
-p2 = meshscatter(lift_node(t-&gt; f.(t * 2.0, linspace(0, 2pi, 50), 1.5), scene[:time]))
+t = to_node(time()) # create a life signal
+p1 = meshscatter(lift_node(t-&gt; f.(t, linspace(0, 2pi, 50), 1), t))
+p2 = meshscatter(lift_node(t-&gt; f.(t * 2.0, linspace(0, 2pi, 50), 1.5), t))
 center!(scene)
 nothing
 # you can now reference to life attributes from the above plots:
@@ -22,6 +22,7 @@ center!(scene)
 # record a video
 io = VideoStream(scene, &quot;.&quot;, &quot;output_vid&quot;)
 for i = 1:300
+    push!(t, time())
     recordframe!(io)
     yield()
     sleep(1/30)
