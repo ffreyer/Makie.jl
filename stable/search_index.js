@@ -181,7 +181,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Conversions",
     "title": "Conversions",
     "category": "section",
-    "text": "Every attribute has a conversion function, allowing attributes to take in rich input types, but keep the variance low for the backends. The conversions are overloadable as explained in Extending, making it simple to integrate custom types.to_scale(scene, value)\n\nto_offset(scene, value)\n\nto_rotation(scene, value)\n\nto_image(scene, value)\n\nto_bool(scene, value)\n\nto_index_buffer(scene, value)\n\nto_index_buffer(scene, value)\n\nto_positions(scene, value)\n\nto_positions(scene, value)\n\nto_array(scene, value)\n\nto_scalefunc(scene, value)\n\nto_text(scene, value)\n\nto_font(scene, value)\n\nto_colornorm(scene, value)\n\nto_intensity(scene, value)\n\nto_surface(scene, value)\n\nto_spritemarker(scene, value)\n\nto_static_vec(scene, value)\n\nto_rotations(scene, value)\n\nto_markersize(scene, value)\n\nto_linestyle(scene, value)\n\nto_normals(scene, value)\n\nto_faces(scene, value)\n\nto_attribut_id(scene, value)\n\nto_mesh(scene, value)\n\nto_float(scene, value)\n\nto_color(scene, value)\n\navailable_gradients(scene, value)\n\nto_colormap(scene, value)\n\nto_spatial_order(scene, value)\n\nto_interval(scene, value)\n\nto_volume_algorithm(scene, value)\n"
+    "text": "Every attribute has a conversion function, allowing attributes to take in rich input types, but keep the variance low for the backends. The conversions are overloadable as explained in Extending, making it simple to integrate custom types.to_scale\n\nto_offset\n\nto_rotation\n\nto_image\n\nto_bool\n\nto_index_buffer\n\nto_index_buffer\n\nto_positions\n\nto_positions\n\nto_array\n\nto_scalefunc\n\nto_text\n\nto_font\n\nto_colornorm\n\nto_intensity\n\nto_surface\n\nto_spritemarker\n\nto_static_vec\n\nto_rotations\n\nto_markersize\n\nto_linestyle\n\nto_normals\n\nto_faces\n\nto_attribut_id\n\nto_mesh\n\nto_float\n\nto_color\n\navailable_gradients\n\nto_colormap\n\nto_spatial_order\n\nto_interval\n\nto_volume_algorithm\n"
 },
 
 {
@@ -377,9 +377,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "axis.html#Interaction-1",
+    "location": "axis.html#Interacting-with-the-Axis-1",
     "page": "Axis",
-    "title": "Interaction",
+    "title": "Interacting with the Axis",
     "category": "section",
     "text": "One can quite easily interact with the attributes of the axis like with any other plot:# always tuples of xyz for most attributes that are applied to each axis\naviz[:gridcolors] = (:gray, :gray, :gray)\naviz[:axiscolors] = (:red, :black, :black)\naviz[:showticks] = (true, true, false)\nsave(\"axis3d_customized.png\", scene); nothing # hide(Image: )"
 },

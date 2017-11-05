@@ -5,7 +5,7 @@ aviz = axis(linspace(0, 2, 4), linspace(0, 2, 4))
 center!(scene)</code></pre></div><p><img src="axis2d.png" alt/></p><div><pre><code class="language-julia">using MakiE
 scene = Scene(resolution = (500, 500))
 aviz = axis(linspace(0, 2, 4), linspace(0, 2, 4), linspace(0, 2, 4))
-center!(scene)</code></pre></div><p><img src="axis3d.png" alt/></p><h3><a class="nav-anchor" id="Interaction-1" href="#Interaction-1">Interaction</a></h3><p>One can quite easily interact with the attributes of the axis like with any other plot:</p><div><pre><code class="language-julia"># always tuples of xyz for most attributes that are applied to each axis
+center!(scene)</code></pre></div><p><img src="axis3d.png" alt/></p><h3><a class="nav-anchor" id="Interacting-with-the-Axis-1" href="#Interacting-with-the-Axis-1">Interacting with the Axis</a></h3><p>One can quite easily interact with the attributes of the axis like with any other plot:</p><div><pre><code class="language-julia"># always tuples of xyz for most attributes that are applied to each axis
 aviz[:gridcolors] = (:gray, :gray, :gray)
 aviz[:axiscolors] = (:red, :black, :black)
 aviz[:showticks] = (true, true, false)</code></pre></div><p><img src="axis3d_customized.png" alt/></p><footer><hr/><a class="previous" href="interaction.html"><span class="direction">Previous</span><span class="title">Interaction</span></a><a class="next" href="legends.html"><span class="direction">Next</span><span class="title">Legend</span></a></footer></article></body></html>
