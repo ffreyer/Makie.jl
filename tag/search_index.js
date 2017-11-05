@@ -57,243 +57,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "conversions.html#MakiE.to_color",
-    "page": "Conversions",
-    "title": "MakiE.to_color",
-    "category": "Function",
-    "text": "to_color(b, x)\n\nColors.Colorants\n\n\n\nA Symbol naming a color, e.g. :black\n\n\n\nA String naming a color, e.g. :black or html style #rrggbb\n\n\n\nA Tuple or Array with elements that to_color accepts. If Array is a Matrix it will get interpreted as an Image\n\n\n\nTuple{<: ColorLike, <: AbstractFloat} for a transparent color\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_colormap",
-    "page": "Conversions",
-    "title": "MakiE.to_colormap",
-    "category": "Function",
-    "text": "to_colormap(b, x)\n\nAn AbstractVector{T} with any object that to_color accepts\n\n\n\nTuple(A, B) or Pair{A, B} with any object that to_color accepts\n\n\n\nA Symbol/String naming the gradient. For more on what names are available please see: `available_gradients()\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_colornorm",
-    "page": "Conversions",
-    "title": "MakiE.to_colornorm",
-    "category": "Function",
-    "text": "to_colornorm(b, norm, intensity)\n\nanything that can be converted to Vec2f0 (e.g. Tuple, Vector)\n\n\n\nIf colornorm is nothing will default to calculate the extrema from intensity\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_scale",
-    "page": "Conversions",
-    "title": "MakiE.to_scale",
-    "category": "Function",
-    "text": "to_scale(b, s::Number)::Vec\n\n\n\nto_scale(b, s::VecLike)::Point\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_offset",
-    "page": "Conversions",
-    "title": "MakiE.to_offset",
-    "category": "Function",
-    "text": "to_offset(b, s::Number)::Point\n\n\n\nto_scale(b, s::VecLike)::Point\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_rotation",
-    "page": "Conversions",
-    "title": "MakiE.to_rotation",
-    "category": "Function",
-    "text": "to_rotation(b, vec4)\n\n\n\nto_rotation(b, quaternion)\n\n\n\nto_rotation(b, tuple_float)\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_image",
-    "page": "Conversions",
-    "title": "MakiE.to_image",
-    "category": "Function",
-    "text": "to_image(b, image)\n\nAll kinds of images\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_bool",
-    "page": "Conversions",
-    "title": "MakiE.to_bool",
-    "category": "Function",
-    "text": "to_bool(b, bool)\n\nTo boolean\n\n\n\nto_bool(b, tuple)\n\nAccepts Tuple of Bool\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_index_buffer",
-    "page": "Conversions",
-    "title": "MakiE.to_index_buffer",
-    "category": "Function",
-    "text": "to_index_buffer(b, x::GLBuffer{UInt32})\n\n\n\nTOrSignal{Int}, AbstractVector{UnitRange{Int}}, TOrSignal{UnitRange{Int}}\n\n\n\nAbstractVector{<:Integer} assumend 1-based indexing\n\n\n\nAbstractVector{<:Face{2}} for linesegments\n\n\n\nAbstractVector{UInt32}, is assumed to be 0 based\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_positions",
-    "page": "Conversions",
-    "title": "MakiE.to_positions",
-    "category": "Function",
-    "text": "to_positions(b, positionlike)\n\nNTuple{2, AbstractArray{Float}} for 2D points\n\n\n\nNTuple{3, AbstractArray{Float}} for 3D points\n\n\n\nview(AbstractArray{Point}, idx) for a subset of points. Can be shared (so you can plot subsets of the same data)!\n\n\n\nAbstractArray{T} where T needs to have length defined and must be convertible to a Point\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_array",
-    "page": "Conversions",
-    "title": "MakiE.to_array",
-    "category": "Function",
-    "text": "to_array(b, arraylike)\n\nAbstractArray\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_scalefunc",
-    "page": "Conversions",
-    "title": "MakiE.to_scalefunc",
-    "category": "Function",
-    "text": "to_scalefunc(b, x)\n\nFunction\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_text",
-    "page": "Conversions",
-    "title": "MakiE.to_text",
-    "category": "Function",
-    "text": "to_text(b, x)\n\nAll text\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_font",
-    "page": "Conversions",
-    "title": "MakiE.to_font",
-    "category": "Function",
-    "text": "to_font(b, x)\n\nAll fonts\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_intensity",
-    "page": "Conversions",
-    "title": "MakiE.to_intensity",
-    "category": "Function",
-    "text": "AbstractArray\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_surface",
-    "page": "Conversions",
-    "title": "MakiE.to_surface",
-    "category": "Function",
-    "text": "to_surface(b, x::Range)\n\nRange\n\n\n\nto_surface(b, arraylike)\n\nAnything that can be converted to Matrix/Vector of Float32\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_spritemarker",
-    "page": "Conversions",
-    "title": "MakiE.to_spritemarker",
-    "category": "Function",
-    "text": "to_spritemarker(b, x::Circle)\n\nGeometryTypes.Circle(Point2(...), radius)\n\n\n\nto_spritemarker(b, ::Type{Circle})\n\nType{GeometryTypes.Circle}\n\n\n\nto_spritemarker(b, ::Type{Rectangle})\n\nType{GeometryTypes.Rectangle}\n\n\n\nto_spritemarker(b, marker::Char)\n\nAny Char, including unicode\n\n\n\nMatrix of AbstractFloat will be interpreted as a distancefield (negative numbers outside shape, positive inside)\n\n\n\nAny AbstractMatrix{<: Colorant} or other image type\n\n\n\nA Symbol - Available options can be printed with available_marker_symbols()\n\n\n\nVector of anything that is accepted as a single marker will give each point it's own marker. Note that it needs to be a uniform vector with the same element type!\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_static_vec",
-    "page": "Conversions",
-    "title": "MakiE.to_static_vec",
-    "category": "Function",
-    "text": "to_static_vec(b, x)\n\nAbstractArray\n\n\n\nAny StaticVector\n\n\n\nNTuple\n\n\n\nAbstract array of which the elements can be converted to vec\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_rotations",
-    "page": "Conversions",
-    "title": "MakiE.to_rotations",
-    "category": "Function",
-    "text": "to_rotations(b, x)\n\nBillboard() for a rotation that will always face the camera\n\n\n\nAny AbstractArray which elements can be converted to Vec4 (as a quaternion x, y, z, w)\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_markersize",
-    "page": "Conversions",
-    "title": "MakiE.to_markersize",
-    "category": "Function",
-    "text": "to_markersize(b, x)\n\nAnything that can be converted to Vec2f0 for x, y scale\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_linestyle",
-    "page": "Conversions",
-    "title": "MakiE.to_linestyle",
-    "category": "Function",
-    "text": "to_linestyle(b, x)\n\nNothing for no style\n\n\n\nAbstractVector{<:AbstractFloat} for denoting sequences of fill/nofill. E.g. [0.5, 0.8, 1.2] will result in 0.5 filled, 0.3 unfilled, 0.4 filled. 1.0 unit is one linewidth!\n\n\n\nA Symbol equal to :dash, :dot, :dashdot, :dashdotdot\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_normals",
-    "page": "Conversions",
-    "title": "MakiE.to_normals",
-    "category": "Function",
-    "text": "to_normals(b, x)\n\nVector{Normal{3}}\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_faces",
-    "page": "Conversions",
-    "title": "MakiE.to_faces",
-    "category": "Function",
-    "text": "to_faces(b, x)\n\nAny array of NTuple/GeometryTypes.Face\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_attribut_id",
-    "page": "Conversions",
-    "title": "MakiE.to_attribut_id",
-    "category": "Function",
-    "text": "to_attribut_id(b, x)\n\nIndex into Mesh attributes, Vector{Integer}\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_mesh",
-    "page": "Conversions",
-    "title": "MakiE.to_mesh",
-    "category": "Function",
-    "text": "to_mesh(b, meshlike)\n\nAbstractMesh\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_float",
-    "page": "Conversions",
-    "title": "MakiE.to_float",
-    "category": "Function",
-    "text": "to_float(b, x)\n\nAny Object convertible to Floatingpoint\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_spatial_order",
-    "page": "Conversions",
-    "title": "MakiE.to_spatial_order",
-    "category": "Function",
-    "text": "to_spatial_order(b, x)\n\n\"xy\" or \"yx\"\n\n\n\n:xy or :yx\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_interval",
-    "page": "Conversions",
-    "title": "MakiE.to_interval",
-    "category": "Function",
-    "text": "to_interval(b, x)\n\nTuple{<: Number, <: Number}\n\n\n\nPair{<: Number, <: Number} e.g. 2 => 100\n\n\n\nAbstractVector will be interpreted as an interval from minimum to maximum\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_volume_algorithm",
-    "page": "Conversions",
-    "title": "MakiE.to_volume_algorithm",
-    "category": "Function",
-    "text": "to_volume_algorithm(b, x)\n\nEnum values: IsoValue Absorption MaximumIntensityProjection AbsorptionRGBA IndexedAbsorptionRGBA\n\n\n\nSymbol/String: iso, absorption, mip, absorptionrgba, indexedabsorption\n\n\n\n"
-},
-
-{
     "location": "conversions.html#Conversions-1",
     "page": "Conversions",
     "title": "Conversions",
     "category": "section",
-    "text": "Every attribute has a conversion function, allowing attributes to take in rich input types, but keep the variance low for the backends. The conversions are overloadable as explained in Extending, making it simple to integrate custom types.to_color\n\nto_colormap\n\nto_colornorm\n\nto_scale\n\nto_offset\n\nto_rotation\n\nto_image\n\nto_bool\n\nto_index_buffer\n\nto_positions\n\nto_array\n\nto_scalefunc\n\nto_text\n\nto_font\n\nto_intensity\n\nto_surface\n\nto_spritemarker\n\nto_static_vec\n\nto_rotations\n\nto_markersize\n\nto_linestyle\n\nto_normals\n\nto_faces\n\nto_attribut_id\n\nto_mesh\n\nto_float\n\nto_spatial_order\n\nto_interval\n\nto_volume_algorithm"
+    "text": "Every attribute has a conversion function, allowing attributes to take in rich input types, but keep the variance low for the backends. The conversions are overloadable as explained in Extending, making it simple to integrate custom types.to_color\n\nto_colormap\n\nto_colornorm\n\nto_scale\n\nto_offset\n\nto_rotation\n\nto_image\n\nto_bool\n\nto_index_buffer\n\nto_positions\n\nto_array\n\nto_scalefunc\n\nto_text\n\nto_font\n\nto_intensity\n\nto_surface\n\nto_spritemarker\n\nto_static_vec\n\nto_rotations\n\nto_markersize\n\nto_linestyle\n\nto_normals\n\nto_faces\n\nto_attribut_id\n\nto_mesh\n\nto_float\n\nto_spatial_order\n\nto_interval\n\nto_volume_algorithm\n\nto_3floats"
 },
 
 {
@@ -317,7 +85,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Functions",
     "title": "MakiE.scatter",
     "category": "Function",
-    "text": "scatter(x, y, z) / scatter(x, y) / scatter(positions)\n\nPlots a marker for each element in xyz/positions\n\nAttributes:\n\nExclusive Attribute sets:\n\nAttribute `positions`, conversion function [`to_positions`](@ref)\n\nor\n\nAttribute `x`, conversion function [`to_array`](@ref)\n\nAttribute `y`, conversion function [`to_array`](@ref)\n\nAttribute `z`, conversion function [`to_array`](@ref)\n\nAttribute `positions`, conversion function [`to_positions`](@ref)\n\nor\n\nAttribute `x`, conversion function [`to_array`](@ref)\n\nAttribute `y`, conversion function [`to_array`](@ref)\n\nAttribute `positions`, conversion function [`to_positions`](@ref)\n\nend\n\n____________________\n\nExclusive Attribute sets:\n\nAttribute `color`, conversion function [`to_color`](@ref)\n\nor\n\nAttribute `colormap`, conversion function [`to_colormap`](@ref)\n\nAttribute `intensity`, conversion function [`to_intensity`](@ref)\n\nAttribute `colornorm`, conversion function [`to_colornorm`](@ref)\n\nend\n\n____________________\n\nAttribute marker, conversion function to_spritemarker\n\n____________________\n\nAttribute strokecolor, conversion function to_color\n\n____________________\n\nAttribute strokewidth, conversion function to_float\n\n____________________\n\nAttribute glowcolor, conversion function to_color\n\n____________________\n\nAttribute glowwidth, conversion function to_float\n\n____________________\n\nAttribute markersize, conversion function to_markersize\n\n____________________\n\nAttribute rotations, conversion function to_rotations\n\n____________________\n\n\n\n"
+    "text": "scatter(x, y, z) / scatter(x, y) / scatter(positions)\n\nPlots a marker for each element in xyz/positions\n\nAttributes:\n\nExclusive Attribute sets:\n\n\n\nAttribute positions, conversion function to_positions\n\nor\n\n\n\nAttribute x, conversion function to_array\n\nAttribute y, conversion function to_array\n\nAttribute z, conversion function to_array\n\nAttribute positions, conversion function to_positions\n\nor\n\n\n\nAttribute x, conversion function to_array\n\nAttribute y, conversion function to_array\n\nAttribute positions, conversion function to_positions\n\nend\n\n\n\n____________________\n\nExclusive Attribute sets:\n\n\n\nAttribute color, conversion function to_color\n\nor\n\n\n\nAttribute colormap, conversion function to_colormap\n\nAttribute intensity, conversion function to_intensity\n\nAttribute colornorm, conversion function to_colornorm\n\nend\n\n\n\n____________________\n\nAttribute marker, conversion function to_spritemarker\n\n____________________\n\nAttribute strokecolor, conversion function to_color\n\n____________________\n\nAttribute strokewidth, conversion function to_float\n\n____________________\n\nAttribute glowcolor, conversion function to_color\n\n____________________\n\nAttribute glowwidth, conversion function to_float\n\n____________________\n\nAttribute markersize, conversion function to_markersize\n\n____________________\n\nAttribute rotations, conversion function to_rotations\n\n____________________\n\n\n\n"
 },
 
 {
@@ -333,7 +101,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Functions",
     "title": "MakiE.lines",
     "category": "Function",
-    "text": "lines(x, y, z) / lines(x, y) / lines(positions)\n\nPlots a connected line for each element in xyz/positions\n\nAttributes:\n\nExclusive Attribute sets:\n\nAttribute `positions`, conversion function [`to_positions`](@ref)\n\nor\n\nAttribute `x`, conversion function [`to_array`](@ref)\n\nAttribute `y`, conversion function [`to_array`](@ref)\n\nAttribute `z`, conversion function [`to_array`](@ref)\n\nAttribute `positions`, conversion function [`to_positions`](@ref)\n\nor\n\nAttribute `x`, conversion function [`to_array`](@ref)\n\nAttribute `y`, conversion function [`to_array`](@ref)\n\nAttribute `positions`, conversion function [`to_positions`](@ref)\n\nend\n\n____________________\n\nExclusive Attribute sets:\n\nAttribute `color`, conversion function [`to_color`](@ref)\n\nor\n\nAttribute `colormap`, conversion function [`to_colormap`](@ref)\n\nAttribute `intensity`, conversion function [`to_intensity`](@ref)\n\nAttribute `colornorm`, conversion function [`to_colornorm`](@ref)\n\nend\n\n____________________\n\nAttribute linewidth, conversion function to_float\n\n____________________\n\nAttribute linestyle, conversion function to_linestyle\n\n____________________\n\nAttribute drawover, conversion function to_bool\n\n____________________\n\n\n\n"
+    "text": "lines(x, y, z) / lines(x, y) / lines(positions)\n\nPlots a connected line for each element in xyz/positions\n\nAttributes:\n\nExclusive Attribute sets:\n\n\n\nAttribute positions, conversion function to_positions\n\nor\n\n\n\nAttribute x, conversion function to_array\n\nAttribute y, conversion function to_array\n\nAttribute z, conversion function to_array\n\nAttribute positions, conversion function to_positions\n\nor\n\n\n\nAttribute x, conversion function to_array\n\nAttribute y, conversion function to_array\n\nAttribute positions, conversion function to_positions\n\nend\n\n\n\n____________________\n\nExclusive Attribute sets:\n\n\n\nAttribute color, conversion function to_color\n\nor\n\n\n\nAttribute colormap, conversion function to_colormap\n\nAttribute intensity, conversion function to_intensity\n\nAttribute colornorm, conversion function to_colornorm\n\nend\n\n\n\n____________________\n\nAttribute linewidth, conversion function to_float\n\n____________________\n\nAttribute linestyle, conversion function to_linestyle\n\n____________________\n\nAttribute drawover, conversion function to_bool\n\n____________________\n\n\n\n"
 },
 
 {
@@ -373,7 +141,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Functions",
     "title": "MakiE.mesh",
     "category": "Function",
-    "text": "mesh(x, y, z) / mesh(mesh_object) / mesh(x, y, z, faces) / mesh(xyz, faces)\n\nPlots a 3D mesh\n\nAttributes:\n\nAttribute shading, conversion function to_bool\n\n____________________\n\nAttribute attribute_id, conversion function to_attribut_id\n\n____________________\n\nAttribute color, conversion function to_color\n\n____________________\n\nExclusive Attribute sets:\n\nAttribute `indices`, conversion function [`to_faces`](@ref)\n\nExclusive Attribute sets:\n\n    Attribute `positions`, conversion function [`to_positions`](@ref)\n\nor\n\n    Attribute `x`, conversion function [`to_array`](@ref)\n\n    Attribute `y`, conversion function [`to_array`](@ref)\n\n    Attribute `z`, conversion function [`to_array`](@ref)\n\n    Attribute `positions`, conversion function [`to_positions`](@ref)\n\nend\n\nAttribute `mesh`, conversion function [`to_mesh`](@ref)\n\nor\n\nAttribute `mesh`, conversion function [`to_mesh`](@ref)\n\nend\n\n____________________\n\n\n\n"
+    "text": "mesh(x, y, z) / mesh(mesh_object) / mesh(x, y, z, faces) / mesh(xyz, faces)\n\nPlots a 3D mesh\n\nAttributes:\n\nAttribute shading, conversion function to_bool\n\n____________________\n\nAttribute attribute_id, conversion function to_attribut_id\n\n____________________\n\nAttribute color, conversion function to_color\n\n____________________\n\nExclusive Attribute sets:\n\n\n\nAttribute indices, conversion function to_faces\n\nExclusive Attribute sets:\n\n\n\nAttribute positions, conversion function to_positions\n\nor\n\n\n\nAttribute x, conversion function to_array\n\nAttribute y, conversion function to_array\n\nAttribute z, conversion function to_array\n\nAttribute positions, conversion function to_positions\n\nend\n\n\n\nAttribute mesh, conversion function to_mesh\n\nor\n\n\n\nAttribute mesh, conversion function to_mesh\n\nend\n\n\n\n____________________\n\n\n\n"
 },
 
 {
@@ -405,7 +173,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Functions",
     "title": "MakiE.volume",
     "category": "Function",
-    "text": "volume(volume_data)\n\nPlots a volume\n\nAttributes:\n\nAttribute volume, conversion function to_array\n\n____________________\n\nExclusive Attribute sets:\n\nAttribute `color`, conversion function [`to_color`](@ref)\n\nor\n\nAttribute `colormap`, conversion function [`to_colormap`](@ref)\n\nend\n\n____________________\n\nAttribute algorithm, conversion function to_volume_algorithm\n\n____________________\n\nAttribute absorption, conversion function to_float\n\n____________________\n\nAttribute isovalue, conversion function to_float\n\n____________________\n\nAttribute isorange, conversion function to_float\n\n____________________\n\n\n\n"
+    "text": "volume(volume_data)\n\nPlots a volume\n\nAttributes:\n\nAttribute volume, conversion function to_array\n\n____________________\n\nExclusive Attribute sets:\n\n\n\nAttribute color, conversion function to_color\n\nor\n\n\n\nAttribute colormap, conversion function to_colormap\n\nend\n\n\n\n____________________\n\nAttribute algorithm, conversion function to_volume_algorithm\n\n____________________\n\nAttribute absorption, conversion function to_float\n\n____________________\n\nAttribute isovalue, conversion function to_float\n\n____________________\n\nAttribute isorange, conversion function to_float\n\n____________________\n\n\n\n"
 },
 
 {
