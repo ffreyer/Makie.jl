@@ -145,14 +145,6 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "conversions.html#MakiE.to_colornorm",
-    "page": "Conversions",
-    "title": "MakiE.to_colornorm",
-    "category": "Function",
-    "text": "to_colornorm(b, norm, intensity)\n\nanything that can be converted to Vec2f0 (e.g. Tuple, Vector)\n\n\n\nIf colornorm is nothing will default to calculate the extrema from intensity\n\n\n\n"
-},
-
-{
     "location": "conversions.html#MakiE.to_intensity",
     "page": "Conversions",
     "title": "MakiE.to_intensity",
@@ -257,19 +249,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "conversions.html#MakiE.available_gradients",
-    "page": "Conversions",
-    "title": "MakiE.available_gradients",
-    "category": "Function",
-    "text": "available_gradients()\n\nPrints all available gradient names\n\n\n\n"
-},
-
-{
     "location": "conversions.html#MakiE.to_colormap",
     "page": "Conversions",
     "title": "MakiE.to_colormap",
     "category": "Function",
     "text": "to_colormap(b, x)\n\nAn AbstractVector{T} with any object that to_color accepts\n\n\n\nTuple(A, B) or Pair{A, B} with any object that to_color accepts\n\n\n\nA Symbol/String naming the gradient. For more on what names are available please see: available_gradients()\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_colornorm",
+    "page": "Conversions",
+    "title": "MakiE.to_colornorm",
+    "category": "Function",
+    "text": "to_colornorm(b, norm, intensity)\n\nanything that can be converted to Vec2f0 (e.g. Tuple, Vector)\n\n\n\nIf colornorm is nothing will default to calculate the extrema from intensity\n\n\n\n"
 },
 
 {
@@ -301,7 +293,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Conversions",
     "title": "Conversions",
     "category": "section",
-    "text": "Every attribute has a conversion function, allowing attributes to take in rich input types, but keep the variance low for the backends. The conversions are overloadable as explained in Extending, making it simple to integrate custom types.to_scale\n\nto_offset\n\nto_rotation\n\nto_image\n\nto_bool\n\nto_index_buffer\n\nto_positions\n\nto_array\n\nto_scalefunc\n\nto_text\n\nto_font\n\nto_colornorm\n\nto_intensity\n\nto_surface\n\nto_spritemarker\n\nto_static_vec\n\nto_rotations\n\nto_markersize\n\nto_linestyle\n\nto_normals\n\nto_faces\n\nto_attribut_id\n\nto_mesh\n\nto_float\n\nto_color\n\navailable_gradients\n\nto_colormap\n\nto_spatial_order\n\nto_interval\n\nto_volume_algorithm"
+    "text": "Every attribute has a conversion function, allowing attributes to take in rich input types, but keep the variance low for the backends. The conversions are overloadable as explained in Extending, making it simple to integrate custom types.to_scale\n\nto_offset\n\nto_rotation\n\nto_image\n\nto_bool\n\nto_index_buffer\n\nto_positions\n\nto_array\n\nto_scalefunc\n\nto_text\n\nto_font\n\nto_intensity\n\nto_surface\n\nto_spritemarker\n\nto_static_vec\n\nto_rotations\n\nto_markersize\n\nto_linestyle\n\nto_normals\n\nto_faces\n\nto_attribut_id\n\nto_mesh\n\nto_float\n\nto_color\n\nto_colormap\n\nto_colornorm\n\nto_spatial_order\n\nto_interval\n\nto_volume_algorithm"
 },
 
 {
@@ -325,7 +317,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Functions",
     "title": "MakiE.scatter",
     "category": "Function",
-    "text": "scatter(x, y, z) / scatter(x, y) / scatter(positions)\n\nPlots a marker for each element in xyz/positions\n\nAttributes:\n\nExclusive Attributes:\n\n    Attribute `positions`, conversion function [`to_positions`](@ref)\n\nor\n\n    Attribute `x`, conversion function [`to_array`](@ref)\n\n    Attribute `y`, conversion function [`to_array`](@ref)\n\n    Attribute `z`, conversion function [`to_array`](@ref)\n\n    Attribute `positions`, conversion function [`to_positions`](@ref)\n\nor\n\n    Attribute `x`, conversion function [`to_array`](@ref)\n\n    Attribute `y`, conversion function [`to_array`](@ref)\n\n    Attribute `positions`, conversion function [`to_positions`](@ref)\n\nend\n\n____________________\n\nExclusive Attributes:\n\n    Attribute `color`, conversion function [`to_color`](@ref)\n\nor\n\n    Attribute `colormap`, conversion function [`to_colormap`](@ref)\n\n    Attribute `intensity`, conversion function [`to_intensity`](@ref)\n\n    Attribute `colornorm`, conversion function [`to_colornorm`](@ref)\n\nend\n\n____________________\n\nAttribute `marker`, conversion function [`to_spritemarker`](@ref)\n\n____________________\n\nAttribute `strokecolor`, conversion function [`to_color`](@ref)\n\n____________________\n\nAttribute `strokewidth`, conversion function [`to_float`](@ref)\n\n____________________\n\nAttribute `glowcolor`, conversion function [`to_color`](@ref)\n\n____________________\n\nAttribute `glowwidth`, conversion function [`to_float`](@ref)\n\n____________________\n\nAttribute `markersize`, conversion function [`to_markersize`](@ref)\n\n____________________\n\nAttribute `rotations`, conversion function [`to_rotations`](@ref)\n\n____________________\n\n\n\n"
+    "text": "scatter(x, y, z) / scatter(x, y) / scatter(positions)\n\nPlots a marker for each element in xyz/positions\n\nAttributes:\n\nExclusive Attribute sets:\n\n    Attribute `positions`, conversion function [MakiE.`to_positions`](@ref)\n\nor\n\n    Attribute `x`, conversion function [MakiE.`to_array`](@ref)\n\n    Attribute `y`, conversion function [MakiE.`to_array`](@ref)\n\n    Attribute `z`, conversion function [MakiE.`to_array`](@ref)\n\n    Attribute `positions`, conversion function [MakiE.`to_positions`](@ref)\n\nor\n\n    Attribute `x`, conversion function [MakiE.`to_array`](@ref)\n\n    Attribute `y`, conversion function [MakiE.`to_array`](@ref)\n\n    Attribute `positions`, conversion function [MakiE.`to_positions`](@ref)\n\nend\n\n____________________\n\nExclusive Attribute sets:\n\n    Attribute `color`, conversion function [MakiE.`to_color`](@ref)\n\nor\n\n    Attribute `colormap`, conversion function [MakiE.`to_colormap`](@ref)\n\n    Attribute `intensity`, conversion function [MakiE.`to_intensity`](@ref)\n\n    Attribute `colornorm`, conversion function [MakiE.`to_colornorm`](@ref)\n\nend\n\n____________________\n\nAttribute `marker`, conversion function [MakiE.`to_spritemarker`](@ref)\n\n____________________\n\nAttribute `strokecolor`, conversion function [MakiE.`to_color`](@ref)\n\n____________________\n\nAttribute `strokewidth`, conversion function [MakiE.`to_float`](@ref)\n\n____________________\n\nAttribute `glowcolor`, conversion function [MakiE.`to_color`](@ref)\n\n____________________\n\nAttribute `glowwidth`, conversion function [MakiE.`to_float`](@ref)\n\n____________________\n\nAttribute `markersize`, conversion function [MakiE.`to_markersize`](@ref)\n\n____________________\n\nAttribute `rotations`, conversion function [MakiE.`to_rotations`](@ref)\n\n____________________\n\n\n\n"
 },
 
 {
@@ -341,7 +333,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Functions",
     "title": "MakiE.lines",
     "category": "Function",
-    "text": "lines(x, y, z) / lines(x, y) / lines(positions)\n\nPlots a connected line for each element in xyz/positions\n\nAttributes:\n\nExclusive Attributes:\n\n    Attribute `positions`, conversion function [`to_positions`](@ref)\n\nor\n\n    Attribute `x`, conversion function [`to_array`](@ref)\n\n    Attribute `y`, conversion function [`to_array`](@ref)\n\n    Attribute `z`, conversion function [`to_array`](@ref)\n\n    Attribute `positions`, conversion function [`to_positions`](@ref)\n\nor\n\n    Attribute `x`, conversion function [`to_array`](@ref)\n\n    Attribute `y`, conversion function [`to_array`](@ref)\n\n    Attribute `positions`, conversion function [`to_positions`](@ref)\n\nend\n\n____________________\n\nExclusive Attributes:\n\n    Attribute `color`, conversion function [`to_color`](@ref)\n\nor\n\n    Attribute `colormap`, conversion function [`to_colormap`](@ref)\n\n    Attribute `intensity`, conversion function [`to_intensity`](@ref)\n\n    Attribute `colornorm`, conversion function [`to_colornorm`](@ref)\n\nend\n\n____________________\n\nAttribute `linewidth`, conversion function [`to_float`](@ref)\n\n____________________\n\nAttribute `linestyle`, conversion function [`to_linestyle`](@ref)\n\n____________________\n\nAttribute `drawover`, conversion function [`to_bool`](@ref)\n\n____________________\n\n\n\n"
+    "text": "lines(x, y, z) / lines(x, y) / lines(positions)\n\nPlots a connected line for each element in xyz/positions\n\nAttributes:\n\nExclusive Attribute sets:\n\n    Attribute `positions`, conversion function [MakiE.`to_positions`](@ref)\n\nor\n\n    Attribute `x`, conversion function [MakiE.`to_array`](@ref)\n\n    Attribute `y`, conversion function [MakiE.`to_array`](@ref)\n\n    Attribute `z`, conversion function [MakiE.`to_array`](@ref)\n\n    Attribute `positions`, conversion function [MakiE.`to_positions`](@ref)\n\nor\n\n    Attribute `x`, conversion function [MakiE.`to_array`](@ref)\n\n    Attribute `y`, conversion function [MakiE.`to_array`](@ref)\n\n    Attribute `positions`, conversion function [MakiE.`to_positions`](@ref)\n\nend\n\n____________________\n\nExclusive Attribute sets:\n\n    Attribute `color`, conversion function [MakiE.`to_color`](@ref)\n\nor\n\n    Attribute `colormap`, conversion function [MakiE.`to_colormap`](@ref)\n\n    Attribute `intensity`, conversion function [MakiE.`to_intensity`](@ref)\n\n    Attribute `colornorm`, conversion function [MakiE.`to_colornorm`](@ref)\n\nend\n\n____________________\n\nAttribute `linewidth`, conversion function [MakiE.`to_float`](@ref)\n\n____________________\n\nAttribute `linestyle`, conversion function [MakiE.`to_linestyle`](@ref)\n\n____________________\n\nAttribute `drawover`, conversion function [MakiE.`to_bool`](@ref)\n\n____________________\n\n\n\n"
 },
 
 {
@@ -381,7 +373,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Functions",
     "title": "MakiE.mesh",
     "category": "Function",
-    "text": "mesh(x, y, z) / mesh(mesh_object) / mesh(x, y, z, faces) / mesh(xyz, faces)\n\nPlots a 3D mesh\n\nAttributes:\n\nAttribute `shading`, conversion function [`to_bool`](@ref)\n\n____________________\n\nAttribute `attribute_id`, conversion function [`to_attribut_id`](@ref)\n\n____________________\n\nAttribute `color`, conversion function [`to_color`](@ref)\n\n____________________\n\nExclusive Attributes:\n\n    Attribute `indices`, conversion function [`to_faces`](@ref)\n\nExclusive Attributes:\n\n        Attribute `positions`, conversion function [`to_positions`](@ref)\n\nor\n\n        Attribute `x`, conversion function [`to_array`](@ref)\n\n        Attribute `y`, conversion function [`to_array`](@ref)\n\n        Attribute `z`, conversion function [`to_array`](@ref)\n\n        Attribute `positions`, conversion function [`to_positions`](@ref)\n\nend\n\n    Attribute `mesh`, conversion function [`to_mesh`](@ref)\n\nor\n\n    Attribute `mesh`, conversion function [`to_mesh`](@ref)\n\nend\n\n____________________\n\n\n\n"
+    "text": "mesh(x, y, z) / mesh(mesh_object) / mesh(x, y, z, faces) / mesh(xyz, faces)\n\nPlots a 3D mesh\n\nAttributes:\n\nAttribute `shading`, conversion function [MakiE.`to_bool`](@ref)\n\n____________________\n\nAttribute `attribute_id`, conversion function [MakiE.`to_attribut_id`](@ref)\n\n____________________\n\nAttribute `color`, conversion function [MakiE.`to_color`](@ref)\n\n____________________\n\nExclusive Attribute sets:\n\n    Attribute `indices`, conversion function [MakiE.`to_faces`](@ref)\n\nExclusive Attribute sets:\n\n        Attribute `positions`, conversion function [MakiE.`to_positions`](@ref)\n\nor\n\n        Attribute `x`, conversion function [MakiE.`to_array`](@ref)\n\n        Attribute `y`, conversion function [MakiE.`to_array`](@ref)\n\n        Attribute `z`, conversion function [MakiE.`to_array`](@ref)\n\n        Attribute `positions`, conversion function [MakiE.`to_positions`](@ref)\n\nend\n\n    Attribute `mesh`, conversion function [MakiE.`to_mesh`](@ref)\n\nor\n\n    Attribute `mesh`, conversion function [MakiE.`to_mesh`](@ref)\n\nend\n\n____________________\n\n\n\n"
 },
 
 {
@@ -397,7 +389,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Functions",
     "title": "MakiE.heatmap",
     "category": "Function",
-    "text": "heatmap(x, y, values) / heatmap(values)\n\nPlots a image on heatmap x, y (defaults to dimensions)\n\nAttributes:\n\nAttribute `linewidth`, conversion function [`to_float`](@ref)\n\n____________________\n\nAttribute `levels`, conversion function [`to_float`](@ref)\n\n____________________\n\nAttribute `heatmap`, conversion function [`to_array`](@ref)\n\n____________________\n\nAttribute `colormap`, conversion function [`to_colormap`](@ref)\n\n____________________\n\n____________________\n\n\n\n"
+    "text": "heatmap(x, y, values) / heatmap(values)\n\nPlots a image on heatmap x, y (defaults to dimensions)\n\nAttributes:\n\nAttribute `linewidth`, conversion function [MakiE.`to_float`](@ref)\n\n____________________\n\nAttribute `levels`, conversion function [MakiE.`to_float`](@ref)\n\n____________________\n\nAttribute `heatmap`, conversion function [MakiE.`to_array`](@ref)\n\n____________________\n\nAttribute `colormap`, conversion function [MakiE.`to_colormap`](@ref)\n\n____________________\n\n____________________\n\n\n\n"
 },
 
 {
@@ -413,7 +405,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Functions",
     "title": "MakiE.volume",
     "category": "Function",
-    "text": "volume(volume_data)\n\nPlots a volume\n\nAttributes:\n\nAttribute `volume`, conversion function [`to_array`](@ref)\n\n____________________\n\nExclusive Attributes:\n\n    Attribute `color`, conversion function [`to_color`](@ref)\n\nor\n\n    Attribute `colormap`, conversion function [`to_colormap`](@ref)\n\nend\n\n____________________\n\nAttribute `algorithm`, conversion function [`to_volume_algorithm`](@ref)\n\n____________________\n\nAttribute `absorption`, conversion function [`to_float`](@ref)\n\n____________________\n\nAttribute `isovalue`, conversion function [`to_float`](@ref)\n\n____________________\n\nAttribute `isorange`, conversion function [`to_float`](@ref)\n\n____________________\n\n\n\n"
+    "text": "volume(volume_data)\n\nPlots a volume\n\nAttributes:\n\nAttribute `volume`, conversion function [MakiE.`to_array`](@ref)\n\n____________________\n\nExclusive Attribute sets:\n\n    Attribute `color`, conversion function [MakiE.`to_color`](@ref)\n\nor\n\n    Attribute `colormap`, conversion function [MakiE.`to_colormap`](@ref)\n\nend\n\n____________________\n\nAttribute `algorithm`, conversion function [MakiE.`to_volume_algorithm`](@ref)\n\n____________________\n\nAttribute `absorption`, conversion function [MakiE.`to_float`](@ref)\n\n____________________\n\nAttribute `isovalue`, conversion function [MakiE.`to_float`](@ref)\n\n____________________\n\nAttribute `isorange`, conversion function [MakiE.`to_float`](@ref)\n\n____________________\n\n\n\n"
 },
 
 {
@@ -605,7 +597,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Axis",
     "title": "MakiE.axis",
     "category": "Function",
-    "text": "Creates an axis visualization for a certain bounding box.\n\nAttributes:\n\nAttribute `axisnames`, conversion function [`to_text`](@ref)\n\n____________________\n\nAttribute `visible`, conversion function [`to_bool`](@ref)\n\n____________________\n\nAttribute `showticks`, conversion function [`to_bool`](@ref)\n\n____________________\n\nAttribute `tickfont2d`, conversion function [`to_font`](@ref)\n\n____________________\n\nAttribute `tickfont3d`, conversion function [`to_font`](@ref)\n\n____________________\n\nAttribute `showaxis`, conversion function [`to_bool`](@ref)\n\n____________________\n\nAttribute `showgrid`, conversion function [`to_bool`](@ref)\n\n____________________\n\nAttribute `scalefuncs`, conversion function [`to_scalefunc`](@ref)\n\n____________________\n\nAttribute `gridcolors`, conversion function [`to_color`](@ref)\n\n____________________\n\nAttribute `gridthickness`, conversion function [`to_3floats`](@ref)\n\n____________________\n\nAttribute `axiscolors`, conversion function [`to_color`](@ref)\n\n____________________\n\n\n\n"
+    "text": "Creates an axis visualization for a certain bounding box.\n\nAttributes:\n\nAttribute `axisnames`, conversion function [MakiE.`to_text`](@ref)\n\n____________________\n\nAttribute `visible`, conversion function [MakiE.`to_bool`](@ref)\n\n____________________\n\nAttribute `showticks`, conversion function [MakiE.`to_bool`](@ref)\n\n____________________\n\nAttribute `tickfont2d`, conversion function [MakiE.`to_font`](@ref)\n\n____________________\n\nAttribute `tickfont3d`, conversion function [MakiE.`to_font`](@ref)\n\n____________________\n\nAttribute `showaxis`, conversion function [MakiE.`to_bool`](@ref)\n\n____________________\n\nAttribute `showgrid`, conversion function [MakiE.`to_bool`](@ref)\n\n____________________\n\nAttribute `scalefuncs`, conversion function [MakiE.`to_scalefunc`](@ref)\n\n____________________\n\nAttribute `gridcolors`, conversion function [MakiE.`to_color`](@ref)\n\n____________________\n\nAttribute `gridthickness`, conversion function [MakiE.`to_3floats`](@ref)\n\n____________________\n\nAttribute `axiscolors`, conversion function [MakiE.`to_color`](@ref)\n\n____________________\n\n\n\n"
 },
 
 {
