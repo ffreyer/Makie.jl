@@ -57,6 +57,246 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "conversions.html#MakiE.to_color",
+    "page": "Conversions",
+    "title": "MakiE.to_color",
+    "category": "Function",
+    "text": "to_color(b, x)\n\nColors.Colorants\n\n\n\nA Symbol naming a color, e.g. :black\n\n\n\nA String naming a color, e.g. :black or html style #rrggbb\n\n\n\nA Tuple or Array with elements that to_color accepts. If Array is a Matrix it will get interpreted as an Image\n\n\n\nTuple{<: ColorLike, <: AbstractFloat} for a transparent color\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_colormap",
+    "page": "Conversions",
+    "title": "MakiE.to_colormap",
+    "category": "Function",
+    "text": "to_colormap(b, x)\n\nAn AbstractVector{T} with any object that to_color accepts\n\n\n\nTuple(A, B) or Pair{A, B} with any object that to_color accepts\n\n\n\nA Symbol/String naming the gradient. For more on what names are available please see: `available_gradients()\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_colornorm",
+    "page": "Conversions",
+    "title": "MakiE.to_colornorm",
+    "category": "Function",
+    "text": "to_colornorm(b, norm, intensity)\n\nanything that can be converted to Vec2f0 (e.g. Tuple, Vector)\n\n\n\nIf colornorm is nothing will default to calculate the extrema from intensity\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_scale",
+    "page": "Conversions",
+    "title": "MakiE.to_scale",
+    "category": "Function",
+    "text": "to_scale(b, s::Number)::Vec\n\n\n\nto_scale(b, s::VecLike)::Point\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_offset",
+    "page": "Conversions",
+    "title": "MakiE.to_offset",
+    "category": "Function",
+    "text": "to_offset(b, s::Number)::Point\n\n\n\nto_scale(b, s::VecLike)::Point\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_rotation",
+    "page": "Conversions",
+    "title": "MakiE.to_rotation",
+    "category": "Function",
+    "text": "to_rotation(b, vec4)\n\n\n\nto_rotation(b, quaternion)\n\n\n\nto_rotation(b, tuple_float)\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_image",
+    "page": "Conversions",
+    "title": "MakiE.to_image",
+    "category": "Function",
+    "text": "to_image(b, image)\n\nAll kinds of images\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_bool",
+    "page": "Conversions",
+    "title": "MakiE.to_bool",
+    "category": "Function",
+    "text": "to_bool(b, bool)\n\nTo boolean\n\n\n\nto_bool(b, tuple)\n\nAccepts Tuple of Bool\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_index_buffer",
+    "page": "Conversions",
+    "title": "MakiE.to_index_buffer",
+    "category": "Function",
+    "text": "to_index_buffer(b, x::GLBuffer{UInt32})\n\n\n\nTOrSignal{Int}, AbstractVector{UnitRange{Int}}, TOrSignal{UnitRange{Int}}\n\n\n\nAbstractVector{<:Integer} assumend 1-based indexing\n\n\n\nAbstractVector{<:Face{2}} for linesegments\n\n\n\nAbstractVector{UInt32}, is assumed to be 0 based\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_positions",
+    "page": "Conversions",
+    "title": "MakiE.to_positions",
+    "category": "Function",
+    "text": "to_positions(b, positionlike)\n\nNTuple{2, AbstractArray{Float}} for 2D points\n\n\n\nNTuple{3, AbstractArray{Float}} for 3D points\n\n\n\nview(AbstractArray{Point}, idx) for a subset of points. Can be shared (so you can plot subsets of the same data)!\n\n\n\nAbstractArray{T} where T needs to have length defined and must be convertible to a Point\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_array",
+    "page": "Conversions",
+    "title": "MakiE.to_array",
+    "category": "Function",
+    "text": "to_array(b, arraylike)\n\nAbstractArray\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_scalefunc",
+    "page": "Conversions",
+    "title": "MakiE.to_scalefunc",
+    "category": "Function",
+    "text": "to_scalefunc(b, x)\n\nFunction\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_text",
+    "page": "Conversions",
+    "title": "MakiE.to_text",
+    "category": "Function",
+    "text": "to_text(b, x)\n\nAll text\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_font",
+    "page": "Conversions",
+    "title": "MakiE.to_font",
+    "category": "Function",
+    "text": "to_font(b, x)\n\nAll fonts\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_intensity",
+    "page": "Conversions",
+    "title": "MakiE.to_intensity",
+    "category": "Function",
+    "text": "AbstractArray\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_surface",
+    "page": "Conversions",
+    "title": "MakiE.to_surface",
+    "category": "Function",
+    "text": "to_surface(b, x::Range)\n\nRange\n\n\n\nto_surface(b, arraylike)\n\nAnything that can be converted to Matrix/Vector of Float32\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_spritemarker",
+    "page": "Conversions",
+    "title": "MakiE.to_spritemarker",
+    "category": "Function",
+    "text": "to_spritemarker(b, x::Circle)\n\nGeometryTypes.Circle(Point2(...), radius)\n\n\n\nto_spritemarker(b, ::Type{Circle})\n\nType{GeometryTypes.Circle}\n\n\n\nto_spritemarker(b, ::Type{Rectangle})\n\nType{GeometryTypes.Rectangle}\n\n\n\nto_spritemarker(b, marker::Char)\n\nAny Char, including unicode\n\n\n\nMatrix of AbstractFloat will be interpreted as a distancefield (negative numbers outside shape, positive inside)\n\n\n\nAny AbstractMatrix{<: Colorant} or other image type\n\n\n\nA Symbol - Available options can be printed with available_marker_symbols()\n\n\n\nVector of anything that is accepted as a single marker will give each point it's own marker. Note that it needs to be a uniform vector with the same element type!\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_static_vec",
+    "page": "Conversions",
+    "title": "MakiE.to_static_vec",
+    "category": "Function",
+    "text": "to_static_vec(b, x)\n\nAbstractArray\n\n\n\nAny StaticVector\n\n\n\nNTuple\n\n\n\nAbstract array of which the elements can be converted to vec\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_rotations",
+    "page": "Conversions",
+    "title": "MakiE.to_rotations",
+    "category": "Function",
+    "text": "to_rotations(b, x)\n\nBillboard() for a rotation that will always face the camera\n\n\n\nAny AbstractArray which elements can be converted to Vec4 (as a quaternion x, y, z, w)\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_markersize",
+    "page": "Conversions",
+    "title": "MakiE.to_markersize",
+    "category": "Function",
+    "text": "to_markersize(b, x)\n\nAnything that can be converted to Vec2f0 for x, y scale\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_linestyle",
+    "page": "Conversions",
+    "title": "MakiE.to_linestyle",
+    "category": "Function",
+    "text": "to_linestyle(b, x)\n\nNothing for no style\n\n\n\nAbstractVector{<:AbstractFloat} for denoting sequences of fill/nofill. E.g. [0.5, 0.8, 1.2] will result in 0.5 filled, 0.3 unfilled, 0.4 filled. 1.0 unit is one linewidth!\n\n\n\nA Symbol equal to :dash, :dot, :dashdot, :dashdotdot\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_normals",
+    "page": "Conversions",
+    "title": "MakiE.to_normals",
+    "category": "Function",
+    "text": "to_normals(b, x)\n\nVector{Normal{3}}\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_faces",
+    "page": "Conversions",
+    "title": "MakiE.to_faces",
+    "category": "Function",
+    "text": "to_faces(b, x)\n\nAny array of NTuple/GeometryTypes.Face\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_attribut_id",
+    "page": "Conversions",
+    "title": "MakiE.to_attribut_id",
+    "category": "Function",
+    "text": "to_attribut_id(b, x)\n\nIndex into Mesh attributes, Vector{Integer}\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_mesh",
+    "page": "Conversions",
+    "title": "MakiE.to_mesh",
+    "category": "Function",
+    "text": "to_mesh(b, meshlike)\n\nAbstractMesh\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_float",
+    "page": "Conversions",
+    "title": "MakiE.to_float",
+    "category": "Function",
+    "text": "to_float(b, x)\n\nAny Object convertible to Floatingpoint\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_spatial_order",
+    "page": "Conversions",
+    "title": "MakiE.to_spatial_order",
+    "category": "Function",
+    "text": "to_spatial_order(b, x)\n\n\"xy\" or \"yx\"\n\n\n\n:xy or :yx\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_interval",
+    "page": "Conversions",
+    "title": "MakiE.to_interval",
+    "category": "Function",
+    "text": "to_interval(b, x)\n\nTuple{<: Number, <: Number}\n\n\n\nPair{<: Number, <: Number} e.g. 2 => 100\n\n\n\nAbstractVector will be interpreted as an interval from minimum to maximum\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_volume_algorithm",
+    "page": "Conversions",
+    "title": "MakiE.to_volume_algorithm",
+    "category": "Function",
+    "text": "to_volume_algorithm(b, x)\n\nEnum values: IsoValue Absorption MaximumIntensityProjection AbsorptionRGBA IndexedAbsorptionRGBA\n\n\n\nSymbol/String: iso, absorption, mip, absorptionrgba, indexedabsorption\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_3floats",
+    "page": "Conversions",
+    "title": "MakiE.to_3floats",
+    "category": "Function",
+    "text": "3 Numbers for each dimension\n\n\n\n"
+},
+
+{
     "location": "conversions.html#Conversions-1",
     "page": "Conversions",
     "title": "Conversions",
