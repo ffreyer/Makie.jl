@@ -49,6 +49,22 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "conversions.html#",
+    "page": "Conversions",
+    "title": "Conversions",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "conversions.html#Conversions-1",
+    "page": "Conversions",
+    "title": "Conversions",
+    "category": "section",
+    "text": "Every attribute has a conversion function, allowing attributes to take in rich input types, but keep the variance low for the backends. The conversions are overloadable as explained in Extending, making it simple to integrate custom types.to_scale\n\nto_offset\n\nto_rotation\n\nto_image\n\nto_bool\n\nto_index_buffer\n\nto_index_buffer\n\nto_positions\n\nto_positions\n\nto_array\n\nto_scalefunc\n\nto_text\n\nto_font\n\nto_colornorm\n\nto_intensity\n\nto_surface\n\nto_spritemarker\n\nto_static_vec\n\nto_rotations\n\nto_markersize\n\nto_linestyle\n\nto_normals\n\nto_faces\n\nto_attribut_id\n\nto_mesh\n\nto_float\n\nto_color\n\navailable_gradients\n\nto_colormap\n\nto_spatial_order\n\nto_interval\n\nto_volume_algorithm"
+},
+
+{
     "location": "functions.html#",
     "page": "Functions",
     "title": "Functions",
@@ -166,22 +182,6 @@ var documenterSearchIndex = {"docs": [
     "title": "Volume",
     "category": "section",
     "text": "volume\n#julia\nusing MakiE\nscene = Scene()\nvolume(rand(32, 32, 32), algorithm = :iso)\ncenter!(scene)\nsave(\"volume.png\", scene); nothing # hide(Image: )image\nvolume\ntext\npoly"
-},
-
-{
-    "location": "conversions.html#",
-    "page": "Conversions",
-    "title": "Conversions",
-    "category": "page",
-    "text": ""
-},
-
-{
-    "location": "conversions.html#Conversions-1",
-    "page": "Conversions",
-    "title": "Conversions",
-    "category": "section",
-    "text": "Every attribute has a conversion function, allowing attributes to take in rich input types, but keep the variance low for the backends. The conversions are overloadable as explained in Extending, making it simple to integrate custom types.to_scale\n\nto_offset\n\nto_rotation\n\nto_image\n\nto_bool\n\nto_index_buffer\n\nto_index_buffer\n\nto_positions\n\nto_positions\n\nto_array\n\nto_scalefunc\n\nto_text\n\nto_font\n\nto_colornorm\n\nto_intensity\n\nto_surface\n\nto_spritemarker\n\nto_static_vec\n\nto_rotations\n\nto_markersize\n\nto_linestyle\n\nto_normals\n\nto_faces\n\nto_attribut_id\n\nto_mesh\n\nto_float\n\nto_color\n\navailable_gradients\n\nto_colormap\n\nto_spatial_order\n\nto_interval\n\nto_volume_algorithm\n"
 },
 
 {
@@ -437,7 +437,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Input Output",
     "title": "VideoStream",
     "category": "section",
-    "text": "\nVideoStream\nfinishusing MakiE\n\nscene = Scene(resolution = (500, 500))\n\nf(t, v, s) = (sin(v + t) * s, cos(v + t) * s, (cos(v + t) + sin(v)) * s)\nt = to_node(time()) # create a life signal\np1 = meshscatter(lift_node(t-> f.(t, linspace(0, 2pi, 50), 1), t))\np2 = meshscatter(lift_node(t-> f.(t * 2.0, linspace(0, 2pi, 50), 1.5), t))\ncenter!(scene)\nnothing\n# you can now reference to life attributes from the above plots:\n\nlines = lift_node(p1[:positions], p2[:positions]) do pos1, pos2\n    map((a, b)-> (a, b), pos1, pos2)\nend\n\nlinesegment(lines, linestyle = :dot)\n\ncenter!(scene)\n# record a video \nio = VideoStream(scene, \".\", \"output_vid\")\nfor i = 1:300\n    push!(t, time())\n    recordframe!(io)\n    yield()\n    sleep(1/30)\nend\nfinish(io, \"mp4\") # could also be gif, webm or mkv\nnothing<video controls autoplay>\n  <source src=\"output_vid.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "\nVideoStream\nfinishusing MakiE\n\nscene = Scene(resolution = (500, 500))\n\nf(t, v, s) = (sin(v + t) * s, cos(v + t) * s, (cos(v + t) + sin(v)) * s)\nt = to_node(time()) # create a life signal\np1 = meshscatter(lift_node(t-> f.(t, linspace(0, 2pi, 50), 1), t))\np2 = meshscatter(lift_node(t-> f.(t * 2.0, linspace(0, 2pi, 50), 1.5), t))\ncenter!(scene)\nnothing\n# you can now reference to life attributes from the above plots:\n\nlines = lift_node(p1[:positions], p2[:positions]) do pos1, pos2\n    map((a, b)-> (a, b), pos1, pos2)\nend\n\nlinesegment(lines, linestyle = :dot)\n\ncenter!(scene)\n# record a video\nio = VideoStream(scene, \".\", \"output_vid\")\nfor i = 1:300\n    push!(t, time())\n    recordframe!(io)\n    yield()\n    sleep(1/30)\nend\nfinish(io, \"mp4\") # could also be gif, webm or mkv\nnothing<video controls autoplay>\n  <source src=\"output_vid.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
 },
 
 {
