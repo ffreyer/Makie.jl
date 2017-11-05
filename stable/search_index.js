@@ -57,6 +57,30 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "conversions.html#MakiE.to_color",
+    "page": "Conversions",
+    "title": "MakiE.to_color",
+    "category": "Function",
+    "text": "to_color(b, x)\n\nColors.Colorants\n\n\n\nA Symbol naming a color, e.g. :black\n\n\n\nA String naming a color, e.g. :black or html style #rrggbb\n\n\n\nA Tuple or Array with elements that to_color accepts. If Array is a Matrix it will get interpreted as an Image\n\n\n\nTuple{<: ColorLike, <: AbstractFloat} for a transparent color\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_colormap",
+    "page": "Conversions",
+    "title": "MakiE.to_colormap",
+    "category": "Function",
+    "text": "to_colormap(b, x)\n\nAn AbstractVector{T} with any object that to_color accepts\n\n\n\nTuple(A, B) or Pair{A, B} with any object that to_color accepts\n\n\n\nA Symbol/String naming the gradient. For more on what names are available please see: `available_gradients()\n\n\n\n"
+},
+
+{
+    "location": "conversions.html#MakiE.to_colornorm",
+    "page": "Conversions",
+    "title": "MakiE.to_colornorm",
+    "category": "Function",
+    "text": "to_colornorm(b, norm, intensity)\n\nanything that can be converted to Vec2f0 (e.g. Tuple, Vector)\n\n\n\nIf colornorm is nothing will default to calculate the extrema from intensity\n\n\n\n"
+},
+
+{
     "location": "conversions.html#MakiE.to_scale",
     "page": "Conversions",
     "title": "MakiE.to_scale",
@@ -241,30 +265,6 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "conversions.html#MakiE.to_color",
-    "page": "Conversions",
-    "title": "MakiE.to_color",
-    "category": "Function",
-    "text": "to_color(b, x)\n\nColors.Colorants\n\n\n\nA Symbol naming a color, e.g. :black\n\n\n\nA String naming a color, e.g. :black or html style #rrggbb\n\n\n\nA Tuple or Array with elements that to_color accepts. If Array is a Matrix it will get interpreted as an Image\n\n\n\nTuple{<: ColorLike, <: AbstractFloat} for a transparent color\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_colormap",
-    "page": "Conversions",
-    "title": "MakiE.to_colormap",
-    "category": "Function",
-    "text": "to_colormap(b, x)\n\nAn AbstractVector{T} with any object that to_color accepts\n\n\n\nTuple(A, B) or Pair{A, B} with any object that to_color accepts\n\n\n\nA Symbol/String naming the gradient. For more on what names are available please see: available_gradients()\n\n\n\n"
-},
-
-{
-    "location": "conversions.html#MakiE.to_colornorm",
-    "page": "Conversions",
-    "title": "MakiE.to_colornorm",
-    "category": "Function",
-    "text": "to_colornorm(b, norm, intensity)\n\nanything that can be converted to Vec2f0 (e.g. Tuple, Vector)\n\n\n\nIf colornorm is nothing will default to calculate the extrema from intensity\n\n\n\n"
-},
-
-{
     "location": "conversions.html#MakiE.to_spatial_order",
     "page": "Conversions",
     "title": "MakiE.to_spatial_order",
@@ -293,7 +293,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Conversions",
     "title": "Conversions",
     "category": "section",
-    "text": "Every attribute has a conversion function, allowing attributes to take in rich input types, but keep the variance low for the backends. The conversions are overloadable as explained in Extending, making it simple to integrate custom types.to_scale\n\nto_offset\n\nto_rotation\n\nto_image\n\nto_bool\n\nto_index_buffer\n\nto_positions\n\nto_array\n\nto_scalefunc\n\nto_text\n\nto_font\n\nto_intensity\n\nto_surface\n\nto_spritemarker\n\nto_static_vec\n\nto_rotations\n\nto_markersize\n\nto_linestyle\n\nto_normals\n\nto_faces\n\nto_attribut_id\n\nto_mesh\n\nto_float\n\nto_color\n\nto_colormap\n\nto_colornorm\n\nto_spatial_order\n\nto_interval\n\nto_volume_algorithm"
+    "text": "Every attribute has a conversion function, allowing attributes to take in rich input types, but keep the variance low for the backends. The conversions are overloadable as explained in Extending, making it simple to integrate custom types.to_color\n\nto_colormap\n\nto_colornorm\n\nto_scale\n\nto_offset\n\nto_rotation\n\nto_image\n\nto_bool\n\nto_index_buffer\n\nto_positions\n\nto_array\n\nto_scalefunc\n\nto_text\n\nto_font\n\nto_intensity\n\nto_surface\n\nto_spritemarker\n\nto_static_vec\n\nto_rotations\n\nto_markersize\n\nto_linestyle\n\nto_normals\n\nto_faces\n\nto_attribut_id\n\nto_mesh\n\nto_float\n\nto_spatial_order\n\nto_interval\n\nto_volume_algorithm\"\"\"     test()println \"\"\" function test()end"
 },
 
 {
