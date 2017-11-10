@@ -345,6 +345,22 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "functions.html#MakiE.meshscatter",
+    "page": "Functions",
+    "title": "MakiE.meshscatter",
+    "category": "Function",
+    "text": "scatter(x, y, z) / scatter(x, y) / scatter(positions)\n\nPlots a mesh for each element in xyz/positions\n\nAttributes:\n\nExclusive Attribute sets:\n\n\n\nAttribute positions, conversion function to_positions\n\nor\n\n\n\nAttribute x, conversion function to_array\n\nAttribute y, conversion function to_array\n\nAttribute z, conversion function to_array\n\nAttribute positions, conversion function to_positions\n\nor\n\n\n\nAttribute x, conversion function to_array\n\nAttribute y, conversion function to_array\n\nAttribute positions, conversion function to_positions\n\nend\n\n\n\n____________________\n\nExclusive Attribute sets:\n\n\n\nAttribute color, conversion function to_color\n\nor\n\n\n\nAttribute colormap, conversion function to_colormap\n\nAttribute intensity, conversion function to_intensity\n\nAttribute colornorm, conversion function to_colornorm\n\nend\n\n\n\n____________________\n\nAttribute marker, conversion function to_mesh\n\n____________________\n\nAttribute markersize, conversion function to_markersize3d\n\n____________________\n\nAttribute rotations, conversion function to_rotations\n\n____________________\n\n\n\n"
+},
+
+{
+    "location": "functions.html#Meshscatter-1",
+    "page": "Functions",
+    "title": "Meshscatter",
+    "category": "section",
+    "text": "using MakiE, GLVisualize, GeometryTypes\nscene = Scene(resolution = (500, 500))\nmeshscatter(Sphere(Point3f0(0), 1f0), marker = loadasset(\"cat.obj\"), markersize = 0.2)\ncenter!(scene)\nsave(\"meshscatter.png\", scene); nothing # hide(Image: )meshscatter"
+},
+
+{
     "location": "functions.html#MakiE.lines",
     "page": "Functions",
     "title": "MakiE.lines",
