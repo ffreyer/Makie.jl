@@ -650,18 +650,18 @@ var documenterSearchIndex = {"docs": [
 
 {
     "location": "legends.html#",
-    "page": "Legend",
-    "title": "Legend",
+    "page": "Legends",
+    "title": "Legends",
     "category": "page",
     "text": ""
 },
 
 {
-    "location": "legends.html#Legend-1",
-    "page": "Legend",
-    "title": "Legend",
+    "location": "legends.html#Legends-1",
+    "page": "Legends",
+    "title": "Legends",
     "category": "section",
-    "text": "The Legend is an interactive object, that can be edited and interacted with like any other object in Makie.You can create it on your own, or let it get created by automatically by a plot command.\nusing Makie, GeometryTypes, Colors\n\n# Create some plots for which we want to generate a legend\nscene = Scene()\nplots = map([:dot, :dash, :dashdot], [2, 3, 4]) do ls, lw\n    linesegment(linspace(1, 5, 100), rand(100), rand(100), linestyle = ls, linewidth = lw)\nend\npush!(plots, scatter(linspace(1, 5, 100), rand(100), rand(100)))\ncenter!(scene)\n\n# plot a legend for the plots with an array of names\nl = Makie.legend(plots, [\"attribute $i\" for i in 1:4])\nio = VideoStream(scene, \".\", \"legend\")\nrecord(io) = (for i = 1:35; recordframe!(io); sleep(1/30); end);\n\nrecord(io)\n# Change some attributes interactively\nl[:position] = (0.4, 0.7)\nrecord(io)\nl[:backgroundcolor] = RGBA(0.95, 0.95, 0.95)\nrecord(io)\nl[:strokecolor] = RGB(0.8, 0.8, 0.8)\nrecord(io)\nl[:gap] = 30\nrecord(io)\nl[:textsize] = 19\nrecord(io)\nl[:linepattern] = Point2f0[(0,-0.2), (0.5, 0.2), (0.5, 0.2), (1.0, -0.2)]\nrecord(io)\nl[:scatterpattern] = decompose(Point2f0, Circle(Point2f0(0.5, 0), 0.3f0), 9)\nrecord(io)\nl[:markersize] = 2f0\nrecord(io)\nfinish(io, \"mp4\")<video controls autoplay>\n  <source src=\"legend.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "The Legend is an interactive object, that can be edited and interacted with like any other object in Makie.You can create it on your own, or let it get created by automatically by a plot command.\nusing Makie, GeometryTypes, Colors\n\n# Create some plots for which we want to generate a legend\nscene = Scene()\nplots = map([:dot, :dash, :dashdot], [2, 3, 4]) do ls, lw\n    linesegment(linspace(1, 5, 100), rand(100), rand(100), linestyle = ls, linewidth = lw)\nend\npush!(plots, scatter(linspace(1, 5, 100), rand(100), rand(100)))\ncenter!(scene)\n\n# plot a legend for the plots with an array of names\nl = Makie.legend(plots, [\"attribute $i\" for i in 1:4])\nio = VideoStream(scene, \".\", \"legend\")\nrecord(io) = (for i = 1:35; recordframe!(io); sleep(1/30); end);\n\nrecord(io)\n# Change some attributes interactively\nl[:position] = (0.4, 0.7)\nrecord(io)\nl[:backgroundcolor] = RGBA(0.95, 0.95, 0.95)\nrecord(io)\nl[:strokecolor] = RGB(0.8, 0.8, 0.8)\nrecord(io)\nl[:gap] = 30\nrecord(io)\nl[:textsize] = 19\nrecord(io)\nl[:linepattern] = Point2f0[(0,-0.2), (0.5, 0.2), (0.5, 0.2), (1.0, -0.2)]\nrecord(io)\nl[:scatterpattern] = decompose(Point2f0, Circle(Point2f0(0.5, 0), 0.3f0), 9)\nrecord(io)\nl[:markersize] = 2f0\nrecord(io)\nfinish(io, \"mp4\")\nnothing<video controls autoplay>\n  <source src=\"legend.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
 },
 
 {
