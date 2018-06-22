@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Help functions · Makie.jl</title><link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js" data-main="assets/documenter.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><link href="assets/documenter.css" rel="stylesheet" type="text/css"/></head><body><nav class="toc"><a href="index.html"><img class="logo" src="assets/logo.png" alt="Makie.jl logo"/></a><h1>Makie.jl</h1><select id="version-selector" onChange="window.location.href=this.value" style="visibility: hidden"></select><form class="search" id="search-form" action="search.html"><input id="search-query" name="q" type="text" placeholder="Search docs"/></form><ul><li><a class="toctext" href="index.html">Home</a></li><li><span class="toctext">Basics</span><ul><li class="current"><a class="toctext" href="help_functions.html">Help functions</a><ul class="internal"><li><a class="toctext" href="#help-1">help</a></li><li><a class="toctext" href="#help_arguments-1">help_arguments</a></li><li><a class="toctext" href="#help_attributes-1">help_attributes</a></li></ul></li><li><a class="toctext" href="functions-overview.html">Atomic functions overview</a></li><li><a class="toctext" href="signatures.html">Plot function signatures</a></li><li><a class="toctext" href="attributes.html">Plot attributes</a></li><li><a class="toctext" href="interaction.html">Interaction</a></li><li><a class="toctext" href="output.html">Output</a></li></ul></li><li><span class="toctext">Examples</span><ul><li><a class="toctext" href="examples-heatmap.html"><code>heatmap</code></a></li><li><a class="toctext" href="examples-image.html"><code>image</code></a></li><li><a class="toctext" href="examples-lines.html"><code>lines</code></a></li><li><a class="toctext" href="examples-linesegments.html"><code>linesegments</code></a></li><li><a class="toctext" href="examples-mesh.html"><code>mesh</code></a></li><li><a class="toctext" href="examples-meshscatter.html"><code>meshscatter</code></a></li><li><a class="toctext" href="examples-scatter.html"><code>scatter</code></a></li><li><a class="toctext" href="examples-surface.html"><code>surface</code></a></li><li><a class="toctext" href="examples-text.html"><code>text</code></a></li><li><a class="toctext" href="examples-volume.html"><code>volume</code></a></li><li><a class="toctext" href="examples-contour.html"><code>contour</code></a></li></ul></li></ul></nav><article id="docs"><header><nav><ul><li>Basics</li><li><a href="help_functions.html">Help functions</a></li></ul><a class="edit-page" href="https://github.com/JuliaPlots/Makie.jl/blob/master/docs/src/help_functions.md"><span class="fa"></span> Edit on GitHub</a></nav><hr/><div id="topbar"><span>Help functions</span><a class="fa fa-bars" href="#"></a></div></header><h1><a class="nav-anchor" id="Help-functions-1" href="#Help-functions-1">Help functions</a></h1><h2><a class="nav-anchor" id="help-1" href="#help-1">help</a></h2><section class="docstring"><div class="docstring-header"><a class="docstring-binding" id="AbstractPlotting.help" href="#AbstractPlotting.help"><code>AbstractPlotting.help</code></a> — <span class="docstring-category">Function</span>.</div><div><pre><code class="language-none">help(func)</code></pre><p>Welcome to the main help function of <code>Makie.jl</code> / <code>AbstractArray.jl</code>.</p><p>For help on a specific function&#39;s arguments, type <code>help_arguments(function_name)</code>.</p><p>For help on a specific function&#39;s attributes, type <code>help_attributes(plot_Type)</code>.</p></div><a class="source-link" target="_blank" href="https://github.com/JuliaPlots/AbstractPlotting.jl/blob/7dadb20a9273d03f9d0739e6e51d5d75f34cabc9/src/documentation.jl#L4-L12">source</a></section><p>Example usage:</p><div><pre><code class="language-julia">help(scatter; extended = true)</code></pre><pre><code class="language-none">```
+`scatter(x, y, z)` / `scatter(x, y)` / `scatter(positions)`
+```
+
+Plots a marker for each element in `(x, y, z)`, `(x, y)`, or `positions`.
+
+`AbstractPlotting.scatter` has the following function signatures:
+
+```
+  (Vector, Vector)
+  (Vector, Vector, Vector)
+  (Matrix)
+```
+
+Please refer to [`convert_arguments`](@ref) to find the full list of accepted arguments
+
+Available attributes and their defaults for `Scatter{...} where T` are:
+
+```
+  strokecolor     RGBA{N0f8}(0.0,0.0,0.0,0.0)
+  colormap        :viridis
+  glowwidth       0.0
+  marker_offset   nothing
+  markersize      0.1
+  rotations       AbstractPlotting.Billboard()
+  strokewidth     0.0
+  colorrange      nothing
+  marker          GeometryTypes.HyperSphere{2,T} where T
+  glowcolor       RGBA{N0f8}(0.0,0.0,0.0,0.0)
+```
+
+You can see usage examples of `AbstractPlotting.scatter` by running:
+
+`example_database(AbstractPlotting.scatter)`</code></pre></div><h2><a class="nav-anchor" id="help_arguments-1" href="#help_arguments-1">help_arguments</a></h2><section class="docstring"><div class="docstring-header"><a class="docstring-binding" id="AbstractPlotting.help_arguments" href="#AbstractPlotting.help_arguments"><code>AbstractPlotting.help_arguments</code></a> — <span class="docstring-category">Function</span>.</div><div><pre><code class="language-none">help_arguments(io, func)</code></pre><p>Returns a list of signatures for function <code>func</code>.</p></div><a class="source-link" target="_blank" href="https://github.com/JuliaPlots/AbstractPlotting.jl/blob/7dadb20a9273d03f9d0739e6e51d5d75f34cabc9/src/documentation.jl#L55-L59">source</a></section><p>Example usage:</p><div><pre><code class="language-julia">help_arguments(STDOUT, scatter)</code></pre><pre><code class="language-none">`AbstractPlotting.scatter` has the following function signatures:
+
+```
+  (Vector, Vector)
+  (Vector, Vector, Vector)
+  (Matrix)
+```</code></pre></div><h2><a class="nav-anchor" id="help_attributes-1" href="#help_attributes-1">help_attributes</a></h2><section class="docstring"><div class="docstring-header"><a class="docstring-binding" id="AbstractPlotting.help_attributes" href="#AbstractPlotting.help_attributes"><code>AbstractPlotting.help_attributes</code></a> — <span class="docstring-category">Function</span>.</div><div><pre><code class="language-none">help_attributes(Typ; extended = false)</code></pre><p>Returns a list of attributes for the plot type <code>Typ</code>. The attributes returned extend those attributes found in the <code>default_theme</code>.</p><p>Use the optional keyword argument <code>extended</code> (default = <code>false</code>) to show in addition the default values of each attribute.</p></div><a class="source-link" target="_blank" href="https://github.com/JuliaPlots/AbstractPlotting.jl/blob/7dadb20a9273d03f9d0739e6e51d5d75f34cabc9/src/documentation.jl#L72-L80">source</a></section><p>Example usage:</p><div><pre><code class="language-julia">help_attributes(STDOUT, Scatter; extended = true)</code></pre><pre><code class="language-none">Available attributes and their defaults for `Scatter{...} where ArgType` are:
+
+```
+  strokecolor     RGBA{N0f8}(0.0,0.0,0.0,0.0)
+  colormap        :viridis
+  glowwidth       0.0
+  marker_offset   nothing
+  markersize      0.1
+  rotations       AbstractPlotting.Billboard()
+  strokewidth     0.0
+  colorrange      nothing
+  marker          GeometryTypes.HyperSphere{2,T} where T
+  glowcolor       RGBA{N0f8}(0.0,0.0,0.0,0.0)
+```</code></pre></div><footer><hr/><a class="previous" href="index.html"><span class="direction">Previous</span><span class="title">Home</span></a><a class="next" href="functions-overview.html"><span class="direction">Next</span><span class="title">Atomic functions overview</span></a></footer></article></body></html>
