@@ -36,7 +36,7 @@ scene
 # TODO explain and improve the situation here
 psurf.converted[3][] = f.(vx .+ 0.5, (vy .+ 0.5)&#39;)
 scene
-</code></pre><p><img src="../media/axis___surface.png" alt="library lines 178:214"/></p><h2><a class="nav-anchor" id="&quot;Animated-surface-and-wireframe&quot;-1" href="#&quot;Animated-surface-and-wireframe&quot;-1">&quot;Animated surface and wireframe&quot;</a></h2><p>Tags: <code>3d</code>, <code>animated</code>, <code>axis</code>, <code>surface</code>, <code>video</code>, <code>wireframe</code>.</p><pre><code class="language-julia">scene = Scene(resolution = (500, 500))
+</code></pre><p><img src="media/axis___surface.png" alt="library lines 178:214"/></p><h2><a class="nav-anchor" id="&quot;Animated-surface-and-wireframe&quot;-1" href="#&quot;Animated-surface-and-wireframe&quot;-1">&quot;Animated surface and wireframe&quot;</a></h2><p>Tags: <code>3d</code>, <code>animated</code>, <code>axis</code>, <code>surface</code>, <code>video</code>, <code>wireframe</code>.</p><pre><code class="language-julia">scene = Scene(resolution = (500, 500))
 function xy_data(x, y)
     r = sqrt(x^2 + y^2)
     r == 0.0 ? 1f0 : (sin(r)/r)
@@ -54,7 +54,7 @@ record(scene, @outputfile(mp4), linspace(5, 40, 100)) do i
     surf[3] = surf_func(i)
 end
 </code></pre><video controls autoplay loop muted>
-  <source src="../media/animated_surface_and_wireframe.mp4" type="video/mp4">
+  <source src="media/animated_surface_and_wireframe.mp4" type="video/mp4">
   Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.
 </video><h2><a class="nav-anchor" id="&quot;Wireframe-of-a-Surface&quot;-1" href="#&quot;Wireframe-of-a-Surface&quot;-1">&quot;Wireframe of a Surface&quot;</a></h2><p>Tags: <code>3d</code>, <code>documentation</code>, <code>surface</code>, <code>wireframe</code>.</p><pre><code class="language-julia">function xy_data(x, y)
     r = sqrt(x^2 + y^2)
@@ -65,7 +65,7 @@ lspace = linspace(-10, 10, N)
 z = Float32[xy_data(x, y) for x in lspace, y in lspace]
 range = linspace(0, 3, N)
 wireframe(range, range, z)
-</code></pre><p><img src="../media/wireframe_of_a_surface.png" alt="library lines 530:538"/></p><h2><a class="nav-anchor" id="&quot;Surface&quot;-1" href="#&quot;Surface&quot;-1">&quot;Surface&quot;</a></h2><p>Tags: <code>3d</code>, <code>documentation</code>, <code>surface</code>.</p><pre><code class="language-julia">N = 30
+</code></pre><p><img src="media/wireframe_of_a_surface.png" alt="library lines 530:538"/></p><h2><a class="nav-anchor" id="&quot;Surface&quot;-1" href="#&quot;Surface&quot;-1">&quot;Surface&quot;</a></h2><p>Tags: <code>3d</code>, <code>documentation</code>, <code>surface</code>.</p><pre><code class="language-julia">N = 30
 function xy_data(x, y)
     r = sqrt(x^2 + y^2)
     r == 0.0 ? 1f0 : (sin(r)/r)
@@ -77,7 +77,7 @@ surface(
     range, range, z,
     colormap = :Spectral
 )
-</code></pre><p><img src="../media/surface_1.png" alt="library lines 541:549"/></p><h2><a class="nav-anchor" id="&quot;Surface-with-image&quot;-1" href="#&quot;Surface-with-image&quot;-1">&quot;Surface with image&quot;</a></h2><p>Tags: <code>3d</code>, <code>documentation</code>, <code>image</code>, <code>surface</code>.</p><pre><code class="language-julia">N = 30
+</code></pre><p><img src="media/surface_1.png" alt="library lines 541:549"/></p><h2><a class="nav-anchor" id="&quot;Surface-with-image&quot;-1" href="#&quot;Surface-with-image&quot;-1">&quot;Surface with image&quot;</a></h2><p>Tags: <code>3d</code>, <code>documentation</code>, <code>image</code>, <code>surface</code>.</p><pre><code class="language-julia">N = 30
 function xy_data(x, y)
     r = sqrt(x^2 + y^2)
     r == 0.0 ? 1f0 : (sin(r)/r)
@@ -88,7 +88,7 @@ surface(
     r, r, surf_func(10),
     image = rand(RGBAf0, 124, 124)
 )
-</code></pre><p><img src="../media/surface_with_image.png" alt="library lines 555:562"/></p><h2><a class="nav-anchor" id="&quot;Image-on-Surface-Sphere&quot;-1" href="#&quot;Image-on-Surface-Sphere&quot;-1">&quot;Image on Surface Sphere&quot;</a></h2><p>Tags: <code>3d</code>, <code>documentation</code>, <code>image</code>, <code>sphere</code>, <code>surface</code>.</p><pre><code class="language-julia">n = 20
+</code></pre><p><img src="media/surface_with_image.png" alt="library lines 555:562"/></p><h2><a class="nav-anchor" id="&quot;Image-on-Surface-Sphere&quot;-1" href="#&quot;Image-on-Surface-Sphere&quot;-1">&quot;Image on Surface Sphere&quot;</a></h2><p>Tags: <code>3d</code>, <code>documentation</code>, <code>image</code>, <code>sphere</code>, <code>surface</code>.</p><pre><code class="language-julia">n = 20
 θ = [0;(0.5:n-0.5)/n;1]
 φ = [(0:2n-2)*2/(2n-1);2]
 x = [cospi(φ)*sinpi(θ) for θ in θ, φ in φ]
@@ -97,7 +97,7 @@ z = [cospi(θ) for θ in θ, φ in φ]
 rand([-1f0, 1f0], 3)
 pts = vec(Point3f0.(x, y, z))
 surface(x, y, z, image = Makie.logo())
-</code></pre><p><img src="../media/image_on_surface_sphere.png" alt="library lines 821:829"/></p><h2><a class="nav-anchor" id="&quot;Arrows-on-Sphere&quot;-1" href="#&quot;Arrows-on-Sphere&quot;-1">&quot;Arrows on Sphere&quot;</a></h2><p>Tags: <code>3d</code>, <code>arrows</code>, <code>documentation</code>, <code>sphere</code>, <code>surface</code>.</p><pre><code class="language-julia">n = 20
+</code></pre><p><img src="media/image_on_surface_sphere.png" alt="library lines 821:829"/></p><h2><a class="nav-anchor" id="&quot;Arrows-on-Sphere&quot;-1" href="#&quot;Arrows-on-Sphere&quot;-1">&quot;Arrows on Sphere&quot;</a></h2><p>Tags: <code>3d</code>, <code>arrows</code>, <code>documentation</code>, <code>sphere</code>, <code>surface</code>.</p><pre><code class="language-julia">n = 20
 f   = (x,y,z) -&gt; x*exp(cos(y)*z)
 ∇f  = (x,y,z) -&gt; Point3f0(exp(cos(y)*z), -sin(y)*z*x*exp(cos(y)*z), x*cos(y)*exp(cos(y)*z))
 ∇ˢf = (x,y,z) -&gt; ∇f(x,y,z) - Point3f0(x,y,z)*dot(Point3f0(x,y,z), ∇f(x,y,z))
@@ -116,4 +116,4 @@ arrows!(
     pts, ∇ˢF,
     arrowsize = 0.03, linecolor = :white, linewidth = 3
 )
-</code></pre><p><img src="../media/arrows_on_sphere.png" alt="library lines 832:847"/></p><footer><hr/><a class="previous" href="examples-scatter.html"><span class="direction">Previous</span><span class="title"><code>scatter</code></span></a><a class="next" href="examples-text.html"><span class="direction">Next</span><span class="title"><code>text</code></span></a></footer></article></body></html>
+</code></pre><p><img src="media/arrows_on_sphere.png" alt="library lines 832:847"/></p><footer><hr/><a class="previous" href="examples-scatter.html"><span class="direction">Previous</span><span class="title"><code>scatter</code></span></a><a class="next" href="examples-text.html"><span class="direction">Next</span><span class="title"><code>text</code></span></a></footer></article></body></html>

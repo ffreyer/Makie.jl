@@ -23,11 +23,11 @@ connectivity = [
 color = [0.0, 0.0, 0.0, 0.0, -0.375, 0.0, 0.0, 0.0, 0.0]
 scene = mesh(coordinates, connectivity, color = color, shading = false)
 wireframe!(scene[end][1], color = (:black, 0.6), linewidth = 3)
-</code></pre><p><img src="../media/fem_mesh_2d.png" alt="library lines 38:61"/></p><h2><a class="nav-anchor" id="&quot;colored-triangle&quot;-1" href="#&quot;colored-triangle&quot;-1">&quot;colored triangle&quot;</a></h2><p>Tags: <code>2d</code>, <code>mesh</code>, <code>polygon</code>.</p><pre><code class="language-julia">mesh(
+</code></pre><p><img src="media/fem_mesh_2d.png" alt="library lines 38:61"/></p><h2><a class="nav-anchor" id="&quot;colored-triangle&quot;-1" href="#&quot;colored-triangle&quot;-1">&quot;colored triangle&quot;</a></h2><p>Tags: <code>2d</code>, <code>mesh</code>, <code>polygon</code>.</p><pre><code class="language-julia">mesh(
     [(0.0, 0.0), (0.5, 1.0), (1.0, 0.0)], color = [:red, :green, :blue],
     shading = false
 )
-</code></pre><p><img src="../media/colored_triangle.png" alt="library lines 64:64"/></p><h2><a class="nav-anchor" id="&quot;FEM-mesh-3D&quot;-1" href="#&quot;FEM-mesh-3D&quot;-1">&quot;FEM mesh 3D&quot;</a></h2><p>Tags: <code>3d</code>, <code>fem</code>, <code>mesh</code>.</p><pre><code class="language-julia">using GeometryTypes
+</code></pre><p><img src="media/colored_triangle.png" alt="library lines 64:64"/></p><h2><a class="nav-anchor" id="&quot;FEM-mesh-3D&quot;-1" href="#&quot;FEM-mesh-3D&quot;-1">&quot;FEM mesh 3D&quot;</a></h2><p>Tags: <code>3d</code>, <code>fem</code>, <code>mesh</code>.</p><pre><code class="language-julia">using GeometryTypes
 
 cat = Makie.loadasset(&quot;cat.obj&quot;)
 vertices = decompose(Point3f0, cat)
@@ -38,7 +38,7 @@ mesh(
     coordinates, connectivity,
     color = rand(length(vertices))
 )
-</code></pre><p><img src="../media/fem_mesh_3d.png" alt="library lines 164:170"/></p><h2><a class="nav-anchor" id="&quot;Fluctuation-3D&quot;-1" href="#&quot;Fluctuation-3D&quot;-1">&quot;Fluctuation 3D&quot;</a></h2><p>Tags: <code>3d</code>, <code>animated</code>, <code>axis</code>, <code>mesh</code>, <code>meshscatter</code>.</p><pre><code class="language-julia">using GeometryTypes, Colors
+</code></pre><p><img src="media/fem_mesh_3d.png" alt="library lines 164:170"/></p><h2><a class="nav-anchor" id="&quot;Fluctuation-3D&quot;-1" href="#&quot;Fluctuation-3D&quot;-1">&quot;Fluctuation 3D&quot;</a></h2><p>Tags: <code>3d</code>, <code>animated</code>, <code>axis</code>, <code>mesh</code>, <code>meshscatter</code>.</p><pre><code class="language-julia">using GeometryTypes, Colors
 
 scene = Scene()
 # define points/edges
@@ -92,20 +92,20 @@ hp = meshscatter!(
     scene, pG,
     color = colorsp, marker = meshS, markersize = radius,
 )
-</code></pre><p><img src="../media/fluctuation_3d.png" alt="library lines 218:267"/></p><h2><a class="nav-anchor" id="&quot;Normals-of-a-Cat&quot;-1" href="#&quot;Normals-of-a-Cat&quot;-1">&quot;Normals of a Cat&quot;</a></h2><p>Tags: <code>3d</code>, <code>cat</code>, <code>linesegment</code>, <code>mesh</code>.</p><pre><code class="language-julia">x = Makie.loadasset(&quot;cat.obj&quot;)
+</code></pre><p><img src="media/fluctuation_3d.png" alt="library lines 218:267"/></p><h2><a class="nav-anchor" id="&quot;Normals-of-a-Cat&quot;-1" href="#&quot;Normals-of-a-Cat&quot;-1">&quot;Normals of a Cat&quot;</a></h2><p>Tags: <code>3d</code>, <code>cat</code>, <code>linesegment</code>, <code>mesh</code>.</p><pre><code class="language-julia">x = Makie.loadasset(&quot;cat.obj&quot;)
 mesh(x, color = :black)
 pos = map(x.vertices, x.normals) do p, n
     p =&gt; p .+ (normalize(n) .* 0.05f0)
 end
 linesegments!(pos, color = :blue)
-</code></pre><p><img src="../media/normals_of_a_cat.png" alt="library lines 318:323"/></p><h2><a class="nav-anchor" id="&quot;Sphere-Mesh&quot;-1" href="#&quot;Sphere-Mesh&quot;-1">&quot;Sphere Mesh&quot;</a></h2><p>Tags: <code>3d</code>, <code>mesh</code>.</p><pre><code class="language-julia">mesh(Sphere(Point3f0(0), 1f0), color = :blue)
-</code></pre><p><img src="../media/sphere_mesh.png" alt="library lines 327:327"/></p><h2><a class="nav-anchor" id="&quot;Textured-Mesh&quot;-1" href="#&quot;Textured-Mesh&quot;-1">&quot;Textured Mesh&quot;</a></h2><p>Tags: <code>3d</code>, <code>cat</code>, <code>documentation</code>, <code>mesh</code>, <code>texture</code>.</p><pre><code class="language-julia">using FileIO
+</code></pre><p><img src="media/normals_of_a_cat.png" alt="library lines 318:323"/></p><h2><a class="nav-anchor" id="&quot;Sphere-Mesh&quot;-1" href="#&quot;Sphere-Mesh&quot;-1">&quot;Sphere Mesh&quot;</a></h2><p>Tags: <code>3d</code>, <code>mesh</code>.</p><pre><code class="language-julia">mesh(Sphere(Point3f0(0), 1f0), color = :blue)
+</code></pre><p><img src="media/sphere_mesh.png" alt="library lines 327:327"/></p><h2><a class="nav-anchor" id="&quot;Textured-Mesh&quot;-1" href="#&quot;Textured-Mesh&quot;-1">&quot;Textured Mesh&quot;</a></h2><p>Tags: <code>3d</code>, <code>cat</code>, <code>documentation</code>, <code>mesh</code>, <code>texture</code>.</p><pre><code class="language-julia">using FileIO
 
 scene = Scene(resolution = (500, 500))
 catmesh = FileIO.load(Makie.assetpath(&quot;cat.obj&quot;), GLNormalUVMesh)
 mesh(catmesh, color = Makie.loadasset(&quot;diffusemap.tga&quot;))
-</code></pre><p><img src="../media/textured_mesh.png" alt="library lines 503:506"/></p><h2><a class="nav-anchor" id="&quot;Load-Mesh&quot;-1" href="#&quot;Load-Mesh&quot;-1">&quot;Load Mesh&quot;</a></h2><p>Tags: <code>3d</code>, <code>cat</code>, <code>documentation</code>, <code>mesh</code>.</p><pre><code class="language-julia">mesh(Makie.loadasset(&quot;cat.obj&quot;))
-</code></pre><p><img src="../media/load_mesh.png" alt="library lines 509:509"/></p><h2><a class="nav-anchor" id="&quot;Colored-Mesh&quot;-1" href="#&quot;Colored-Mesh&quot;-1">&quot;Colored Mesh&quot;</a></h2><p>Tags: <code>3d</code>, <code>axis</code>, <code>documentation</code>, <code>mesh</code>.</p><pre><code class="language-julia">x = [0, 1, 2, 0]
+</code></pre><p><img src="media/textured_mesh.png" alt="library lines 503:506"/></p><h2><a class="nav-anchor" id="&quot;Load-Mesh&quot;-1" href="#&quot;Load-Mesh&quot;-1">&quot;Load Mesh&quot;</a></h2><p>Tags: <code>3d</code>, <code>cat</code>, <code>documentation</code>, <code>mesh</code>.</p><pre><code class="language-julia">mesh(Makie.loadasset(&quot;cat.obj&quot;))
+</code></pre><p><img src="media/load_mesh.png" alt="library lines 509:509"/></p><h2><a class="nav-anchor" id="&quot;Colored-Mesh&quot;-1" href="#&quot;Colored-Mesh&quot;-1">&quot;Colored Mesh&quot;</a></h2><p>Tags: <code>3d</code>, <code>axis</code>, <code>documentation</code>, <code>mesh</code>.</p><pre><code class="language-julia">x = [0, 1, 2, 0]
 y = [0, 0, 1, 2]
 z = [0, 2, 0, 1]
 color = [:red, :green, :blue, :yellow]
@@ -115,5 +115,5 @@ k = [2, 3, 1, 3]
 # indices interpreted as triangles (every 3 sequential indices)
 indices = [1, 2, 3,   1, 3, 4,   1, 4, 2,   2, 3, 4]
 mesh(x, y, z, indices, color = color)
-</code></pre><p><img src="../media/colored_mesh.png" alt="library lines 512:521"/></p><h2><a class="nav-anchor" id="&quot;Wireframe-of-a-Mesh&quot;-1" href="#&quot;Wireframe-of-a-Mesh&quot;-1">&quot;Wireframe of a Mesh&quot;</a></h2><p>Tags: <code>3d</code>, <code>cat</code>, <code>documentation</code>, <code>mesh</code>, <code>wireframe</code>.</p><pre><code class="language-julia">wireframe(Makie.loadasset(&quot;cat.obj&quot;))
-</code></pre><p><img src="../media/wireframe_of_a_mesh.png" alt="library lines 524:524"/></p><footer><hr/><a class="previous" href="examples-linesegments.html"><span class="direction">Previous</span><span class="title"><code>linesegments</code></span></a><a class="next" href="examples-meshscatter.html"><span class="direction">Next</span><span class="title"><code>meshscatter</code></span></a></footer></article></body></html>
+</code></pre><p><img src="media/colored_mesh.png" alt="library lines 512:521"/></p><h2><a class="nav-anchor" id="&quot;Wireframe-of-a-Mesh&quot;-1" href="#&quot;Wireframe-of-a-Mesh&quot;-1">&quot;Wireframe of a Mesh&quot;</a></h2><p>Tags: <code>3d</code>, <code>cat</code>, <code>documentation</code>, <code>mesh</code>, <code>wireframe</code>.</p><pre><code class="language-julia">wireframe(Makie.loadasset(&quot;cat.obj&quot;))
+</code></pre><p><img src="media/wireframe_of_a_mesh.png" alt="library lines 524:524"/></p><footer><hr/><a class="previous" href="examples-linesegments.html"><span class="direction">Previous</span><span class="title"><code>linesegments</code></span></a><a class="next" href="examples-meshscatter.html"><span class="direction">Next</span><span class="title"><code>meshscatter</code></span></a></footer></article></body></html>

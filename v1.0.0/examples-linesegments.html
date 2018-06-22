@@ -10,7 +10,7 @@ poly!(scene, [Rectangle{Float32}(50+i, 50+i, 20, 20) for i = 1:100:400], strokew
 linesegments!(scene,
     [Point2f0(50+i, 50+i) =&gt; Point2f0(i + 80, i + 80) for i = 1:100:400], linewidth = 8, color = :purple
 )
-</code></pre><p><img src="../media/polygons.png" alt="library lines 93:100"/></p><h2><a class="nav-anchor" id="&quot;Moire&quot;-1" href="#&quot;Moire&quot;-1">&quot;Moire&quot;</a></h2><p>Tags: <code>3d</code>, <code>camera</code>, <code>lines</code>, <code>linesegments</code>, <code>mp4</code>, <code>record</code>, <code>rotate_cam!</code>, <code>update_cam!</code>.</p><pre><code class="language-julia">function cartesian(ll)
+</code></pre><p><img src="media/polygons.png" alt="library lines 93:100"/></p><h2><a class="nav-anchor" id="&quot;Moire&quot;-1" href="#&quot;Moire&quot;-1">&quot;Moire&quot;</a></h2><p>Tags: <code>3d</code>, <code>camera</code>, <code>lines</code>, <code>linesegments</code>, <code>mp4</code>, <code>record</code>, <code>rotate_cam!</code>, <code>update_cam!</code>.</p><pre><code class="language-julia">function cartesian(ll)
     return Point3f0(
         cos(ll[1]) * sin(ll[2]),
         sin(ll[1]) * sin(ll[2]),
@@ -53,6 +53,6 @@ record(scene, @outputfile(mp4), 1:300) do i
     rotate_cam!(scene, 0.0, 0.01, 0.01)
 end
 </code></pre><video controls autoplay loop muted>
-  <source src="../media/moire.mp4" type="video/mp4">
+  <source src="media/moire.mp4" type="video/mp4">
   Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.
 </video><footer><hr/><a class="previous" href="examples-lines.html"><span class="direction">Previous</span><span class="title"><code>lines</code></span></a><a class="next" href="examples-mesh.html"><span class="direction">Next</span><span class="title"><code>mesh</code></span></a></footer></article></body></html>

@@ -5,7 +5,7 @@ linepos = view(positions, rand(1:length(positions), 1000))
 scene = lines(linepos, linewidth = 0.1, color = :black)
 scatter!(scene, positions, strokewidth = 0.02, strokecolor = :white, color = RGBAf0(0.9, 0.2, 0.4, 0.6))
 scene
-</code></pre><p><img src="../media/connected_sphere.png" alt="library lines 274:279"/></p><h2><a class="nav-anchor" id="&quot;Moire&quot;-1" href="#&quot;Moire&quot;-1">&quot;Moire&quot;</a></h2><p>Tags: <code>3d</code>, <code>camera</code>, <code>lines</code>, <code>linesegments</code>, <code>mp4</code>, <code>record</code>, <code>rotate_cam!</code>, <code>update_cam!</code>.</p><pre><code class="language-julia">function cartesian(ll)
+</code></pre><p><img src="media/connected_sphere.png" alt="library lines 274:279"/></p><h2><a class="nav-anchor" id="&quot;Moire&quot;-1" href="#&quot;Moire&quot;-1">&quot;Moire&quot;</a></h2><p>Tags: <code>3d</code>, <code>camera</code>, <code>lines</code>, <code>linesegments</code>, <code>mp4</code>, <code>record</code>, <code>rotate_cam!</code>, <code>update_cam!</code>.</p><pre><code class="language-julia">function cartesian(ll)
     return Point3f0(
         cos(ll[1]) * sin(ll[2]),
         sin(ll[1]) * sin(ll[2]),
@@ -48,7 +48,7 @@ record(scene, @outputfile(mp4), 1:300) do i
     rotate_cam!(scene, 0.0, 0.01, 0.01)
 end
 </code></pre><video controls autoplay loop muted>
-  <source src="../media/moire.mp4" type="video/mp4">
+  <source src="media/moire.mp4" type="video/mp4">
   Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.
 </video><h2><a class="nav-anchor" id="&quot;Line-GIF&quot;-1" href="#&quot;Line-GIF&quot;-1">&quot;Line GIF&quot;</a></h2><p>Tags: <code>3d</code>, <code>animated</code>, <code>gif</code>, <code>lines</code>, <code>offset</code>.</p><pre><code class="language-julia">us = linspace(0, 1, 100)
 scene = Scene()
@@ -83,11 +83,11 @@ path = record(scene, @outputfile(gif), 1:200) do i
     end
 end
 path
-</code></pre><p><img src="../media/line_gif.gif" alt="library lines 397:429"/></p><h2><a class="nav-anchor" id="&quot;Line-Function&quot;-1" href="#&quot;Line-Function&quot;-1">&quot;Line Function&quot;</a></h2><p>Tags: <code>2d</code>, <code>documentation</code>, <code>lines</code>.</p><pre><code class="language-julia">scene = Scene()
+</code></pre><p><img src="media/line_gif.gif" alt="library lines 397:429"/></p><h2><a class="nav-anchor" id="&quot;Line-Function&quot;-1" href="#&quot;Line-Function&quot;-1">&quot;Line Function&quot;</a></h2><p>Tags: <code>2d</code>, <code>documentation</code>, <code>lines</code>.</p><pre><code class="language-julia">scene = Scene()
 x = linspace(0, 3pi)
 lines!(scene, x, sin.(x))
 lines!(scene, x, cos.(x), color = :blue)
-</code></pre><p><img src="../media/line_function.png" alt="library lines 568:571"/></p><h2><a class="nav-anchor" id="&quot;Interaction-with-Mouse&quot;-1" href="#&quot;Interaction-with-Mouse&quot;-1">&quot;Interaction with Mouse&quot;</a></h2><p>Tags: <code>documentation</code>, <code>interactive</code>, <code>lines</code>, <code>marker</code>, <code>scatter</code>.</p><pre><code class="language-julia">scene = Scene()
+</code></pre><p><img src="media/line_function.png" alt="library lines 568:571"/></p><h2><a class="nav-anchor" id="&quot;Interaction-with-Mouse&quot;-1" href="#&quot;Interaction-with-Mouse&quot;-1">&quot;Interaction with Mouse&quot;</a></h2><p>Tags: <code>documentation</code>, <code>interactive</code>, <code>lines</code>, <code>marker</code>, <code>scatter</code>.</p><pre><code class="language-julia">scene = Scene()
 r = linspace(0, 3, 4)
 cam2d!(scene)
 time = Node(0.0)
@@ -125,6 +125,6 @@ record(scene, @outputfile(mp4), linspace(0.01, 0.4, 100)) do i
     push!(time, time[] + 0.1)
 end
 </code></pre><video controls autoplay loop muted>
-  <source src="../media/interaction_with_mouse.mp4" type="video/mp4">
+  <source src="media/interaction_with_mouse.mp4" type="video/mp4">
   Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.
 </video><footer><hr/><a class="previous" href="examples-image.html"><span class="direction">Previous</span><span class="title"><code>image</code></span></a><a class="next" href="examples-linesegments.html"><span class="direction">Next</span><span class="title"><code>linesegments</code></span></a></footer></article></body></html>
