@@ -26,7 +26,7 @@ lines = lift(p1[1], p2[1]) do pos1, pos2
 end
 linesegments!(scene, lines, linestyle = :dot, limits = limits)
 # record a video
-record(scene, &quot;C:\\Users\\sdani\\.julia\\v0.6\\Makie\\docs\\media\\videostream.mp4&quot;, 1:300) do i
+record(scene, &quot;/home/s/.julia/v0.6/Makie/docs/media/videostream.mp4&quot;, 1:300) do i
     push!(t, Base.time())
 end
 

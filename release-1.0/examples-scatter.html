@@ -10,7 +10,7 @@ record(scene, @outputfile(mp4), r) do m
     s[2] = m[:, 2]
 end
 </code></pre><video controls autoplay loop muted>
-  <source src="..\media\animated_scatter.mp4" type="video/mp4">
+  <source src="../media/animated_scatter.mp4" type="video/mp4">
   Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.
 </video><h2><a class="nav-anchor" id="&quot;Connected-Sphere&quot;-1" href="#&quot;Connected-Sphere&quot;-1">&quot;Connected Sphere&quot;</a></h2><p>Tags: <code>3d</code>, <code>axis</code>, <code>lines</code>, <code>scatter</code>, <code>views</code>.</p><pre><code class="language-julia">large_sphere = Sphere(Point3f0(0), 1f0)
 positions = decompose(Point3f0, large_sphere)
@@ -56,7 +56,7 @@ record(scene, @outputfile(mp4), linspace(0, 10, 100)) do i
     push!(time, i)
 end
 </code></pre><video controls autoplay loop muted>
-  <source src="..\media\interaction.mp4" type="video/mp4">
+  <source src="../media/interaction.mp4" type="video/mp4">
   Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.
 </video><h2><a class="nav-anchor" id="&quot;Interaction-with-Mouse&quot;-1" href="#&quot;Interaction-with-Mouse&quot;-1">&quot;Interaction with Mouse&quot;</a></h2><p>Tags: <code>documentation</code>, <code>interactive</code>, <code>lines</code>, <code>marker</code>, <code>scatter</code>.</p><pre><code class="language-julia">scene = Scene()
 r = linspace(0, 3, 4)
@@ -96,7 +96,7 @@ record(scene, @outputfile(mp4), linspace(0.01, 0.4, 100)) do i
     push!(time, time[] + 0.1)
 end
 </code></pre><video controls autoplay loop muted>
-  <source src="..\media\interaction_with_mouse.mp4" type="video/mp4">
+  <source src="../media/interaction_with_mouse.mp4" type="video/mp4">
   Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.
 </video><h2><a class="nav-anchor" id="&quot;Marker-sizes-Marker-colors&quot;-1" href="#&quot;Marker-sizes-Marker-colors&quot;-1">&quot;Marker sizes + Marker colors&quot;</a></h2><p>Tags: <code>2d</code>, <code>color</code>, <code>documentation</code>, <code>markersize</code>, <code>scatter</code>.</p><pre><code class="language-julia">scene = Scene(resolution = (500, 500))
 scatter!(

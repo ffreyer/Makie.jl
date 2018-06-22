@@ -11,7 +11,7 @@ lines = lift(p1[1], p2[1]) do pos1, pos2
     map((a, b)-&gt; (a, b), pos1, pos2)
 end
 linesegments!(scene, lines)
-record(scene, &quot;C:\\Users\\sdani\\.julia\\v0.6\\Makie\\docs\\media\\interaction.mp4&quot;, linspace(0, 10, 100)) do i
+record(scene, &quot;/home/s/.julia/v0.6/Makie/docs/media/interaction.mp4&quot;, linspace(0, 10, 100)) do i
     push!(time, i)
 end
 
@@ -49,7 +49,7 @@ p2[:marker] = &#39;o&#39;
 # push a reasonable mouse position in case this is executed as part
 # of the documentation
 push!(scene.events.mouseposition, (250.0, 250.0))
-record(scene, &quot;C:\\Users\\sdani\\.julia\\v0.6\\Makie\\docs\\media\\interaction_with_mouse.mp4&quot;, linspace(0.01, 0.4, 100)) do i
+record(scene, &quot;/home/s/.julia/v0.6/Makie/docs/media/interaction_with_mouse.mp4&quot;, linspace(0.01, 0.4, 100)) do i
     push!(scene.events.mouseposition, (250.0, 250.0))
     p2[:markersize] = i
     push!(time, time[] + 0.1)
