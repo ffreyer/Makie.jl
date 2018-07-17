@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>lines · Makie.jl</title><link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js" data-main="assets/documenter.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><link href="assets/documenter.css" rel="stylesheet" type="text/css"/></head><body><nav class="toc"><a href="index.html"><img class="logo" src="assets/logo.png" alt="Makie.jl logo"/></a><h1>Makie.jl</h1><select id="version-selector" onChange="window.location.href=this.value" style="visibility: hidden"></select><form class="search" id="search-form" action="search.html"><input id="search-query" name="q" type="text" placeholder="Search docs"/></form><ul><li><a class="toctext" href="index.html">Home</a></li><li><span class="toctext">Basics</span><ul><li><a class="toctext" href="help_functions.html">Help functions</a></li><li><a class="toctext" href="functions-overview.html">Atomic functions overview</a></li><li><a class="toctext" href="signatures.html">Plot function signatures</a></li><li><a class="toctext" href="attributes.html">Plot attributes</a></li><li><a class="toctext" href="interaction.html">Interaction</a></li><li><a class="toctext" href="output.html">Output</a></li></ul></li><li><span class="toctext">Examples</span><ul><li><a class="toctext" href="examples-heatmap.html"><code>heatmap</code></a></li><li><a class="toctext" href="examples-image.html"><code>image</code></a></li><li class="current"><a class="toctext" href="examples-lines.html"><code>lines</code></a><ul class="internal"><li><a class="toctext" href="#&quot;Connected-Sphere&quot;-1">&quot;Connected Sphere&quot;</a></li><li><a class="toctext" href="#&quot;Moire&quot;-1">&quot;Moire&quot;</a></li><li><a class="toctext" href="#&quot;Line-GIF&quot;-1">&quot;Line GIF&quot;</a></li><li><a class="toctext" href="#&quot;Line-Function&quot;-1">&quot;Line Function&quot;</a></li><li><a class="toctext" href="#&quot;Interaction-with-Mouse&quot;-1">&quot;Interaction with Mouse&quot;</a></li></ul></li><li><a class="toctext" href="examples-linesegments.html"><code>linesegments</code></a></li><li><a class="toctext" href="examples-mesh.html"><code>mesh</code></a></li><li><a class="toctext" href="examples-meshscatter.html"><code>meshscatter</code></a></li><li><a class="toctext" href="examples-scatter.html"><code>scatter</code></a></li><li><a class="toctext" href="examples-surface.html"><code>surface</code></a></li><li><a class="toctext" href="examples-text.html"><code>text</code></a></li><li><a class="toctext" href="examples-volume.html"><code>volume</code></a></li><li><a class="toctext" href="examples-contour.html"><code>contour</code></a></li></ul></li></ul></nav><article id="docs"><header><nav><ul><li>Examples</li><li><a href="examples-lines.html"><code>lines</code></a></li></ul><a class="edit-page" href="https://github.com/JuliaPlots/Makie.jl/blob/master/docs/src/examples-lines.md"><span class="fa"></span> Edit on GitHub</a></nav><hr/><div id="topbar"><span>lines</span><a class="fa fa-bars" href="#"></a></div></header><h1><a class="nav-anchor" id="lines-1" href="#lines-1"><code>lines</code></a></h1><h2><a class="nav-anchor" id="&quot;Connected-Sphere&quot;-1" href="#&quot;Connected-Sphere&quot;-1">&quot;Connected Sphere&quot;</a></h2><p>Tags: <code>3d</code>, <code>axis</code>, <code>lines</code>, <code>scatter</code>, <code>views</code>.</p><pre><code class="language-julia">using Makie
+
+large_sphere = Sphere(Point3f0(0), 1f0)
+positions = decompose(Point3f0, large_sphere)
+linepos = view(positions, rand(1:length(positions), 1000))
+scene = lines(linepos, linewidth = 0.1, color = :black)
+scatter!(scene, positions, strokewidth = 10, strokecolor = :white, color = RGBAf0(0.9, 0.2, 0.4, 0.6))
+scene
+
+</code></pre><h2><a class="nav-anchor" id="&quot;Moire&quot;-1" href="#&quot;Moire&quot;-1">&quot;Moire&quot;</a></h2><p>Tags: <code>3d</code>, <code>camera</code>, <code>lines</code>, <code>linesegments</code>, <code>mp4</code>, <code>record</code>, <code>rotate_cam!</code>, <code>update_cam!</code>.</p><pre><code class="language-julia">using Makie
+
+function cartesian(ll)
+    return Point3f0(
+        cos(ll[1]) * sin(ll[2]),
+        sin(ll[1]) * sin(ll[2]),
+        cos(ll[2])
+    )
+end
+fract(x) = x - floor(x)
+function calcpositions(rings, index, time, audio)
+    movement, radius, speed, spin = 1, 2, 3, 4;
+    position = Point3f0(0.0)
+    precision = 0.2f0
+    for ring in rings
+        position += ring[radius] * cartesian(
+            precision *
+            index *
+            Point2f0(ring[spin] + Point2f0(sin(time * ring[speed]), cos(time * ring[speed])) * ring[movement])
+        )
+    end
+    amplitude = audio[round(Int, clamp(fract(position[1] * 0.1), 0, 1) * (25000-1)) + 1]; # index * 0.002
+    position *= 1.0 + amplitude * 0.5;
+    position
+end
+rings = [(0.1f0, 1.0f0, 0.00001f0, Point2f0(0.2, 0.1)), (0.1f0, 0.0f0, 0.0002f0, Point2f0(0.052, 0.05))]
+N2 = 25000
+t_audio = sin.(linspace(0, 10pi, N2)) .+ (cos.(linspace(-3, 7pi, N2)) .* 0.6) .+ (rand(Float32, N2) .* 0.1) ./ 2f0
+start = time()
+t = (time() - start) * 100
+pos = calcpositions.((rings,), 1:N2, t, (t_audio,))
+
+scene = lines(pos, color = RGBAf0.(to_colormap(:RdBu, N2), 0.6), thickness = 0.6f0, show_axis = false)
+linesegments!(scene, FRect3D(Vec3f0(-1.5), Vec3f0(3)), raw = true, linewidth = 3, linestyle = :dot)
+eyepos = Vec3f0(5, 1.5, 0.5)
+lookat = Vec3f0(0)
+update_cam!(scene, eyepos, lookat)
+l = scene[1]
+N = 150
+record(scene, &quot;./docs/media/moire.mp4&quot;, 1:N) do i
+    t = (time() - start) * 700
+    pos .= calcpositions.((rings,), 1:N2, t, (t_audio,))
+    l[1] = pos # update argument 1
+    rotate_cam!(scene, 0.0, 0.01, 0.01)
+end
+
+</code></pre><video controls autoplay loop muted>
+  <source src="media\moire.mp4" type="video/mp4">
+  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.
+</video><h2><a class="nav-anchor" id="&quot;Line-GIF&quot;-1" href="#&quot;Line-GIF&quot;-1">&quot;Line GIF&quot;</a></h2><p>Tags: <code>3d</code>, <code>animated</code>, <code>gif</code>, <code>lines</code>, <code>offset</code>, <code>record</code>.</p><pre><code class="language-julia">using Makie
+
+us = linspace(0, 1, 100)
+scene = Scene()
+scene = linesegments!(scene, FRect3D(Vec3f0(0, -1, 0), Vec3f0(1, 2, 2)))
+p = lines!(scene, us, sin.(us .+ time()), zeros(100), linewidth = 3)[end]
+lineplots = [p]
+translate!(p, 0, 0, 0)
+colors = to_colormap(:RdYlBu)
+#display(scene) # would be needed without the record
+N = 150
+path = record(scene, &quot;./docs/media/line_gif.gif&quot;, 1:N) do i
+    global lineplots, scene
+    if length(lineplots) &lt; 20
+        p = lines!(
+            scene,
+            us, sin.(us .+ time()), zeros(100),
+            color = colors[length(lineplots)],
+            linewidth = 3
+        )[end]
+        unshift!(lineplots, p)
+        translate!(p, 0, 0, 0)
+        #TODO automatically insert new plots
+        insert!(Makie.global_gl_screen(), scene, p)
+    else
+        lineplots = circshift(lineplots, 1)
+        lp = first(lineplots)
+        lp[2] = sin.(us .+ time())
+        translate!(lp, 0, 0, 0)
+    end
+    for lp in Iterators.drop(lineplots, 1)
+        z = translation(lp)[][3]
+        translate!(lp, 0, 0, z + 0.1)
+    end
+end
+path
+
+</code></pre><p><img src="media\\line_gif.gif" alt="library lines 411:444"/></p><h2><a class="nav-anchor" id="&quot;Line-Function&quot;-1" href="#&quot;Line-Function&quot;-1">&quot;Line Function&quot;</a></h2><p>Tags: <code>2d</code>, <code>documentation</code>, <code>lines</code>.</p><pre><code class="language-julia">using Makie
+
+scene = Scene()
+x = linspace(0, 3pi)
+lines!(scene, x, sin.(x))
+lines!(scene, x, cos.(x), color = :blue)
+
+</code></pre><h2><a class="nav-anchor" id="&quot;Interaction-with-Mouse&quot;-1" href="#&quot;Interaction-with-Mouse&quot;-1">&quot;Interaction with Mouse&quot;</a></h2><p>Tags: <code>documentation</code>, <code>interactive</code>, <code>lines</code>, <code>marker</code>, <code>record</code>, <code>scatter</code>.</p><pre><code class="language-julia">using Makie
+
+scene = Scene()
+r = linspace(0, 3, 4)
+cam2d!(scene)
+time = Node(0.0)
+pos = lift(scene.events.mouseposition, time) do mpos, t
+    map(linspace(0, 2pi, 60)) do i
+        circle = Point2f0(sin(i), cos(i))
+        mouse = to_world(scene, Point2f0(mpos))
+        secondary = (sin((i * 10f0) + t) * 0.09) * normalize(circle)
+        (secondary .+ circle) .+ mouse
+    end
+end
+scene = lines!(scene, pos, raw = true)
+p1 = scene[end]
+p2 = scatter!(
+    scene,
+    pos, markersize = 0.1f0,
+    marker = :star5,
+    color = p1[:color],
+    raw = true
+)[end]
+scene
+display(Makie.global_gl_screen(), scene)
+
+p1[:color] = RGBAf0(1, 0, 0, 0.1)
+p2[:marker] = &#39;π&#39;
+p2[:markersize] = 0.2
+
+# push a reasonable mouse position in case this is executed as part
+# of the documentation
+push!(scene.events.mouseposition, (250.0, 250.0))
+N = 50
+record(scene, &quot;./docs/media/interaction_with_mouse.mp4&quot;, linspace(0.01, 0.4, N)) do i
+    push!(scene.events.mouseposition, (250.0, 250.0))
+    p2[:markersize] = i
+    push!(time, time[] + 0.1)
+end
+
+</code></pre><video controls autoplay loop muted>
+  <source src="media\interaction_with_mouse.mp4" type="video/mp4">
+  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.
+</video><footer><hr/><a class="previous" href="examples-image.html"><span class="direction">Previous</span><span class="title"><code>image</code></span></a><a class="next" href="examples-linesegments.html"><span class="direction">Next</span><span class="title"><code>linesegments</code></span></a></footer></article></body></html>
