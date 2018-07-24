@@ -37,7 +37,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Help functions",
     "title": "AbstractPlotting.help",
     "category": "function",
-    "text": "help(func)\n\nWelcome to the main help function of Makie.jl / AbstractArray.jl.\n\nFor help on a specific function\'s arguments, type help_arguments(function_name).\n\nFor help on a specific function\'s attributes, type help_attributes(plot_Type).\n\n\n\n"
+    "text": "help(func[; extended = false])\n\nWelcome to the main help function of Makie.jl / AbstractArray.jl.\n\nFor help on a specific function\'s arguments, type help_arguments(function_name).\n\nFor help on a specific function\'s attributes, type help_attributes(plot_Type).\n\nUse the optional extended = true keyword argument to see more details.\n\n\n\n"
 },
 
 {
@@ -69,7 +69,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Help functions",
     "title": "AbstractPlotting.help_attributes",
     "category": "function",
-    "text": "help_attributes(io, Typ; extended = false)\n\nReturns a list of attributes for the plot type Typ. The attributes returned extend those attributes found in the default_theme.\n\nUse the optional keyword argument extended (default = false) to show in addition the default values of each attribute.\n\n\n\n"
+    "text": "help_attributes(io, Typ[; extended = false])\n\nReturns a list of attributes for the plot type Typ. The attributes returned extend those attributes found in the default_theme.\n\nUse the optional keyword argument extended (default = false) to show in addition the default values of each attribute.\n\n\n\n"
 },
 
 {
@@ -133,7 +133,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Atomic functions overview",
     "title": "heatmap",
     "category": "section",
-    "text": "heatmapAvailable attributes and their defaults for Heatmap{...} where T are:   alpha           1.0\n  color           :black\n  colormap        :viridis\n  colorrange      nothing\n  interpolate     false\n  levels          1\n  linewidth       0.0\n  visible         true(Image: library lines 70:75) (Image: library lines 119:119) (Image: library lines 582:593) (Image: library lines 666:667) (Image: library lines 858:869)"
+    "text": "heatmapAvailable attributes and their defaults for Heatmap{...} where T are:   alpha           1.0\n  color           :black\n  colormap        :viridis\n  colorrange      AbstractPlotting.Automatic()\n  interpolate     false\n  levels          1\n  linewidth       0.0\n  visible         true(Image: library lines 5:6) (Image: library lines 108:113) (Image: library lines 157:157) (Image: library lines 119:130) (Image: library lines 44:55)"
 },
 
 {
@@ -149,7 +149,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Atomic functions overview",
     "title": "image",
     "category": "section",
-    "text": "imageAvailable attributes and their defaults for Image{...} where T are:   alpha           1.0\n  color           :black\n  colormap        ColorTypes.RGBA{Float32}[RGBA{Float32}(0.0,0.0,0.0,1.0), RGBA{Float32}(1.0,1.0,1.0,1.0)]\n  colorrange      nothing\n  linewidth       1\n  visible         true(Image: library lines 7:7) (Image: library lines 85:89) (Image: library lines 282:282) (Image: library lines 507:514) (Image: library lines 634:642) (Image: library lines 666:667) (Image: library lines 805:830)"
+    "text": "imageAvailable attributes and their defaults for Image{...} where T are:   alpha           1.0\n  color           :black\n  colormap        ColorTypes.RGBA{Float32}[RGBA{Float32}(0.0,0.0,0.0,1.0), RGBA{Float32}(1.0,1.0,1.0,1.0)]\n  colorrange      AbstractPlotting.Automatic()\n  linewidth       1\n  visible         true(Image: library lines 5:6) (Image: library lines 41:41) (Image: library lines 123:127) (Image: library lines 60:67) (Image: library lines 172:180) (Image: library lines 338:338) (Image: library lines 95:120)"
 },
 
 {
@@ -165,7 +165,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Atomic functions overview",
     "title": "lines",
     "category": "section",
-    "text": "linesAvailable attributes and their defaults for Lines{...} where T are:   alpha           1.0\n  color           :black\n  linestyle       nothing\n  linewidth       1.0\n  visible         true(Image: library lines 274:279) (Image: library lines 364:405) (Image: library lines 411:444) (Image: library lines 520:523) (Image: library lines 670:705) (Image: library lines 757:768)"
+    "text": "linesAvailable attributes and their defaults for Lines{...} where T are:   alpha           1.0\n  color           :black\n  colormap        :viridis\n  colorrange      AbstractPlotting.Automatic()\n  linestyle       nothing\n  linewidth       1.0\n  visible         true(Image: library lines 73:76) (Image: library lines 330:335) (Image: library lines 421:462) (Image: library lines 468:501) (Image: library lines 4:39) (Image: library lines 47:58)\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 1<br><img src=\"media/axis_theming/thumb-axis_theming-1.jpg\" alt=\"Step 1<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 2<br><img src=\"media/axis_theming/thumb-axis_theming-2.jpg\" alt=\"Step 2<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 3<br><img src=\"media/axis_theming/thumb-axis_theming-3.jpg\" alt=\"Step 3<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 4<br><img src=\"media/axis_theming/thumb-axis_theming-4.jpg\" alt=\"Step 4<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 5<br><img src=\"media/axis_theming/thumb-axis_theming-5.jpg\" alt=\"Step 5<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 6<br><img src=\"media/axis_theming/thumb-axis_theming-6.jpg\" alt=\"Step 6<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 7<br><img src=\"media/axis_theming/thumb-axis_theming-7.jpg\" alt=\"Step 7<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 8<br><img src=\"media/axis_theming/thumb-axis_theming-8.jpg\" alt=\"Step 8<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 9<br><img src=\"media/axis_theming/thumb-axis_theming-9.jpg\" alt=\"Step 9<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 10<br><img src=\"media/axis_theming/thumb-axis_theming-10.jpg\" alt=\"Step 10<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 11<br><img src=\"media/axis_theming/thumb-axis_theming-11.jpg\" alt=\"Step 11<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 12<br><img src=\"media/axis_theming/thumb-axis_theming-12.jpg\" alt=\"Step 12<br>\" /></p></div>"
 },
 
 {
@@ -181,7 +181,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Atomic functions overview",
     "title": "linesegments",
     "category": "section",
-    "text": "linesegmentsAvailable attributes and their defaults for LineSegments{...} where T are:   alpha           1.0\n  color           :black\n  linestyle       nothing\n  linewidth       1.0\n  visible         true(Image: library lines 93:101) (Image: library lines 364:405)"
+    "text": "linesegmentsAvailable attributes and their defaults for LineSegments{...} where T are:   alpha           1.0\n  color           :black\n  colormap        :viridis\n  colorrange      AbstractPlotting.Automatic()\n  linestyle       nothing\n  linewidth       1.0\n  visible         true(Image: library lines 131:139) (Image: library lines 421:462) (Image: library lines 4:63)"
 },
 
 {
@@ -197,7 +197,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Atomic functions overview",
     "title": "mesh",
     "category": "section",
-    "text": "meshAvailable attributes and their defaults for Mesh{...} where T are:   alpha           1.0\n  color           :black\n  colormap        :viridis\n  colorrange      nothing\n  interpolate     false\n  linewidth       1\n  shading         true\n  visible         true(Image: library lines 38:61) (Image: library lines 64:64) (Image: library lines 164:170) (Image: library lines 218:267) (Image: library lines 319:324) (Image: library lines 328:328) (Image: library lines 351:360) (Image: library lines 455:458) (Image: library lines 461:461) (Image: library lines 464:473) (Image: library lines 476:476)"
+    "text": "meshAvailable attributes and their defaults for Mesh{...} where T are:   alpha           1.0\n  color           :black\n  colormap        :viridis\n  colorrange      AbstractPlotting.Automatic()\n  interpolate     false\n  linewidth       1\n  shading         true\n  visible         true(Image: library lines 76:99) (Image: library lines 102:102) (Image: library lines 8:11) (Image: library lines 14:14) (Image: library lines 17:26) (Image: library lines 29:29) (Image: library lines 220:226) (Image: library lines 274:323) (Image: library lines 376:381) (Image: library lines 385:385) (Image: library lines 408:417)"
 },
 
 {
@@ -213,7 +213,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Atomic functions overview",
     "title": "meshscatter",
     "category": "section",
-    "text": "meshscatterAvailable attributes and their defaults for MeshScatter{...} where T are:   alpha           1.0\n  color           :black\n  colormap        nothing\n  colorrange      nothing\n  intensity       nothing\n  linewidth       1\n  marker          GeometryTypes.HyperSphere{3,Float32}(Float32[0.0, 0.0, 0.0], 1.0f0)\n  markersize      0.1\n  rotations       1.0 + 0.0im + 0.0jm + 0.0km\n  visible         true(Image: library lines 218:267) (Image: library lines 292:294) (Image: library lines 527:532) (Image: library lines 561:576)"
+    "text": "meshscatterAvailable attributes and their defaults for MeshScatter{...} where T are:   alpha           1.0\n  color           :black\n  colormap        :viridis\n  colorrange      AbstractPlotting.Automatic()\n  linewidth       1\n  marker          GeometryTypes.HyperSphere{3,Float32}(Float32[0.0, 0.0, 0.0], 1.0f0)\n  markersize      0.1\n  rotations       1.0 + 0.0im + 0.0jm + 0.0km\n  visible         true(Image: library lines 80:85) (Image: library lines 99:114) (Image: library lines 274:323) (Image: library lines 348:350) (Image: library lines 4:63)"
 },
 
 {
@@ -229,7 +229,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Atomic functions overview",
     "title": "scatter",
     "category": "section",
-    "text": "scatterAvailable attributes and their defaults for Scatter{...} where T are:   alpha             1.0\n  color             :black\n  colormap          :viridis\n  colorrange        nothing\n  glowcolor         RGBA{N0f8}(0.0,0.0,0.0,0.0)\n  glowwidth         0.0\n  linewidth         1\n  marker            GeometryTypes.HyperSphere{2,T} where T\n  marker_offset     nothing\n  markersize        0.1\n  rotations         AbstractPlotting.Billboard()\n  strokecolor       RGBA{N0f8}(0.0,0.0,0.0,0.0)\n  strokewidth       0.0\n  transform_marker  false\n  visible           true(Image: library lines 10:10) (Image: library lines 85:89) (Image: library lines 123:129) (Image: library lines 274:279) (Image: library lines 282:282) (Image: library lines 332:342) (Image: library lines 346:347) (Image: library lines 536:536) (Image: library lines 540:540) (Image: library lines 544:556) (Image: library lines 670:705) (Image: library lines 713:741) (Image: library lines 746:752) (Image: library lines 773:774) (Image: library lines 778:785) (Image: library lines 789:789) (Image: library lines 797:801) (Image: library lines 858:869) (Image: library lines 873:903)"
+    "text": "scatterAvailable attributes and their defaults for Scatter{...} where T are:   alpha             1.0\n  color             :black\n  colormap          :viridis\n  colorrange        AbstractPlotting.Automatic()\n  glowcolor         RGBA{N0f8}(0.0,0.0,0.0,0.0)\n  glowwidth         0.0\n  linewidth         1\n  marker            GeometryTypes.HyperSphere{2,T} where T\n  marker_offset     AbstractPlotting.Automatic()\n  markersize        0.1\n  rotations         AbstractPlotting.Billboard()\n  strokecolor       RGBA{N0f8}(0.0,0.0,0.0,0.0)\n  strokewidth       0.0\n  transform_marker  false\n  visible           true(Image: library lines 10:22) (Image: library lines 48:48) (Image: library lines 123:127) (Image: library lines 161:167) (Image: library lines 89:89) (Image: library lines 93:93) (Image: library lines 330:335) (Image: library lines 338:338) (Image: library lines 389:399) (Image: library lines 403:404) (Image: library lines 4:39) (Image: library lines 44:55) (Image: library lines 5:33) (Image: library lines 38:42) (Image: library lines 63:64) (Image: library lines 68:75) (Image: library lines 79:79) (Image: library lines 87:91)"
 },
 
 {
@@ -245,7 +245,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Atomic functions overview",
     "title": "surface",
     "category": "section",
-    "text": "surfaceAvailable attributes and their defaults for Surface{...} where T are:   alpha           1.0\n  color           :black\n  colormap        :viridis\n  colorrange      nothing\n  image           nothing\n  linewidth       1\n  visible         true(Image: library lines 178:214) (Image: library lines 298:314) (Image: library lines 482:490) (Image: library lines 493:501) (Image: library lines 507:514) (Image: library lines 634:642) (Image: library lines 645:660) (Image: library lines 873:903)"
+    "text": "surfaceAvailable attributes and their defaults for Surface{...} where T are:   alpha           1.0\n  color           :black\n  colormap        :viridis\n  colorrange      AbstractPlotting.Automatic()\n  linewidth       1\n  visible         true(Image: library lines 35:43) (Image: library lines 46:54) (Image: library lines 60:67) (Image: library lines 172:180) (Image: library lines 184:198) (Image: library lines 205:216) (Image: library lines 234:270) (Image: library lines 354:371)"
 },
 
 {
@@ -261,7 +261,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Atomic functions overview",
     "title": "text",
     "category": "section",
-    "text": "textAvailable attributes and their defaults for Text{...} where T are:   align           (:left, :bottom)\n  alpha           1.0\n  color           :black\n  font            \"Dejavu Sans\"\n  linewidth       1\n  position        Float32[0.0, 0.0]\n  rotation        0.0\n  strokecolor     (:black, 0.0)\n  strokewidth     0\n  textsize        20\n  visible         true(Image: library lines 134:134) (Image: library lines 144:158)"
+    "text": "textAvailable attributes and their defaults for Text{...} where T are:   align           (:left, :bottom)\n  alpha           1.0\n  color           :black\n  font            \"Dejavu Sans\"\n  linewidth       1\n  position        Float32[0.0, 0.0]\n  rotation        0.0\n  strokecolor     (:black, 0.0)\n  strokewidth     0\n  textsize        20\n  visible         true(Image: library lines 172:172) (Image: library lines 182:196)"
 },
 
 {
@@ -277,7 +277,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Atomic functions overview",
     "title": "volume",
     "category": "section",
-    "text": "volumeAvailable attributes and their defaults for Volume{...} where T are:   absorption      1.0f0\n  algorithm       :iso\n  alpha           1.0\n  color           :black\n  colormap        :viridis\n  colorrange      (0, 1)\n  isorange        0.01f0\n  isovalue        0.5f0\n  linewidth       1\n  visible         true(Image: library lines 452:452) (Image: library lines 582:593)"
+    "text": "volumeAvailable attributes and their defaults for Volume{...} where T are:   absorption      1.0f0\n  algorithm       :iso\n  alpha           1.0\n  color           :black\n  colormap        :viridis\n  colorrange      (0, 1)\n  isorange        0.01f0\n  isovalue        0.5f0\n  linewidth       1\n  visible         true(Image: library lines 5:5) (Image: library lines 119:130)"
 },
 
 {
@@ -293,7 +293,31 @@ var documenterSearchIndex = {"docs": [
     "page": "Atomic functions overview",
     "title": "contour",
     "category": "section",
-    "text": "contourAvailable attributes and their defaults for Contour{...} where T are:   alpha           1.0\n  color           :black\n  colormap        :viridis\n  colorrange      nothing\n  fillrange       false\n  levels          5\n  linewidth       1.0\n  visible         true(Image: library lines 107:109) (Image: library lines 114:115) (Image: library lines 582:593)"
+    "text": "contourAvailable attributes and their defaults for Contour{...} where T are:   alpha           1.0\n  color           :viridis\n  fillrange       false\n  levels          5\n  linewidth       1.0\n  visible         true(Image: library lines 145:147) (Image: library lines 152:153) (Image: library lines 119:130)"
+},
+
+{
+    "location": "functions-overview.html#arrows-1",
+    "page": "Atomic functions overview",
+    "title": "arrows",
+    "category": "section",
+    "text": "arrowsAvailable attributes and their defaults for Arrows{...} where T are:   arrowcolor   :black\n  arrowhead    AbstractPlotting.Automatic()\n  arrowsize    0.3\n  arrowtail    nothing\n  lengthscale  1.0f0\n  linecolor    :black\n  linestyle    nothing\n  linewidth    1\n  normalize    false\n  scale        Float32[1.0, 1.0, 1.0](Image: library lines 32:38) (Image: library lines 157:168) (Image: library lines 184:198)"
+},
+
+{
+    "location": "functions-overview.html#barplot-1",
+    "page": "Atomic functions overview",
+    "title": "barplot",
+    "category": "section",
+    "text": "barplotAvailable attributes and their defaults for BarPlot{...} where T are:   color       :black\n  colormap    :viridis\n  colorrange  AbstractPlotting.Automatic()\n  fillto      0.0\n  marker      GeometryTypes.HyperRectangle{N,T} where T where N\n  width       nothing(Image: library lines 28:28)"
+},
+
+{
+    "location": "functions-overview.html#poly-1",
+    "page": "Atomic functions overview",
+    "title": "poly",
+    "category": "section",
+    "text": "polyAvailable attributes and their defaults for Poly{...} where T are:   color        :black\n  colormap     :viridis\n  colorrange   AbstractPlotting.Automatic()\n  linestyle    nothing\n  strokecolor  RGBA{Float32}(0.0f0,0.0f0,0.0f0,0.0f0)\n  strokewidth  0.0(Image: library lines 51:73) (Image: library lines 131:139)"
 },
 
 {
@@ -369,7 +393,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "attributes.html#",
+    "location": "plot-attributes.html#",
     "page": "Plot attributes",
     "title": "Plot attributes",
     "category": "page",
@@ -377,7 +401,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "attributes.html#Plot-attributes-1",
+    "location": "plot-attributes.html#Plot-attributes-1",
     "page": "Plot attributes",
     "title": "Plot attributes",
     "category": "section",
@@ -385,11 +409,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "attributes.html#List-of-attributes-1",
+    "location": "plot-attributes.html#List-of-attributes-1",
     "page": "Plot attributes",
     "title": "List of attributes",
     "category": "section",
-    "text": "Symbol Description\nabsorption Float32. Sets the absorption value for volume plots.\nalgorithm Algorithm to be used for volume plots. Can be one of :iso, :absorption, :mip, :absorptionrgba, or :indexedabsorption.\nalign (:pos, :pos). Specify the text alignment, where :pos can be :left, :center, or :right.\nalpha Float in [0,1]. The alpha value (transparency).\ncolor The color of the main plot element (markers, lines, etc.). Can be a color symbol/string like :red, or a Colorant\ncolormap The color map of the main plot. Call available_gradients() to see what gradients are available. Can also be used with any Vector{<: Colorant}, or e.g. [:red, :black]\ncolorrange A tuple (min, max) where min and max specify the data range to be used for indexing the colormap. E.g. color = [-2, 4] with colorrange = (-2, 4) will map to the lowest and highest color value of the colormap\nfillrange Bool. Toggles range filling in contour plots.\nfont String or Symbol. Specifies the font and can name any font available on the system\nglowcolor Color Type. Color of the marker glow (outside the border) in scatter plots.\nglowwidth Number. Width of the marker glow in scatter plots.\nimage The image to be plotted on the plot.\ninterpolate Bool. For heatmap and images. Toggles color interpolation between nearby pixels.\nisorange Float32. Sets the isorange for volume plots.\nisovalue Float32. Sets the isovalue for volume plots.\nlevels Integer. Number of levels for a contour-type plot.\nlinestyle Symbol. Style of the line (for line and linesegments plots). Available styles are :dash, :dot, :dashdot, and :dashdotdot. You can also supply an array describing the length of each gap/fill.\nlinewidth Number. Width of the line in line and linesegments plots.\nmarker Symbol, Shape, or AbstractVector.\nmarker_offset Array of GeometryTypes.Point\'s. Specifies the offset coordinates for the markers. See the \"Marker offset\" example.\nmarkersize Number or AbstractVector. Specifies size (radius pixels) of the markers.\nposition NTuple{2,Float}, (x, y). Specify the coordinates to position text at.\nrotation Number. Specifies the rotation in degrees.\nrotations AbstractVector. Similar to :rotation, except it specifies the rotation for each element in the plot.\nshading Bool. Specifies if shading should be on or not (for meshes).\nstrokecolor Color Type. Color of the marker stroke (border).\nstrokewidth Number. Width of the marker stroke (in pixels).\ntextsize Integer. Font pointsize for text.\ntransformation (:plane, location). Transforms the :plane to the specified location. Possible :plane\'s are :xy, :yz, and :xz.\nvisible Bool. Toggle visibility of plot."
+    "text": "Symbol Description\nabsorption Float32. Sets the absorption value for volume plots.\nalgorithm Algorithm to be used for volume plots. Can be one of :iso, :absorption, :mip, :absorptionrgba, or :indexedabsorption.\nalign (:pos, :pos). Specify the text alignment, where :pos can be :left, :center, or :right.\nalpha Float in [0,1]. The alpha value (transparency).\ncolor Symbol or Colorant. The color of the main plot element (markers, lines, etc.). Can be a color symbol/string like :red, or a Colorant.\ncolormap The color map of the main plot. Call available_gradients() to see what gradients are available. Can also be used with any Vector{<: Colorant}, or e.g. [:red, :black]\ncolorrange A tuple (min, max) where min and max specify the data range to be used for indexing the colormap. E.g. color = [-2, 4] with colorrange = (-2, 4) will map to the lowest and highest color value of the colormap.\nfillrange Bool. Toggles range filling in contour plots.\nfont String. Specifies the font, and can choose any font available on the system.\nglowcolor Color Type. Color of the marker glow (outside the border) in scatter plots.\nglowwidth Number. Width of the marker glow in scatter plots.\nimage The image to be plotted on the plot.\ninterpolate Bool. For heatmap and images. Toggles color interpolation between nearby pixels.\nisorange Float32. Sets the isorange for volume plots.\nisovalue Float32. Sets the isovalue for volume plots.\nlevels Integer. Number of levels for a contour-type plot.\nlinestyle Symbol. Style of the line (for line and linesegments plots). Available styles are :dash, :dot, :dashdot, and :dashdotdot. You can also supply an array describing the length of each gap/fill.\nlinewidth Number. Width of the line in line and linesegments plots.\nmarker Symbol, Shape, or AbstractVector.\nmarker_offset Array of GeometryTypes.Point\'s. Specifies the offset coordinates for the markers. See the \"Marker offset\" example.\nmarkersize Number or AbstractVector. Specifies size (radius pixels) of the markers.\nposition NTuple{2,Float}, (x, y). Specify the coordinates to position text at.\nrotation Float32. Specifies the rotation in radians.\nrotations AbstractVector{Float32}. Similar to :rotation, except it specifies the rotations for each element in the plot.\nshading Bool. Specifies if shading should be on or not (for meshes).\nstrokecolor Color Type. Color of the marker stroke (border).\nstrokewidth Number. Width of the marker stroke (in pixels).\ntextsize Integer. Font pointsize for text.\ntransformation (:plane, location). Transforms the :plane to the specified location. Possible :plane\'s are :xy, :yz, and :xz.\nvisible Bool. Toggle visibility of plot."
 },
 
 {
@@ -429,7 +453,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Interaction",
     "title": "Examples",
     "category": "section",
-    "text": "@example_database(\"pulsing marker\")@example_database(\"Interaction\")"
+    "text": "@example_database(\"pulsing marker\")@example_database(\"Interaction\")@example_database(\"pong\")"
 },
 
 {
@@ -454,6 +478,126 @@ var documenterSearchIndex = {"docs": [
     "title": "Correct way to animate a plot",
     "category": "section",
     "text": "You can animate a plot in a for loop:r = 1:10\nfor i = 1:length(r)\n    push!(s[:markersize], r[i])\n    AbstractPlotting.force_update!()\n    sleep(1/24)\nendBut, if you push! to a plot, it doesn\'t necessarily get updated whenever an attribute changes, so you must call force_update!().A better way to do it is to access the attribute of a plot directly using its symbol, and when you change it, the plot automatically gets updated live, so you no longer need to call force_update!():for i = 1:length(r)\n    s[:markersize] = r[i]\n    # AbstractPlotting.force_update!() is no longer needed\n    sleep(1/24)\nendSimilarly, for plots based on functions:scene = Scene()\nv = linspace(0, 4pi, 50)\nf(v, t) = sin(v + t) # some function\ns = lines!(\n    scene,\n    lift(t -> f.(v, t), time),\n)[end];\n\nfor i = 1:length(v)\n    push!(time, i)\n    sleep(1/24)\nend"
+},
+
+{
+    "location": "axis.html#",
+    "page": "Axis",
+    "title": "Axis",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "axis.html#Axis-1",
+    "page": "Axis",
+    "title": "Axis",
+    "category": "section",
+    "text": "The axis is just a scene object, making it easy to manipulate and share between plots. Axis objects also contains the mapping you want to apply to the data and can interactively be changed. An Axis object can be created from any boundingbox and inserted into any plot.There are two types of axes: Axis2D and Axis3D."
+},
+
+{
+    "location": "axis.html#Interacting-with-the-Axis-1",
+    "page": "Axis",
+    "title": "Interacting with the Axis",
+    "category": "section",
+    "text": "One can quite easily interact with the attributes of the axis like with any other plot.You can access the axis of a scene by doingaxis = scene[Axis]The axis attributes are nested, and there are different attributes depending on whether it is an Axis2D or Axis3D object.You can access the nested attributes in multiple ways. Take the nested attribute axis -> :names -> :axisnames, for example:axis[:names, :axisnames] = (\"x\", \"y\", \"z\")\naxis[:names][:axisnames] = (\"x\", \"y\", \"z\")\naxis = NT(names = NT(axisnames = (\"x\", \"y\", \"z\")))"
+},
+
+{
+    "location": "axis.html#Examples-1",
+    "page": "Axis",
+    "title": "Examples",
+    "category": "section",
+    "text": "@example_database(\"Unicode Marker\")@example_database(\"Axis + Surface\")@example_database(\"Axis theming\")"
+},
+
+{
+    "location": "axis.html#Axis2D-1",
+    "page": "Axis",
+    "title": "Axis2D",
+    "category": "section",
+    "text": ""
+},
+
+{
+    "location": "axis.html#Axis2D-attributes-groups-1",
+    "page": "Axis",
+    "title": "Axis2D attributes groups",
+    "category": "section",
+    "text": "Symbol Description\nframe See the detailed descriptions for frame attributes.\ngrid See the detailed descriptions for grid attributes.\nnames See the detailed descriptions for names attributes.\nticks See the detailed descriptions for ticks attributes."
+},
+
+{
+    "location": "axis.html#:grid-1",
+    "page": "Axis",
+    "title": ":grid",
+    "category": "section",
+    "text": "Symbol Description\nlinecolor Symbol or Colorant. Specifies the color of the grid lines. Can be a color symbol/string like :red, or a Colorant.\nlinestyle \nlinewidth NTuple{2, Number}. Width of the x and y grids."
+},
+
+{
+    "location": "axis.html#:ticks-1",
+    "page": "Axis",
+    "title": ":ticks",
+    "category": "section",
+    "text": "Symbol Description\nalign NTuple{2,(:pos, :pos)}. Specify the text alignment for the axis ticks, where :pos can be :left, :center, or :right\nfont NTuple{2,String}. Specifies the font and can name any font available on the system.\ngap Number. Specifies the gap (in pixels) between the axis tick labels and the axes themselves.\nlinecolor NTuple{2,Symbol or Colorant}. Specifies the color of the grid lines. Can be a color symbol/string like :red, or a Colorant.\nlinestyle \nlinewidth NTuple{2,Number}. Width of the axes ticks.\nrotation NTuple{3,Float32}. Specifies the rotations for each axis\'s ticks, in radians.\ntextcolor NTuple{2,Symbol or Colorant}. Specifies the color of the axes ticks. Can be a color symbol/string like :red, or a Colorant.\ntextsize NTuple{2,Int}. Font pointsize for tick labels.\ntitle_gap Number. Specifies the gap (in pixels) between the axis titles and the axis tick labels."
+},
+
+{
+    "location": "axis.html#:frame-1",
+    "page": "Axis",
+    "title": ":frame",
+    "category": "section",
+    "text": "Symbol Description\narrow_size Number. Size of the axes arrows.\naxis_arrow Bool. Toggles the axes arrows.\naxis_position \nframes NTuple{2,NTuple{2,Bool}}.\nlinecolor Symbol or Colorant. Specifies the color of the grid lines. Can be a color symbol/string like :red, or a Colorant.\nlinestyle \nlinewidth Number. Widths of the axes frame lines."
+},
+
+{
+    "location": "axis.html#:names-1",
+    "page": "Axis",
+    "title": ":names",
+    "category": "section",
+    "text": "Symbol Description\nalign (:pos, :pos). Specify the text alignment, where :pos can be :left, :center, or :right.\naxisnames NTuple{2,String}. Specifies the text labels for the axes.\nfont NTuple{2,String}. Specifies the font and can name any font available on the system.\nrotation NTuple{3,Float32}. Specifies the rotations for each axis\'s label, in radians.\ntextcolor NTuple{2,Symbol or Colorant}. Specifies the color of the axes labels. Can be a color symbol/string like :red, or a Colorant.\ntextsize Integer. Font pointsize for text."
+},
+
+{
+    "location": "axis.html#Axis3D-1",
+    "page": "Axis",
+    "title": "Axis3D",
+    "category": "section",
+    "text": ""
+},
+
+{
+    "location": "axis.html#Axis3D-attributes-groups-1",
+    "page": "Axis",
+    "title": "Axis3D attributes groups",
+    "category": "section",
+    "text": "Symbol Description\nframe See the detailed descriptions for frame attributes.\nnames See the detailed descriptions for names attributes.\nscale NTuple{3,Float}. Specifies the scaling for the axes.\nshowaxis NTuple{3,Bool}. Specifies whether to show the axes.\nshowgrid NTuple{3,Bool}. Specifies whether to show the axis grids.\nshowticks NTuple{3,Bool}. Specifies whether to show the axis ticks.\nticks See the detailed descriptions for ticks attributes."
+},
+
+{
+    "location": "axis.html#:ticks-2",
+    "page": "Axis",
+    "title": ":ticks",
+    "category": "section",
+    "text": "Symbol Description\nalign NTuple{3,(:pos, :pos)}. Specify the text alignment for the axis ticks, where :pos can be :left, :center, or :right.\nfont NTuple{3,String}. Specifies the font for the axis ticks, and can choose any font available on the system.\ngap Number. Specifies the gap (in pixels) between the axis ticks and the axes themselves.\nrotation NTuple{3,Quaternion{Float32}}. Specifies the rotations for each axis\'s ticks, in radians.\ntextcolor NTuple{3,Symbol or Colorant}. Specifies the color of the axes ticks. Can be a color symbol/string like :red, or a Colorant.\ntextsize Integer. Font pointsize for text."
+},
+
+{
+    "location": "axis.html#:frame-2",
+    "page": "Axis",
+    "title": ":frame",
+    "category": "section",
+    "text": "Symbol Description\naxiscolor Symbol or Colorant. Specifies the color of the axes. Can be a color symbol/string like :red, or a Colorant.\nlinecolor Symbol or Colorant. Specifies the color of the grid lines. Can be a color symbol/string like :red, or a Colorant.\nlinewidth Number. Width of the axes lines."
+},
+
+{
+    "location": "axis.html#:names-2",
+    "page": "Axis",
+    "title": ":names",
+    "category": "section",
+    "text": "Symbol Description\nalign NTuple{3,(:pos, :pos)}. Specify the text alignment for the axis labels, where :pos can be :left, :center, or :right.\naxisnames NTuple{3,String}. Specifies the axis labels.\nfont NTuple{3,String}. Specifies the font for the axis labels, and can choose any font available on the system.\ngap Number. Specifies the gap (in pixels) between the axis labels and the axes themselves.\nrotation NTuple{3,Quaternion{Float32}}. Specifies the rotations for each axis\'s label, in radians.\ntextcolor NTuple{3,Symbol or Colorant}. Specifies the color of the axes labels. Can be a color symbol/string like :red, or a Colorant.\ntextsize NTuple{3,Int}. Font pointsize for axes labels."
 },
 
 {
@@ -537,43 +681,43 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "examples-heatmap.html#\"heatmap-interpolation\"-1",
+    "location": "examples-heatmap.html#Test-heatmap-image-overlap-1",
     "page": "heatmap",
-    "title": "\"heatmap interpolation\"",
+    "title": "Test heatmap + image overlap",
     "category": "section",
-    "text": "Tags: 2d, heatmap, interpolate.using Makie\n\np1 = heatmap(rand(100, 100), interpolate = true)\np2 = heatmap(rand(100, 100), interpolate = false)\nscene = AbstractPlotting.vbox(p1, p2)\ntext!(campixel(p1), \"Interpolate = true\", position = widths(p1) .* Vec(0.5, 1), align = (:center, :top), raw = true)\ntext!(campixel(p2), \"Interpolate = false\", position = widths(p2) .* Vec(0.5, 1), align = (:center, :top), raw = true)\nscene\n\n(Image: library lines 70:75)"
+    "text": "Tags: 2d, heatmap, image, transparency.using Makie\n\nheatmap(rand(32, 32))\nimage!(map(x->RGBAf0(x,0.5, 0.5, 0.8), rand(32,32)))\n\n(Image: library lines 5:6)"
 },
 
 {
-    "location": "examples-heatmap.html#\"Heatmap\"-1",
+    "location": "examples-heatmap.html#heatmap-interpolation-1",
     "page": "heatmap",
-    "title": "\"Heatmap\"",
+    "title": "heatmap interpolation",
     "category": "section",
-    "text": "Tags: 2d, heatmap.using Makie\n\nheatmap(rand(32, 32))\n\n(Image: library lines 119:119)"
+    "text": "Tags: 2d, heatmap, interpolate, subscene.using Makie\n\np1 = heatmap(rand(100, 50), interpolate = true)\np2 = heatmap(rand(100, 50), interpolate = false)\nscene = AbstractPlotting.vbox(p1, p2)\ntext!(campixel(p1), \"Interpolate = true\", position = widths(p1) .* Vec(0.5, 1), align = (:center, :top), raw = true)\ntext!(campixel(p2), \"Interpolate = false\", position = widths(p2) .* Vec(0.5, 1), align = (:center, :top), raw = true)\nscene\n\n(Image: library lines 108:113)"
 },
 
 {
-    "location": "examples-heatmap.html#\"3D-Contour-with-2D-contour-slices\"-1",
+    "location": "examples-heatmap.html#Heatmap-1",
     "page": "heatmap",
-    "title": "\"3D Contour with 2D contour slices\"",
+    "title": "Heatmap",
     "category": "section",
-    "text": "Tags: 3d, contour, documentation, heatmap, transformation, volume.using Makie\n\nfunction test(x, y, z)\n    xy = [x, y, z]\n    ((xy\') * eye(3, 3) * xy) / 20\nend\nx = linspace(-2pi, 2pi, 100)\nscene = Scene()\nc = contour!(scene, x, x, x, test, levels = 10)[end]\nxm, ym, zm = minimum(scene.limits[])\n# c[4] == fourth argument of the above plotting command\ncontour!(scene, x, x, map(v-> v[1, :, :], c[4]), transformation = (:xy, zm))\nheatmap!(scene, x, x, map(v-> v[:, 1, :], c[4]), transformation = (:xz, ym))\ncontour!(scene, x, x, map(v-> v[:, :, 1], c[4]), fillrange = true, transformation = (:yz, xm))\n\n(Image: library lines 582:593)"
+    "text": "Tags: 2d, heatmap.using Makie\n\nheatmap(rand(32, 32))\n\n(Image: library lines 157:157)"
 },
 
 {
-    "location": "examples-heatmap.html#\"Test-heatmap-image-overlap\"-1",
+    "location": "examples-heatmap.html#D-Contour-with-2D-contour-slices-1",
     "page": "heatmap",
-    "title": "\"Test heatmap + image overlap\"",
+    "title": "3D Contour with 2D contour slices",
     "category": "section",
-    "text": "Tags: 2d, documentation, heatmap, image, transparency.using Makie\n\nheatmap(rand(32, 32))\nimage!(map(x->RGBAf0(x,0.5, 0.5, 0.8), rand(32,32)))\n\n(Image: library lines 666:667)"
+    "text": "Tags: 3d, contour, heatmap, transformation, volume.using Makie\n\nfunction test(x, y, z)\n    xy = [x, y, z]\n    ((xy\') * eye(3, 3) * xy) / 20\nend\nx = linspace(-2pi, 2pi, 100)\nscene = Scene()\nc = contour!(scene, x, x, x, test, levels = 6, alpha = 0.3)[end]\nxm, ym, zm = minimum(scene.limits[])\n# c[4] == fourth argument of the above plotting command\ncontour!(scene, x, x, map(v-> v[1, :, :], c[4]), transformation = (:xy, zm), linewidth = 10)\nheatmap!(scene, x, x, map(v-> v[:, 1, :], c[4]), transformation = (:xz, ym))\ncontour!(scene, x, x, map(v-> v[:, :, 1], c[4]), fillrange = true, transformation = (:yz, xm))\n\n(Image: library lines 119:130)"
 },
 
 {
-    "location": "examples-heatmap.html#\"Mouse-Picking\"-1",
+    "location": "examples-heatmap.html#Mouse-Picking-1",
     "page": "heatmap",
-    "title": "\"Mouse Picking\"",
+    "title": "Mouse Picking",
     "category": "section",
-    "text": "Tags: documentation, heatmap, interactive, scatter.using Makie\n\nimg = rand(100, 100)\nscene = Scene()\nheatmap!(scene, img, scale_plot = false)\nclicks = Node(Point2f0[(0,0)])\nforeach(scene.events.mousebuttons) do buttons\n   if ispressed(scene, Mouse.left)\n       pos = to_world(scene, Point2f0(scene.events.mouseposition[]))\n       push!(clicks, push!(clicks[], pos))\n   end\n   return\nend\nscatter!(scene, clicks, color = :red, marker = \'+\', markersize = 10, raw = true)\n\n(Image: library lines 858:869)"
+    "text": "Tags: heatmap, interaction, interactive, scatter.using Makie\n\nimg = rand(100, 100)\nscene = Scene()\nheatmap!(scene, img, scale_plot = false)\nclicks = Node(Point2f0[(0,0)])\nforeach(scene.events.mousebuttons) do buttons\n   if ispressed(scene, Mouse.left)\n       pos = to_world(scene, Point2f0(scene.events.mouseposition[]))\n       push!(clicks, push!(clicks[], pos))\n   end\n   return\nend\nscatter!(scene, clicks, color = :red, marker = \'+\', markersize = 10, raw = true)\n\n(Image: library lines 44:55)"
 },
 
 {
@@ -593,59 +737,59 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "examples-image.html#\"image\"-1",
+    "location": "examples-image.html#Test-heatmap-image-overlap-1",
     "page": "image",
-    "title": "\"image\"",
+    "title": "Test heatmap + image overlap",
     "category": "section",
-    "text": "Tags: 2d, image.using Makie\n\nimage(Makie.logo(), scale_plot = false)\n\n(Image: library lines 7:7)"
+    "text": "Tags: 2d, heatmap, image, transparency.using Makie\n\nheatmap(rand(32, 32))\nimage!(map(x->RGBAf0(x,0.5, 0.5, 0.8), rand(32,32)))\n\n(Image: library lines 5:6)"
 },
 
 {
-    "location": "examples-image.html#\"Subscenes\"-1",
+    "location": "examples-image.html#image-2",
     "page": "image",
-    "title": "\"Subscenes\"",
+    "title": "image",
     "category": "section",
-    "text": "Tags: 2d, image, scatter, subscene.using Makie\n\nimg = rand(RGBAf0, 100, 100)\nscene = image(img, show_axis = false)\nsubscene = Scene(scene, IRect(100, 100, 300, 300))\nscatter!(subscene, rand(100) * 200, rand(100) * 200, markersize = 4)\nscene\n\n(Image: library lines 85:89)"
+    "text": "Tags: 2d, image.using Makie\n\nAbstractPlotting.vbox(\n    image(Makie.logo(), scale_plot = false),\n    image(rand(100, 500), scale_plot = false),\n)\n\n\n(Image: library lines 41:41)"
 },
 
 {
-    "location": "examples-image.html#\"image-scatter\"-1",
+    "location": "examples-image.html#Subscenes-1",
     "page": "image",
-    "title": "\"image scatter\"",
+    "title": "Subscenes",
     "category": "section",
-    "text": "Tags: 3d, image, scatter.using Makie\n\nscatter(\n    1:10, 1:10, rand(10, 10) .* 10,\n    rotations = normalize.(rand(Quaternionf0, 10*10)),\n    markersize = 1,\n    # can also be an array of images for each point\n    # need to be the same size for best performance, though\n    marker = Makie.logo()\n)\n\n(Image: library lines 282:282)"
+    "text": "Tags: 2d, image, scatter, subscene.using Makie\n\nimg = rand(RGBAf0, 100, 100)\nscene = image(img, show_axis = false)\nsubscene = Scene(scene, IRect(100, 100, 300, 300))\nscatter!(subscene, rand(100) * 200, rand(100) * 200, markersize = 4)\nscene\n\n(Image: library lines 123:127)"
 },
 
 {
-    "location": "examples-image.html#\"Surface-with-image\"-1",
+    "location": "examples-image.html#Surface-with-image-1",
     "page": "image",
-    "title": "\"Surface with image\"",
+    "title": "Surface with image",
     "category": "section",
-    "text": "Tags: 3d, documentation, image, surface.using Makie\n\nN = 30\nfunction xy_data(x, y)\n    r = sqrt(x^2 + y^2)\n    r == 0.0 ? 1f0 : (sin(r)/r)\nend\nr = linspace(-2, 2, N)\nsurf_func(i) = [Float32(xy_data(x*i, y*i)) for x = r, y = r]\nsurface(\n    r, r, surf_func(10),\n    image = rand(RGBAf0, 124, 124)\n)\n\n(Image: library lines 507:514)"
+    "text": "Tags: 3d, image, surface.using Makie\n\nN = 30\nfunction xy_data(x, y)\n    r = sqrt(x^2 + y^2)\n    r == 0.0 ? 1f0 : (sin(r)/r)\nend\nr = linspace(-2, 2, N)\nsurf_func(i) = [Float32(xy_data(x*i, y*i)) for x = r, y = r]\nsurface(\n    r, r, surf_func(10),\n    color = rand(RGBAf0, 124, 124)\n)\n\n(Image: library lines 60:67)"
 },
 
 {
-    "location": "examples-image.html#\"Image-on-Surface-Sphere\"-1",
+    "location": "examples-image.html#Image-on-Surface-Sphere-1",
     "page": "image",
-    "title": "\"Image on Surface Sphere\"",
+    "title": "Image on Surface Sphere",
     "category": "section",
-    "text": "Tags: 3d, documentation, image, sphere, surface.using Makie\n\nn = 20\nθ = [0;(0.5:n-0.5)/n;1]\nφ = [(0:2n-2)*2/(2n-1);2]\nx = [cospi(φ)*sinpi(θ) for θ in θ, φ in φ]\ny = [sinpi(φ)*sinpi(θ) for θ in θ, φ in φ]\nz = [cospi(θ) for θ in θ, φ in φ]\nrand([-1f0, 1f0], 3)\npts = vec(Point3f0.(x, y, z))\nsurface(x, y, z, image = Makie.logo())\n\n(Image: library lines 634:642)"
+    "text": "Tags: 3d, image, sphere, surface.using Makie\n\nn = 20\nθ = [0;(0.5:n-0.5)/n;1]\nφ = [(0:2n-2)*2/(2n-1);2]\nx = [cospi(φ)*sinpi(θ) for θ in θ, φ in φ]\ny = [sinpi(φ)*sinpi(θ) for θ in θ, φ in φ]\nz = [cospi(θ) for θ in θ, φ in φ]\nrand([-1f0, 1f0], 3)\npts = vec(Point3f0.(x, y, z))\nsurface(x, y, z, color = Makie.logo())\n\n(Image: library lines 172:180)"
 },
 
 {
-    "location": "examples-image.html#\"Test-heatmap-image-overlap\"-1",
+    "location": "examples-image.html#image-scatter-1",
     "page": "image",
-    "title": "\"Test heatmap + image overlap\"",
+    "title": "image scatter",
     "category": "section",
-    "text": "Tags: 2d, documentation, heatmap, image, transparency.using Makie\n\nheatmap(rand(32, 32))\nimage!(map(x->RGBAf0(x,0.5, 0.5, 0.8), rand(32,32)))\n\n(Image: library lines 666:667)"
+    "text": "Tags: 3d, image, scatter.using Makie\n\nscatter(\n    1:10, 1:10, rand(10, 10) .* 10,\n    rotations = normalize.(rand(Quaternionf0, 10*10)),\n    markersize = 1,\n    # can also be an array of images for each point\n    # need to be the same size for best performance, though\n    marker = Makie.logo()\n)\n\n(Image: library lines 338:338)"
 },
 
 {
-    "location": "examples-image.html#\"colormaps\"-1",
+    "location": "examples-image.html#colormaps-1",
     "page": "image",
-    "title": "\"colormaps\"",
+    "title": "colormaps",
     "category": "section",
-    "text": "Tags: colorbrewer, colormap, documentation, image, meta, translate.using Makie\n\nh = 0.0\noffset = 0.1\nscene = Scene()\ncam2d!(scene)\nplot = map(AbstractPlotting.colorbrewer_names) do cmap\n    global h\n    c = to_colormap(cmap)\n    cbar = image!(\n        scene,\n        linspace(0, 10, length(c)),\n        linspace(0, 1, length(c)),\n        reshape(c, (1, length(c))),\n        show_axis = false\n    )[end]\n    text!(\n        scene,\n        string(cmap, \":\"),\n        position = Point2f0(-0.1, 0.5 + h),\n        align = (:right, :center),\n        show_axis = false,\n        textsize = 0.4\n    )\n    translate!(cbar, 0, h, 0)\n    h -= (1 + offset)\nend\nscene\n\n(Image: library lines 805:830)"
+    "text": "Tags: colorbrewer, colormap, documentation, image, meta, translate.using Makie\n\nh = 0.0\noffset = 0.1\nscene = Scene()\ncam2d!(scene)\nplot = map(AbstractPlotting.colorbrewer_names) do cmap\n    global h\n    c = to_colormap(cmap)\n    cbar = image!(\n        scene,\n        linspace(0, 10, length(c)),\n        linspace(0, 1, length(c)),\n        reshape(c, (1, length(c))),\n        show_axis = false\n    )[end]\n    text!(\n        scene,\n        string(cmap, \":\"),\n        position = Point2f0(-0.1, 0.5 + h),\n        align = (:right, :center),\n        show_axis = false,\n        textsize = 0.4\n    )\n    translate!(cbar, 0, h, 0)\n    h -= (1 + offset)\nend\nscene\n\n(Image: library lines 95:120)"
 },
 
 {
@@ -665,51 +809,59 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "examples-lines.html#\"Connected-Sphere\"-1",
+    "location": "examples-lines.html#Line-Function-1",
     "page": "lines",
-    "title": "\"Connected Sphere\"",
+    "title": "Line Function",
     "category": "section",
-    "text": "Tags: 3d, axis, lines, scatter, views.using Makie\n\nlarge_sphere = Sphere(Point3f0(0), 1f0)\npositions = decompose(Point3f0, large_sphere)\nlinepos = view(positions, rand(1:length(positions), 1000))\nscene = lines(linepos, linewidth = 0.1, color = :black)\nscatter!(scene, positions, strokewidth = 10, strokecolor = :white, color = RGBAf0(0.9, 0.2, 0.4, 0.6))\nscene\n\n(Image: library lines 274:279)"
+    "text": "Tags: 2d, 3d, lines.using Makie\n\nscene = Scene()\nx = linspace(0, 3pi)\nlines!(scene, x, sin.(x))\nlines!(scene, x, cos.(x), color = :blue)\n\n(Image: library lines 73:76)"
 },
 
 {
-    "location": "examples-lines.html#\"Moire\"-1",
+    "location": "examples-lines.html#Connected-Sphere-1",
     "page": "lines",
-    "title": "\"Moire\"",
+    "title": "Connected Sphere",
     "category": "section",
-    "text": "Tags: 3d, camera, lines, linesegments, mp4, record, rotate_cam!, update_cam!.using Makie\n\nfunction cartesian(ll)\n    return Point3f0(\n        cos(ll[1]) * sin(ll[2]),\n        sin(ll[1]) * sin(ll[2]),\n        cos(ll[2])\n    )\nend\nfract(x) = x - floor(x)\nfunction calcpositions(rings, index, time, audio)\n    movement, radius, speed, spin = 1, 2, 3, 4;\n    position = Point3f0(0.0)\n    precision = 0.2f0\n    for ring in rings\n        position += ring[radius] * cartesian(\n            precision *\n            index *\n            Point2f0(ring[spin] + Point2f0(sin(time * ring[speed]), cos(time * ring[speed])) * ring[movement])\n        )\n    end\n    amplitude = audio[round(Int, clamp(fract(position[1] * 0.1), 0, 1) * (25000-1)) + 1]; # index * 0.002\n    position *= 1.0 + amplitude * 0.5;\n    position\nend\nrings = [(0.1f0, 1.0f0, 0.00001f0, Point2f0(0.2, 0.1)), (0.1f0, 0.0f0, 0.0002f0, Point2f0(0.052, 0.05))]\nN2 = 25000\nt_audio = sin.(linspace(0, 10pi, N2)) .+ (cos.(linspace(-3, 7pi, N2)) .* 0.6) .+ (rand(Float32, N2) .* 0.1) ./ 2f0\nstart = time()\nt = (time() - start) * 100\npos = calcpositions.((rings,), 1:N2, t, (t_audio,))\n\nscene = lines(pos, color = RGBAf0.(to_colormap(:RdBu, N2), 0.6), thickness = 0.6f0, show_axis = false)\nlinesegments!(scene, FRect3D(Vec3f0(-1.5), Vec3f0(3)), raw = true, linewidth = 3, linestyle = :dot)\neyepos = Vec3f0(5, 1.5, 0.5)\nlookat = Vec3f0(0)\nupdate_cam!(scene, eyepos, lookat)\nl = scene[1]\nN = 150\nrecord(scene, \"./docs/media/moire.mp4\", 1:N) do i\n    t = (time() - start) * 700\n    pos .= calcpositions.((rings,), 1:N2, t, (t_audio,))\n    l[1] = pos # update argument 1\n    rotate_cam!(scene, 0.0, 0.01, 0.01)\nend\n\n<video controls autoplay loop muted>\n  <source src=\"media\\moire.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "Tags: 3d, axis, lines, scatter, views.using Makie\n\nlarge_sphere = Sphere(Point3f0(0), 1f0)\npositions = decompose(Point3f0, large_sphere)\nlinepos = view(positions, rand(1:length(positions), 1000))\nscene = lines(linepos, linewidth = 0.1, color = :black)\nscatter!(scene, positions, strokewidth = 10, strokecolor = :white, color = RGBAf0(0.9, 0.2, 0.4, 0.6))\nscene\n\n(Image: library lines 330:335)"
 },
 
 {
-    "location": "examples-lines.html#\"Line-GIF\"-1",
+    "location": "examples-lines.html#Moire-1",
     "page": "lines",
-    "title": "\"Line GIF\"",
+    "title": "Moire",
     "category": "section",
-    "text": "Tags: 3d, animated, gif, lines, offset, record.using Makie\n\nus = linspace(0, 1, 100)\nscene = Scene()\nscene = linesegments!(scene, FRect3D(Vec3f0(0, -1, 0), Vec3f0(1, 2, 2)))\np = lines!(scene, us, sin.(us .+ time()), zeros(100), linewidth = 3)[end]\nlineplots = [p]\ntranslate!(p, 0, 0, 0)\ncolors = to_colormap(:RdYlBu)\n#display(scene) # would be needed without the record\nN = 150\npath = record(scene, \"./docs/media/line_gif.gif\", 1:N) do i\n    global lineplots, scene\n    if length(lineplots) < 20\n        p = lines!(\n            scene,\n            us, sin.(us .+ time()), zeros(100),\n            color = colors[length(lineplots)],\n            linewidth = 3\n        )[end]\n        unshift!(lineplots, p)\n        translate!(p, 0, 0, 0)\n        #TODO automatically insert new plots\n        insert!(Makie.global_gl_screen(), scene, p)\n    else\n        lineplots = circshift(lineplots, 1)\n        lp = first(lineplots)\n        lp[2] = sin.(us .+ time())\n        translate!(lp, 0, 0, 0)\n    end\n    for lp in Iterators.drop(lineplots, 1)\n        z = translation(lp)[][3]\n        translate!(lp, 0, 0, z + 0.1)\n    end\nend\npath\n\n(Image: library lines 411:444)"
+    "text": "Tags: 3d, camera, lines, linesegments, mp4, record, rotate_cam!, update_cam!.using Makie\n\nfunction cartesian(ll)\n    return Point3f0(\n        cos(ll[1]) * sin(ll[2]),\n        sin(ll[1]) * sin(ll[2]),\n        cos(ll[2])\n    )\nend\nfract(x) = x - floor(x)\nfunction calcpositions(rings, index, time, audio)\n    movement, radius, speed, spin = 1, 2, 3, 4;\n    position = Point3f0(0.0)\n    precision = 0.2f0\n    for ring in rings\n        position += ring[radius] * cartesian(\n            precision *\n            index *\n            Point2f0(ring[spin] + Point2f0(sin(time * ring[speed]), cos(time * ring[speed])) * ring[movement])\n        )\n    end\n    amplitude = audio[round(Int, clamp(fract(position[1] * 0.1), 0, 1) * (25000-1)) + 1]; # index * 0.002\n    position *= 1.0 + amplitude * 0.5;\n    position\nend\nrings = [(0.1f0, 1.0f0, 0.00001f0, Point2f0(0.2, 0.1)), (0.1f0, 0.0f0, 0.0002f0, Point2f0(0.052, 0.05))]\nN2 = 25000\nt_audio = sin.(linspace(0, 10pi, N2)) .+ (cos.(linspace(-3, 7pi, N2)) .* 0.6) .+ (rand(Float32, N2) .* 0.1) ./ 2f0\nstart = time()\nt = (time() - start) * 100\npos = calcpositions.((rings,), 1:N2, t, (t_audio,))\n\nscene = lines(pos, color = RGBAf0.(to_colormap(:RdBu, N2), 0.6), thickness = 0.6f0, show_axis = false)\nlinesegments!(scene, FRect3D(Vec3f0(-1.5), Vec3f0(3)), raw = true, linewidth = 3, linestyle = :dot)\neyepos = Vec3f0(5, 1.5, 0.5)\nlookat = Vec3f0(0)\nupdate_cam!(scene, eyepos, lookat)\nl = scene[1]\nN = 150\nrecord(scene, \"./docs/media/moire.mp4\", 1:N) do i\n    t = (time() - start) * 700\n    pos .= calcpositions.((rings,), 1:N2, t, (t_audio,))\n    l[1] = pos # update argument 1\n    rotate_cam!(scene, 0.0, 0.01, 0.01)\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\moire.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
 },
 
 {
-    "location": "examples-lines.html#\"Line-Function\"-1",
+    "location": "examples-lines.html#Line-GIF-1",
     "page": "lines",
-    "title": "\"Line Function\"",
+    "title": "Line GIF",
     "category": "section",
-    "text": "Tags: 2d, documentation, lines.using Makie\n\nscene = Scene()\nx = linspace(0, 3pi)\nlines!(scene, x, sin.(x))\nlines!(scene, x, cos.(x), color = :blue)\n\n(Image: library lines 520:523)"
+    "text": "Tags: 3d, animated, gif, lines, offset, record.using Makie\n\nus = linspace(0, 1, 100)\nscene = Scene()\nscene = linesegments!(scene, FRect3D(Vec3f0(0, -1, 0), Vec3f0(1, 2, 2)))\np = lines!(scene, us, sin.(us .+ time()), zeros(100), linewidth = 3)[end]\nlineplots = [p]\ntranslate!(p, 0, 0, 0)\ncolors = to_colormap(:RdYlBu)\n#display(scene) # would be needed without the record\nN = 150\npath = record(scene, \"./docs/media/line_gif.gif\", 1:N) do i\n    global lineplots, scene\n    if length(lineplots) < 20\n        p = lines!(\n            scene,\n            us, sin.(us .+ time()), zeros(100),\n            color = colors[length(lineplots)],\n            linewidth = 3\n        )[end]\n        unshift!(lineplots, p)\n        translate!(p, 0, 0, 0)\n        #TODO automatically insert new plots\n        insert!(Makie.global_gl_screen(), scene, p)\n    else\n        lineplots = circshift(lineplots, 1)\n        lp = first(lineplots)\n        lp[2] = sin.(us .+ time())\n        translate!(lp, 0, 0, 0)\n    end\n    for lp in Iterators.drop(lineplots, 1)\n        z = translation(lp)[][3]\n        translate!(lp, 0, 0, z + 0.1)\n    end\nend\npath\n\n(Image: library lines 468:501)"
 },
 
 {
-    "location": "examples-lines.html#\"Interaction-with-Mouse\"-1",
+    "location": "examples-lines.html#Interaction-with-Mouse-1",
     "page": "lines",
-    "title": "\"Interaction with Mouse\"",
+    "title": "Interaction with Mouse",
     "category": "section",
-    "text": "Tags: documentation, interactive, lines, marker, record, scatter.using Makie\n\nscene = Scene()\nr = linspace(0, 3, 4)\ncam2d!(scene)\ntime = Node(0.0)\npos = lift(scene.events.mouseposition, time) do mpos, t\n    map(linspace(0, 2pi, 60)) do i\n        circle = Point2f0(sin(i), cos(i))\n        mouse = to_world(scene, Point2f0(mpos))\n        secondary = (sin((i * 10f0) + t) * 0.09) * normalize(circle)\n        (secondary .+ circle) .+ mouse\n    end\nend\nscene = lines!(scene, pos, raw = true)\np1 = scene[end]\np2 = scatter!(\n    scene,\n    pos, markersize = 0.1f0,\n    marker = :star5,\n    color = p1[:color],\n    raw = true\n)[end]\nscene\ndisplay(Makie.global_gl_screen(), scene)\n\np1[:color] = RGBAf0(1, 0, 0, 0.1)\np2[:marker] = \'π\'\np2[:markersize] = 0.2\n\n# push a reasonable mouse position in case this is executed as part\n# of the documentation\npush!(scene.events.mouseposition, (250.0, 250.0))\nN = 50\nrecord(scene, \"./docs/media/interaction_with_mouse.mp4\", linspace(0.01, 0.4, N)) do i\n    push!(scene.events.mouseposition, (250.0, 250.0))\n    p2[:markersize] = i\n    push!(time, time[] + 0.1)\nend\n\n<video controls autoplay loop muted>\n  <source src=\"media\\interaction_with_mouse.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "Tags: interaction, interactive, lines, marker, record, scatter.using Makie\n\nscene = Scene()\nr = linspace(0, 3, 4)\ncam2d!(scene)\ntime = Node(0.0)\npos = lift(scene.events.mouseposition, time) do mpos, t\n    map(linspace(0, 2pi, 60)) do i\n        circle = Point2f0(sin(i), cos(i))\n        mouse = to_world(scene, Point2f0(mpos))\n        secondary = (sin((i * 10f0) + t) * 0.09) * normalize(circle)\n        (secondary .+ circle) .+ mouse\n    end\nend\nscene = lines!(scene, pos, raw = true)\np1 = scene[end]\np2 = scatter!(\n    scene,\n    pos, markersize = 0.1f0,\n    marker = :star5,\n    color = p1[:color],\n    raw = true\n)[end]\nscene\ndisplay(Makie.global_gl_screen(), scene)\n\np1[:color] = RGBAf0(1, 0, 0, 0.1)\np2[:marker] = \'π\'\np2[:markersize] = 0.2\n\n# push a reasonable mouse position in case this is executed as part\n# of the documentation\npush!(scene.events.mouseposition, (250.0, 250.0))\nN = 50\nrecord(scene, \"./docs/media/interaction_with_mouse.mp4\", linspace(0.01, 0.4, N)) do i\n    push!(scene.events.mouseposition, (250.0, 250.0))\n    p2[:markersize] = i\n    push!(time, time[] + 0.1)\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\interaction_with_mouse.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
 },
 
 {
-    "location": "examples-lines.html#\"Travelling-wave\"-1",
+    "location": "examples-lines.html#Travelling-wave-1",
     "page": "lines",
-    "title": "\"Travelling wave\"",
+    "title": "Travelling wave",
     "category": "section",
-    "text": "Tags: animated, documentation, interaction, lines, updating.using Makie\n\nscene = Scene()\ntime = Node(0.0)\nf(v, t) = sin(v + t)\nscene = lines!(\n    scene,\n    lift(t -> f.(linspace(0, 2pi, 50), t), time),\n    color = :blue\n)\np1 = scene[end];\nN = 100\nrecord(scene, \"./docs/media/travelling_wave.mp4\", linspace(0, 4pi, N)) do i\n    push!(time, i)\nend\n\n<video controls autoplay loop muted>\n  <source src=\"media\\travelling_wave.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "Tags: animated, documentation, interaction, lines, updating.using Makie\n\nscene = Scene()\ntime = Node(0.0)\nf(v, t) = sin(v + t)\nscene = lines!(\n    scene,\n    lift(t -> f.(linspace(0, 2pi, 50), t), time),\n    color = :blue\n)\np1 = scene[end];\nN = 100\nrecord(scene, \"./docs/media/travelling_wave.mp4\", linspace(0, 4pi, N)) do i\n    time[] = i\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\travelling_wave.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
+},
+
+{
+    "location": "examples-lines.html#Axis-theming-1",
+    "page": "lines",
+    "title": "Axis theming",
+    "category": "section",
+    "text": "Tags: axis, documentation, lines, stepper.using Makie\nusing GeometryTypes\n\nscene = Scene()\npoints = decompose(Point2f0, Circle(Point2f0(10), 10f0), 9)\nlines!(\n    scene,\n    points,\n    linewidth = 8,\n    color = :black\n)\n\naxis = scene[Axis] # get axis\nscene\n\nst = Stepper(scene, \"./docs/media/axis_theming\")\nstep!(st)\naxis[:frame][:linewidth] = 5\nstep!(st)\naxis[:grid][:linewidth] = (1, 5)\nstep!(st)\naxis[:grid][:linecolor] = ((:red, 0.3), (:blue, 0.5))\nstep!(st)\naxis[:names][:axisnames] = (\"x\", \"y   \")\nstep!(st)\naxis[:ticks][:title_gap] = 1\nstep!(st)\naxis[:names][:rotation] = (0.0, -3/8*pi)\nstep!(st)\naxis[:names][:textcolor] = ((:red, 1.0), (:blue, 1.0))\nstep!(st)\naxis[:ticks][:font] = (\"Dejavu Sans\", \"Helvetica\")\nstep!(st)\naxis[:ticks][:rotation] = (0.0, -pi/2)\nstep!(st)\naxis[:ticks][:textsize] = (3, 7)\nstep!(st)\naxis[:ticks][:gap] = 5\nstep!(st)\n\n\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 1<br><img src=\"media/axis_theming/thumb-axis_theming-1.jpg\" alt=\"Step 1<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 2<br><img src=\"media/axis_theming/thumb-axis_theming-2.jpg\" alt=\"Step 2<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 3<br><img src=\"media/axis_theming/thumb-axis_theming-3.jpg\" alt=\"Step 3<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 4<br><img src=\"media/axis_theming/thumb-axis_theming-4.jpg\" alt=\"Step 4<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 5<br><img src=\"media/axis_theming/thumb-axis_theming-5.jpg\" alt=\"Step 5<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 6<br><img src=\"media/axis_theming/thumb-axis_theming-6.jpg\" alt=\"Step 6<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 7<br><img src=\"media/axis_theming/thumb-axis_theming-7.jpg\" alt=\"Step 7<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 8<br><img src=\"media/axis_theming/thumb-axis_theming-8.jpg\" alt=\"Step 8<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 9<br><img src=\"media/axis_theming/thumb-axis_theming-9.jpg\" alt=\"Step 9<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 10<br><img src=\"media/axis_theming/thumb-axis_theming-10.jpg\" alt=\"Step 10<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 11<br><img src=\"media/axis_theming/thumb-axis_theming-11.jpg\" alt=\"Step 11<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 12<br><img src=\"media/axis_theming/thumb-axis_theming-12.jpg\" alt=\"Step 12<br>\" /></p></div>"
 },
 
 {
@@ -729,19 +881,27 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "examples-linesegments.html#\"Polygons\"-1",
+    "location": "examples-linesegments.html#Polygons-1",
     "page": "linesegments",
-    "title": "\"Polygons\"",
+    "title": "Polygons",
     "category": "section",
-    "text": "Tags: 2d, linesegments, poly, polygon.using Makie\nusing GeometryTypes\n\nscene = Scene(resolution = (500, 500))\npoints = decompose(Point2f0, Circle(Point2f0(50), 50f0))\npol = poly!(scene, points, color = :gray, strokewidth = 10, strokecolor = :red)\n# Optimized forms\npoly!(scene, [Circle(Point2f0(50+300), 50f0)], color = :gray, strokewidth = 10, strokecolor = :red)\npoly!(scene, [Circle(Point2f0(50+i, 50+i), 10f0) for i = 1:100:400], color = :red)\npoly!(scene, [Rectangle{Float32}(50+i, 50+i, 20, 20) for i = 1:100:400], strokewidth = 2, strokecolor = :green)\nlinesegments!(scene,\n    [Point2f0(50 + i, 50 + i) => Point2f0(i + 70, i + 70) for i = 1:100:400], linewidth = 8, color = :purple\n)\n\n(Image: library lines 93:101)"
+    "text": "Tags: 2d, linesegments, poly, polygon.using Makie\nusing GeometryTypes\n\nscene = Scene(resolution = (500, 500))\npoints = decompose(Point2f0, Circle(Point2f0(50), 50f0))\npol = poly!(scene, points, color = :gray, strokewidth = 10, strokecolor = :red)\n# Optimized forms\npoly!(scene, [Circle(Point2f0(50+300), 50f0)], color = :gray, strokewidth = 10, strokecolor = :red)\npoly!(scene, [Circle(Point2f0(50+i, 50+i), 10f0) for i = 1:100:400], color = :red)\npoly!(scene, [Rectangle{Float32}(50+i, 50+i, 20, 20) for i = 1:100:400], strokewidth = 2, strokecolor = :green)\nlinesegments!(scene,\n    [Point2f0(50 + i, 50 + i) => Point2f0(i + 70, i + 70) for i = 1:100:400], linewidth = 8, color = :purple\n)\n\n(Image: library lines 131:139)"
 },
 
 {
-    "location": "examples-linesegments.html#\"Moire\"-1",
+    "location": "examples-linesegments.html#Moire-1",
     "page": "linesegments",
-    "title": "\"Moire\"",
+    "title": "Moire",
     "category": "section",
-    "text": "Tags: 3d, camera, lines, linesegments, mp4, record, rotate_cam!, update_cam!.using Makie\n\nfunction cartesian(ll)\n    return Point3f0(\n        cos(ll[1]) * sin(ll[2]),\n        sin(ll[1]) * sin(ll[2]),\n        cos(ll[2])\n    )\nend\nfract(x) = x - floor(x)\nfunction calcpositions(rings, index, time, audio)\n    movement, radius, speed, spin = 1, 2, 3, 4;\n    position = Point3f0(0.0)\n    precision = 0.2f0\n    for ring in rings\n        position += ring[radius] * cartesian(\n            precision *\n            index *\n            Point2f0(ring[spin] + Point2f0(sin(time * ring[speed]), cos(time * ring[speed])) * ring[movement])\n        )\n    end\n    amplitude = audio[round(Int, clamp(fract(position[1] * 0.1), 0, 1) * (25000-1)) + 1]; # index * 0.002\n    position *= 1.0 + amplitude * 0.5;\n    position\nend\nrings = [(0.1f0, 1.0f0, 0.00001f0, Point2f0(0.2, 0.1)), (0.1f0, 0.0f0, 0.0002f0, Point2f0(0.052, 0.05))]\nN2 = 25000\nt_audio = sin.(linspace(0, 10pi, N2)) .+ (cos.(linspace(-3, 7pi, N2)) .* 0.6) .+ (rand(Float32, N2) .* 0.1) ./ 2f0\nstart = time()\nt = (time() - start) * 100\npos = calcpositions.((rings,), 1:N2, t, (t_audio,))\n\nscene = lines(pos, color = RGBAf0.(to_colormap(:RdBu, N2), 0.6), thickness = 0.6f0, show_axis = false)\nlinesegments!(scene, FRect3D(Vec3f0(-1.5), Vec3f0(3)), raw = true, linewidth = 3, linestyle = :dot)\neyepos = Vec3f0(5, 1.5, 0.5)\nlookat = Vec3f0(0)\nupdate_cam!(scene, eyepos, lookat)\nl = scene[1]\nN = 150\nrecord(scene, \"./docs/media/moire.mp4\", 1:N) do i\n    t = (time() - start) * 700\n    pos .= calcpositions.((rings,), 1:N2, t, (t_audio,))\n    l[1] = pos # update argument 1\n    rotate_cam!(scene, 0.0, 0.01, 0.01)\nend\n\n<video controls autoplay loop muted>\n  <source src=\"media\\moire.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "Tags: 3d, camera, lines, linesegments, mp4, record, rotate_cam!, update_cam!.using Makie\n\nfunction cartesian(ll)\n    return Point3f0(\n        cos(ll[1]) * sin(ll[2]),\n        sin(ll[1]) * sin(ll[2]),\n        cos(ll[2])\n    )\nend\nfract(x) = x - floor(x)\nfunction calcpositions(rings, index, time, audio)\n    movement, radius, speed, spin = 1, 2, 3, 4;\n    position = Point3f0(0.0)\n    precision = 0.2f0\n    for ring in rings\n        position += ring[radius] * cartesian(\n            precision *\n            index *\n            Point2f0(ring[spin] + Point2f0(sin(time * ring[speed]), cos(time * ring[speed])) * ring[movement])\n        )\n    end\n    amplitude = audio[round(Int, clamp(fract(position[1] * 0.1), 0, 1) * (25000-1)) + 1]; # index * 0.002\n    position *= 1.0 + amplitude * 0.5;\n    position\nend\nrings = [(0.1f0, 1.0f0, 0.00001f0, Point2f0(0.2, 0.1)), (0.1f0, 0.0f0, 0.0002f0, Point2f0(0.052, 0.05))]\nN2 = 25000\nt_audio = sin.(linspace(0, 10pi, N2)) .+ (cos.(linspace(-3, 7pi, N2)) .* 0.6) .+ (rand(Float32, N2) .* 0.1) ./ 2f0\nstart = time()\nt = (time() - start) * 100\npos = calcpositions.((rings,), 1:N2, t, (t_audio,))\n\nscene = lines(pos, color = RGBAf0.(to_colormap(:RdBu, N2), 0.6), thickness = 0.6f0, show_axis = false)\nlinesegments!(scene, FRect3D(Vec3f0(-1.5), Vec3f0(3)), raw = true, linewidth = 3, linestyle = :dot)\neyepos = Vec3f0(5, 1.5, 0.5)\nlookat = Vec3f0(0)\nupdate_cam!(scene, eyepos, lookat)\nl = scene[1]\nN = 150\nrecord(scene, \"./docs/media/moire.mp4\", 1:N) do i\n    t = (time() - start) * 700\n    pos .= calcpositions.((rings,), 1:N2, t, (t_audio,))\n    l[1] = pos # update argument 1\n    rotate_cam!(scene, 0.0, 0.01, 0.01)\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\moire.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
+},
+
+{
+    "location": "examples-linesegments.html#Type-recipe-for-molecule-simulation-1",
+    "page": "linesegments",
+    "title": "Type recipe for molecule simulation",
+    "category": "section",
+    "text": "Tags: linesegments, meshscatter, molecules, recipe.using Makie\nimport AbstractPlotting: Plot, default_theme, plot!, to_value\nusing Makie\n\n\nstruct Simulation\n    grid::Vector{Point3f0}\nend\n# Probably worth having a macro for this!\nfunction default_theme(scene::SceneLike, ::Type{<: Plot(Simulation)})\n    Theme(\n        advance = 0,\n        molecule_sizes = [0.08, 0.04, 0.04],\n        molecule_colors = [:maroon, :deepskyblue2, :deepskyblue2]\n    )\nend\n\n# The recipe! - will get called for plot(!)(x::SimulationResult)\nfunction AbstractPlotting.plot!(p::Plot(Simulation))\n    sim = to_value(p[1]) # first argument is the SimulationResult\n    # when advance changes, get new positions from the simulation\n    mpos = lift(p[:advance]) do i\n        sim.grid .+ rand(Point3f0, length(sim.grid)) .* 0.01f0\n    end\n    # size shouldn\'t change, so we might as well get the value instead of signal\n    pos = to_value(mpos)\n    N = length(pos)\n    sizes = lift(p[:molecule_sizes]) do s\n        repeat(s, outer = N ÷ 3)\n    end\n    sizes = lift(p[:molecule_sizes]) do s\n        repeat(s, outer = N ÷ 3)\n    end\n    colors = lift(p[:molecule_colors]) do c\n        repeat(c, outer = N ÷ 3)\n    end\n    scene = meshscatter!(p, mpos, markersize = sizes, color = colors)\n    indices = Int[]\n    for i in 1:3:N\n        push!(indices, i, i + 1, i, i + 2)\n    end\n    meshplot = p.plots[end] # meshplot is the last plot we added to p\n    # meshplot[1] -> the positions (first argument) converted to points, so\n    # we don\'t do the conversion 2 times for linesegments!\n    linesegments!(p, lift(x-> view(x, indices), meshplot[1]))\nend\n\n# To write out a video of the whole simulation\nn = 5\ngrid = Point3f0.(linspace(-1, 1, n), reshape(linspace(-1, 1, n), (1, n, 1)), reshape(linspace(-1, 1, n), (1, 1, n)))\nmolecules = map(1:(n^3) * 3) do i\n    i3 = ((i - 1) ÷ 3) + 1\n    xy = 0.1; z = 0.08\n    i % 3 == 1 && return grid[i3]\n    i % 3 == 2 && return grid[i3] + Point3f0(xy, xy, z)\n    i % 3 == 0 && return grid[i3] + Point3f0(-xy, xy, z)\nend\nresult = Simulation(molecules)\nscene = plot(result)\nN = 100\nrecord(scene, \"./docs/media/type_recipe_for_molecule_simulation.mp4\", 1:100) do i\n    scene[end][:advance] = i\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\type_recipe_for_molecule_simulation.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
 },
 
 {
@@ -761,91 +921,91 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "examples-mesh.html#\"FEM-mesh-2D\"-1",
+    "location": "examples-mesh.html#FEM-mesh-2D-1",
     "page": "mesh",
-    "title": "\"FEM mesh 2D\"",
+    "title": "FEM mesh 2D",
     "category": "section",
-    "text": "Tags: 2d, fem, mesh.using Makie\n\ncoordinates = [\n    0.0 0.0;\n    0.5 0.0;\n    1.0 0.0;\n    0.0 0.5;\n    0.5 0.5;\n    1.0 0.5;\n    0.0 1.0;\n    0.5 1.0;\n    1.0 1.0;\n]\nconnectivity = [\n    1 2 5;\n    1 4 5;\n    2 3 6;\n    2 5 6;\n    4 5 8;\n    4 7 8;\n    5 6 9;\n    5 8 9;\n]\ncolor = [0.0, 0.0, 0.0, 0.0, -0.375, 0.0, 0.0, 0.0, 0.0]\nscene = mesh(coordinates, connectivity, color = color, shading = false)\nwireframe!(scene[end][1], color = (:black, 0.6), linewidth = 3)\n\n(Image: library lines 38:61)"
+    "text": "Tags: 2d, fem, mesh.using Makie\n\ncoordinates = [\n    0.0 0.0;\n    0.5 0.0;\n    1.0 0.0;\n    0.0 0.5;\n    0.5 0.5;\n    1.0 0.5;\n    0.0 1.0;\n    0.5 1.0;\n    1.0 1.0;\n]\nconnectivity = [\n    1 2 5;\n    1 4 5;\n    2 3 6;\n    2 5 6;\n    4 5 8;\n    4 7 8;\n    5 6 9;\n    5 8 9;\n]\ncolor = [0.0, 0.0, 0.0, 0.0, -0.375, 0.0, 0.0, 0.0, 0.0]\nscene = mesh(coordinates, connectivity, color = color, shading = false)\nwireframe!(scene[end][1], color = (:black, 0.6), linewidth = 3)\n\n(Image: library lines 76:99)"
 },
 
 {
-    "location": "examples-mesh.html#\"colored-triangle\"-1",
+    "location": "examples-mesh.html#colored-triangle-1",
     "page": "mesh",
-    "title": "\"colored triangle\"",
+    "title": "colored triangle",
     "category": "section",
-    "text": "Tags: 2d, mesh, polygon.using Makie\n\nmesh(\n    [(0.0, 0.0), (0.5, 1.0), (1.0, 0.0)], color = [:red, :green, :blue],\n    shading = false\n)\n\n(Image: library lines 64:64)"
+    "text": "Tags: 2d, mesh, polygon.using Makie\n\nmesh(\n    [(0.0, 0.0), (0.5, 1.0), (1.0, 0.0)], color = [:red, :green, :blue],\n    shading = false\n)\n\n(Image: library lines 102:102)"
 },
 
 {
-    "location": "examples-mesh.html#\"FEM-mesh-3D\"-1",
+    "location": "examples-mesh.html#Textured-Mesh-1",
     "page": "mesh",
-    "title": "\"FEM mesh 3D\"",
+    "title": "Textured Mesh",
     "category": "section",
-    "text": "Tags: 3d, fem, mesh.using Makie\nusing GeometryTypes\n\ncat = Makie.loadasset(\"cat.obj\")\nvertices = decompose(Point3f0, cat)\nfaces = decompose(Face{3, Int}, cat)\ncoordinates = [vertices[i][j] for i = 1:length(vertices), j = 1:3]\nconnectivity = [faces[i][j] for i = 1:length(faces), j = 1:3]\nmesh(\n    coordinates, connectivity,\n    color = rand(length(vertices))\n)\n\n(Image: library lines 164:170)"
+    "text": "Tags: 3d, cat, mesh, texture.using Makie\nusing FileIO\n\nscene = Scene(resolution = (500, 500))\ncatmesh = FileIO.load(Makie.assetpath(\"cat.obj\"), GLNormalUVMesh)\nmesh(catmesh, color = Makie.loadasset(\"diffusemap.tga\"))\n\n(Image: library lines 8:11)"
 },
 
 {
-    "location": "examples-mesh.html#\"Fluctuation-3D\"-1",
+    "location": "examples-mesh.html#Load-Mesh-1",
     "page": "mesh",
-    "title": "\"Fluctuation 3D\"",
+    "title": "Load Mesh",
     "category": "section",
-    "text": "Tags: 3d, animated, axis, mesh, meshscatter.using Makie\nusing GeometryTypes, Colors\n\nscene = Scene()\n# define points/edges\nperturbfactor = 4e1\nN = 3; nbfacese = 30; radius = 0.02\nlarge_sphere = Sphere(Point3f0(0), 1f0)\npositions = decompose(Point3f0, large_sphere, 30)\nnp = length(positions)\npts = [positions[k][l] for k = 1:length(positions), l = 1:3]\npts = vcat(pts, 1.1 * pts + randn(size(pts)) / perturbfactor) # light position influence ?\nedges = hcat(collect(1:np), collect(1:np) + np)\nne = size(edges, 1); np = size(pts, 1)\n# define markers meshes\nmeshC = GLNormalMesh(\n    Makie.Cylinder{3, Float32}(\n        Point3f0(0., 0., 0.),\n        Point3f0(0., 0, 1.),\n        Float32(1)\n    ), nbfacese\n)\nmeshS = GLNormalMesh(large_sphere, 20)\n# define colors, markersizes and rotations\npG = [Point3f0(pts[k, 1], pts[k, 2], pts[k, 3]) for k = 1:np]\nlengthsC = sqrt.(sum((pts[edges[:,1], :] .- pts[edges[:, 2], :]) .^ 2, 2))\nsizesC = [Vec3f0(radius, radius, lengthsC[i]) for i = 1:ne]\nsizesC = [Vec3f0(1., 1., 1.) for i = 1:ne]\ncolorsp = [RGBA{Float32}(rand(), rand(), rand(), 1.) for i = 1:np]\ncolorsC = [(colorsp[edges[i, 1]] + colorsp[edges[i, 2]]) / 2. for i = 1:ne]\nsizesC = [Vec3f0(radius, radius, lengthsC[i]) for i = 1:ne]\nQlist = zeros(ne, 4)\nfor k = 1:ne\n    ct = GeometryTypes.Cylinder{3, Float32}(\n        Point3f0(pts[edges[k, 1], 1], pts[edges[k, 1], 2], pts[edges[k, 1], 3]),\n        Point3f0(pts[edges[k, 2], 1], pts[edges[k, 2], 2], pts[edges[k, 2], 3]),\n        Float32(1)\n    )\n    Q = GeometryTypes.rotation(ct)\n    r = 0.5 * sqrt(1 + Q[1, 1] + Q[2, 2] + Q[3, 3]); Qlist[k, 4] = r\n    Qlist[k, 1] = (Q[3, 2] - Q[2, 3]) / (4 * r)\n    Qlist[k, 2] = (Q[1, 3] - Q[3, 1]) / (4 * r)\n    Qlist[k, 3] = (Q[2, 1] - Q[1, 2]) / (4 * r)\nend\nrotationsC = [Makie.Vec4f0(Qlist[i, 1], Qlist[i, 2], Qlist[i, 3], Qlist[i, 4]) for i = 1:ne]\n# plot\nhm = meshscatter!(\n    scene, pG[edges[:, 1]],\n    color = colorsC, marker = meshC,\n    markersize = sizesC,  rotations = rotationsC,\n)\nhp = meshscatter!(\n    scene, pG,\n    color = colorsp, marker = meshS, markersize = radius,\n)\n\n(Image: library lines 218:267)"
+    "text": "Tags: 3d, cat, mesh.using Makie\n\nmesh(Makie.loadasset(\"cat.obj\"))\n\n(Image: library lines 14:14)"
 },
 
 {
-    "location": "examples-mesh.html#\"Normals-of-a-Cat\"-1",
+    "location": "examples-mesh.html#Colored-Mesh-1",
     "page": "mesh",
-    "title": "\"Normals of a Cat\"",
+    "title": "Colored Mesh",
     "category": "section",
-    "text": "Tags: 3d, cat, linesegment, mesh.using Makie\n\nx = Makie.loadasset(\"cat.obj\")\nmesh(x, color = :black)\npos = map(x.vertices, x.normals) do p, n\n    p => p .+ (normalize(n) .* 0.05f0)\nend\nlinesegments!(pos, color = :blue)\n\n(Image: library lines 319:324)"
+    "text": "Tags: 3d, axis, mesh.using Makie\n\nx = [0, 1, 2, 0]\ny = [0, 0, 1, 2]\nz = [0, 2, 0, 1]\ncolor = [:red, :green, :blue, :yellow]\ni = [0, 0, 0, 1]\nj = [1, 2, 3, 2]\nk = [2, 3, 1, 3]\n# indices interpreted as triangles (every 3 sequential indices)\nindices = [1, 2, 3,   1, 3, 4,   1, 4, 2,   2, 3, 4]\nmesh(x, y, z, indices, color = color)\n\n(Image: library lines 17:26)"
 },
 
 {
-    "location": "examples-mesh.html#\"Sphere-Mesh\"-1",
+    "location": "examples-mesh.html#Wireframe-of-a-Mesh-1",
     "page": "mesh",
-    "title": "\"Sphere Mesh\"",
+    "title": "Wireframe of a Mesh",
     "category": "section",
-    "text": "Tags: 3d, mesh.using Makie\n\nmesh(Sphere(Point3f0(0), 1f0), color = :blue)\n\n(Image: library lines 328:328)"
+    "text": "Tags: 3d, cat, mesh, wireframe.using Makie\n\nwireframe(Makie.loadasset(\"cat.obj\"))\n\n(Image: library lines 29:29)"
 },
 
 {
-    "location": "examples-mesh.html#\"Merged-color-Mesh\"-1",
+    "location": "examples-mesh.html#FEM-mesh-3D-1",
     "page": "mesh",
-    "title": "\"Merged color Mesh\"",
+    "title": "FEM mesh 3D",
     "category": "section",
-    "text": "Tags: 3d, color, mesh.using Makie\nusing GeometryTypes\n\nx = Vec3f0(0); baselen = 0.2f0; dirlen = 1f0\n# create an array of differently colored boxes in the direction of the 3 axes\nrectangles = [\n    (HyperRectangle(Vec3f0(x), Vec3f0(dirlen, baselen, baselen)), RGBAf0(1,0,0,1)),\n    (HyperRectangle(Vec3f0(x), Vec3f0(baselen, dirlen, baselen)), RGBAf0(0,1,0,1)),\n    (HyperRectangle(Vec3f0(x), Vec3f0(baselen, baselen, dirlen)), RGBAf0(0,0,1,1))\n]\nmeshes = map(GLNormalMesh, rectangles)\nmesh(merge(meshes))\n\n(Image: library lines 351:360)"
+    "text": "Tags: 3d, fem, mesh.using Makie\nusing GeometryTypes\n\ncat = Makie.loadasset(\"cat.obj\")\nvertices = decompose(Point3f0, cat)\nfaces = decompose(Face{3, Int}, cat)\ncoordinates = [vertices[i][j] for i = 1:length(vertices), j = 1:3]\nconnectivity = [faces[i][j] for i = 1:length(faces), j = 1:3]\nmesh(\n    coordinates, connectivity,\n    color = rand(length(vertices))\n)\n\n(Image: library lines 220:226)"
 },
 
 {
-    "location": "examples-mesh.html#\"Textured-Mesh\"-1",
+    "location": "examples-mesh.html#Fluctuation-3D-1",
     "page": "mesh",
-    "title": "\"Textured Mesh\"",
+    "title": "Fluctuation 3D",
     "category": "section",
-    "text": "Tags: 3d, cat, documentation, mesh, texture.using Makie\nusing FileIO\n\nscene = Scene(resolution = (500, 500))\ncatmesh = FileIO.load(Makie.assetpath(\"cat.obj\"), GLNormalUVMesh)\nmesh(catmesh, color = Makie.loadasset(\"diffusemap.tga\"))\n\n(Image: library lines 455:458)"
+    "text": "Tags: 3d, animated, axis, mesh, meshscatter.using Makie\nusing GeometryTypes, Colors\n\nscene = Scene()\n# define points/edges\nperturbfactor = 4e1\nN = 3; nbfacese = 30; radius = 0.02\nlarge_sphere = Sphere(Point3f0(0), 1f0)\npositions = decompose(Point3f0, large_sphere, 30)\nnp = length(positions)\npts = [positions[k][l] for k = 1:length(positions), l = 1:3]\npts = vcat(pts, 1.1 * pts + randn(size(pts)) / perturbfactor) # light position influence ?\nedges = hcat(collect(1:np), collect(1:np) + np)\nne = size(edges, 1); np = size(pts, 1)\n# define markers meshes\nmeshC = GLNormalMesh(\n    Makie.Cylinder{3, Float32}(\n        Point3f0(0., 0., 0.),\n        Point3f0(0., 0, 1.),\n        Float32(1)\n    ), nbfacese\n)\nmeshS = GLNormalMesh(large_sphere, 20)\n# define colors, markersizes and rotations\npG = [Point3f0(pts[k, 1], pts[k, 2], pts[k, 3]) for k = 1:np]\nlengthsC = sqrt.(sum((pts[edges[:,1], :] .- pts[edges[:, 2], :]) .^ 2, 2))\nsizesC = [Vec3f0(radius, radius, lengthsC[i]) for i = 1:ne]\nsizesC = [Vec3f0(1., 1., 1.) for i = 1:ne]\ncolorsp = [RGBA{Float32}(rand(), rand(), rand(), 1.) for i = 1:np]\ncolorsC = [(colorsp[edges[i, 1]] + colorsp[edges[i, 2]]) / 2. for i = 1:ne]\nsizesC = [Vec3f0(radius, radius, lengthsC[i]) for i = 1:ne]\nQlist = zeros(ne, 4)\nfor k = 1:ne\n    ct = GeometryTypes.Cylinder{3, Float32}(\n        Point3f0(pts[edges[k, 1], 1], pts[edges[k, 1], 2], pts[edges[k, 1], 3]),\n        Point3f0(pts[edges[k, 2], 1], pts[edges[k, 2], 2], pts[edges[k, 2], 3]),\n        Float32(1)\n    )\n    Q = GeometryTypes.rotation(ct)\n    r = 0.5 * sqrt(1 + Q[1, 1] + Q[2, 2] + Q[3, 3]); Qlist[k, 4] = r\n    Qlist[k, 1] = (Q[3, 2] - Q[2, 3]) / (4 * r)\n    Qlist[k, 2] = (Q[1, 3] - Q[3, 1]) / (4 * r)\n    Qlist[k, 3] = (Q[2, 1] - Q[1, 2]) / (4 * r)\nend\nrotationsC = [Makie.Vec4f0(Qlist[i, 1], Qlist[i, 2], Qlist[i, 3], Qlist[i, 4]) for i = 1:ne]\n# plot\nhm = meshscatter!(\n    scene, pG[edges[:, 1]],\n    color = colorsC, marker = meshC,\n    markersize = sizesC,  rotations = rotationsC,\n)\nhp = meshscatter!(\n    scene, pG,\n    color = colorsp, marker = meshS, markersize = radius,\n)\n\n(Image: library lines 274:323)"
 },
 
 {
-    "location": "examples-mesh.html#\"Load-Mesh\"-1",
+    "location": "examples-mesh.html#Normals-of-a-Cat-1",
     "page": "mesh",
-    "title": "\"Load Mesh\"",
+    "title": "Normals of a Cat",
     "category": "section",
-    "text": "Tags: 3d, cat, documentation, mesh.using Makie\n\nmesh(Makie.loadasset(\"cat.obj\"))\n\n(Image: library lines 461:461)"
+    "text": "Tags: 3d, cat, linesegment, mesh.using Makie\n\nx = Makie.loadasset(\"cat.obj\")\nmesh(x, color = :black)\npos = map(x.vertices, x.normals) do p, n\n    p => p .+ (normalize(n) .* 0.05f0)\nend\nlinesegments!(pos, color = :blue)\n\n(Image: library lines 376:381)"
 },
 
 {
-    "location": "examples-mesh.html#\"Colored-Mesh\"-1",
+    "location": "examples-mesh.html#Sphere-Mesh-1",
     "page": "mesh",
-    "title": "\"Colored Mesh\"",
+    "title": "Sphere Mesh",
     "category": "section",
-    "text": "Tags: 3d, axis, documentation, mesh.using Makie\n\nx = [0, 1, 2, 0]\ny = [0, 0, 1, 2]\nz = [0, 2, 0, 1]\ncolor = [:red, :green, :blue, :yellow]\ni = [0, 0, 0, 1]\nj = [1, 2, 3, 2]\nk = [2, 3, 1, 3]\n# indices interpreted as triangles (every 3 sequential indices)\nindices = [1, 2, 3,   1, 3, 4,   1, 4, 2,   2, 3, 4]\nmesh(x, y, z, indices, color = color)\n\n(Image: library lines 464:473)"
+    "text": "Tags: 3d, mesh.using Makie\n\nmesh(Sphere(Point3f0(0), 1f0), color = :blue)\n\n(Image: library lines 385:385)"
 },
 
 {
-    "location": "examples-mesh.html#\"Wireframe-of-a-Mesh\"-1",
+    "location": "examples-mesh.html#Merged-color-Mesh-1",
     "page": "mesh",
-    "title": "\"Wireframe of a Mesh\"",
+    "title": "Merged color Mesh",
     "category": "section",
-    "text": "Tags: 3d, cat, documentation, mesh, wireframe.using Makie\n\nwireframe(Makie.loadasset(\"cat.obj\"))\n\n(Image: library lines 476:476)"
+    "text": "Tags: 3d, color, mesh.using Makie\nusing GeometryTypes\n\nx = Vec3f0(0); baselen = 0.2f0; dirlen = 1f0\n# create an array of differently colored boxes in the direction of the 3 axes\nrectangles = [\n    (HyperRectangle(Vec3f0(x), Vec3f0(dirlen, baselen, baselen)), RGBAf0(1,0,0,1)),\n    (HyperRectangle(Vec3f0(x), Vec3f0(baselen, dirlen, baselen)), RGBAf0(0,1,0,1)),\n    (HyperRectangle(Vec3f0(x), Vec3f0(baselen, baselen, dirlen)), RGBAf0(0,0,1,1))\n]\nmeshes = map(GLNormalMesh, rectangles)\nmesh(merge(meshes))\n\n(Image: library lines 408:417)"
 },
 
 {
@@ -865,35 +1025,43 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "examples-meshscatter.html#\"Fluctuation-3D\"-1",
+    "location": "examples-meshscatter.html#Meshscatter-Function-1",
     "page": "meshscatter",
-    "title": "\"Fluctuation 3D\"",
+    "title": "Meshscatter Function",
     "category": "section",
-    "text": "Tags: 3d, animated, axis, mesh, meshscatter.using Makie\nusing GeometryTypes, Colors\n\nscene = Scene()\n# define points/edges\nperturbfactor = 4e1\nN = 3; nbfacese = 30; radius = 0.02\nlarge_sphere = Sphere(Point3f0(0), 1f0)\npositions = decompose(Point3f0, large_sphere, 30)\nnp = length(positions)\npts = [positions[k][l] for k = 1:length(positions), l = 1:3]\npts = vcat(pts, 1.1 * pts + randn(size(pts)) / perturbfactor) # light position influence ?\nedges = hcat(collect(1:np), collect(1:np) + np)\nne = size(edges, 1); np = size(pts, 1)\n# define markers meshes\nmeshC = GLNormalMesh(\n    Makie.Cylinder{3, Float32}(\n        Point3f0(0., 0., 0.),\n        Point3f0(0., 0, 1.),\n        Float32(1)\n    ), nbfacese\n)\nmeshS = GLNormalMesh(large_sphere, 20)\n# define colors, markersizes and rotations\npG = [Point3f0(pts[k, 1], pts[k, 2], pts[k, 3]) for k = 1:np]\nlengthsC = sqrt.(sum((pts[edges[:,1], :] .- pts[edges[:, 2], :]) .^ 2, 2))\nsizesC = [Vec3f0(radius, radius, lengthsC[i]) for i = 1:ne]\nsizesC = [Vec3f0(1., 1., 1.) for i = 1:ne]\ncolorsp = [RGBA{Float32}(rand(), rand(), rand(), 1.) for i = 1:np]\ncolorsC = [(colorsp[edges[i, 1]] + colorsp[edges[i, 2]]) / 2. for i = 1:ne]\nsizesC = [Vec3f0(radius, radius, lengthsC[i]) for i = 1:ne]\nQlist = zeros(ne, 4)\nfor k = 1:ne\n    ct = GeometryTypes.Cylinder{3, Float32}(\n        Point3f0(pts[edges[k, 1], 1], pts[edges[k, 1], 2], pts[edges[k, 1], 3]),\n        Point3f0(pts[edges[k, 2], 1], pts[edges[k, 2], 2], pts[edges[k, 2], 3]),\n        Float32(1)\n    )\n    Q = GeometryTypes.rotation(ct)\n    r = 0.5 * sqrt(1 + Q[1, 1] + Q[2, 2] + Q[3, 3]); Qlist[k, 4] = r\n    Qlist[k, 1] = (Q[3, 2] - Q[2, 3]) / (4 * r)\n    Qlist[k, 2] = (Q[1, 3] - Q[3, 1]) / (4 * r)\n    Qlist[k, 3] = (Q[2, 1] - Q[1, 2]) / (4 * r)\nend\nrotationsC = [Makie.Vec4f0(Qlist[i, 1], Qlist[i, 2], Qlist[i, 3], Qlist[i, 4]) for i = 1:ne]\n# plot\nhm = meshscatter!(\n    scene, pG[edges[:, 1]],\n    color = colorsC, marker = meshC,\n    markersize = sizesC,  rotations = rotationsC,\n)\nhp = meshscatter!(\n    scene, pG,\n    color = colorsp, marker = meshS, markersize = radius,\n)\n\n(Image: library lines 218:267)"
+    "text": "Tags: 3d, meshscatter.using Makie\nusing GeometryTypes\n\nlarge_sphere = Sphere(Point3f0(0), 1f0)\npositions = decompose(Point3f0, large_sphere)\ncolS = [RGBAf0(rand(), rand(), rand(), 1.0) for i = 1:length(positions)]\nsizesS = [rand(Point3f0) .* 0.05f0 for i = 1:length(positions)]\nmeshscatter(positions, color = colS, markersize = sizesS)\n\n(Image: library lines 80:85)"
 },
 
 {
-    "location": "examples-meshscatter.html#\"Simple-meshscatter\"-1",
+    "location": "examples-meshscatter.html#Record-Video-1",
     "page": "meshscatter",
-    "title": "\"Simple meshscatter\"",
+    "title": "Record Video",
     "category": "section",
-    "text": "Tags: 3d, meshscatter.using Makie\n\nlarge_sphere = Sphere(Point3f0(0), 1f0)\npositions = decompose(Point3f0, large_sphere)\nmeshscatter(positions, color = RGBAf0(0.9, 0.2, 0.4, 1), markersize = 0.05)\n\n(Image: library lines 292:294)"
+    "text": "Tags: 3d, linesegment, meshscatter, record.using Makie\n\nscene = Scene()\n\nf(t, v, s) = (sin(v + t) * s, cos(v + t) * s, (cos(v + t) + sin(v)) * s)\nt = Node(Base.time()) # create a life signal\nlimits = FRect3D(Vec3f0(-1.5, -1.5, -3), Vec3f0(3, 3, 6))\np1 = meshscatter!(scene, lift(t-> f.(t, linspace(0, 2pi, 50), 1), t), markersize = 0.05)[end]\np2 = meshscatter!(scene, lift(t-> f.(t * 2.0, linspace(0, 2pi, 50), 1.5), t), markersize = 0.05)[end]\n\nlines = lift(p1[1], p2[1]) do pos1, pos2\n    map((a, b)-> (a, b), pos1, pos2)\nend\nlinesegments!(scene, lines, linestyle = :dot, limits = limits)\n# record a video\nN = 150\nrecord(scene, \"./docs/media/record_video.mp4\", 1:N) do i\n    push!(t, Base.time())\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\record_video.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
 },
 
 {
-    "location": "examples-meshscatter.html#\"Meshscatter-Function\"-1",
+    "location": "examples-meshscatter.html#Fluctuation-3D-1",
     "page": "meshscatter",
-    "title": "\"Meshscatter Function\"",
+    "title": "Fluctuation 3D",
     "category": "section",
-    "text": "Tags: 3d, documentation, meshscatter.using Makie\nusing GeometryTypes\n\nlarge_sphere = Sphere(Point3f0(0), 1f0)\npositions = decompose(Point3f0, large_sphere)\ncolS = [RGBAf0(rand(), rand(), rand(), 1.0) for i = 1:length(positions)]\nsizesS = [rand(Point3f0) .* 0.05f0 for i = 1:length(positions)]\nmeshscatter(positions, color = colS, markersize = sizesS)\n\n(Image: library lines 527:532)"
+    "text": "Tags: 3d, animated, axis, mesh, meshscatter.using Makie\nusing GeometryTypes, Colors\n\nscene = Scene()\n# define points/edges\nperturbfactor = 4e1\nN = 3; nbfacese = 30; radius = 0.02\nlarge_sphere = Sphere(Point3f0(0), 1f0)\npositions = decompose(Point3f0, large_sphere, 30)\nnp = length(positions)\npts = [positions[k][l] for k = 1:length(positions), l = 1:3]\npts = vcat(pts, 1.1 * pts + randn(size(pts)) / perturbfactor) # light position influence ?\nedges = hcat(collect(1:np), collect(1:np) + np)\nne = size(edges, 1); np = size(pts, 1)\n# define markers meshes\nmeshC = GLNormalMesh(\n    Makie.Cylinder{3, Float32}(\n        Point3f0(0., 0., 0.),\n        Point3f0(0., 0, 1.),\n        Float32(1)\n    ), nbfacese\n)\nmeshS = GLNormalMesh(large_sphere, 20)\n# define colors, markersizes and rotations\npG = [Point3f0(pts[k, 1], pts[k, 2], pts[k, 3]) for k = 1:np]\nlengthsC = sqrt.(sum((pts[edges[:,1], :] .- pts[edges[:, 2], :]) .^ 2, 2))\nsizesC = [Vec3f0(radius, radius, lengthsC[i]) for i = 1:ne]\nsizesC = [Vec3f0(1., 1., 1.) for i = 1:ne]\ncolorsp = [RGBA{Float32}(rand(), rand(), rand(), 1.) for i = 1:np]\ncolorsC = [(colorsp[edges[i, 1]] + colorsp[edges[i, 2]]) / 2. for i = 1:ne]\nsizesC = [Vec3f0(radius, radius, lengthsC[i]) for i = 1:ne]\nQlist = zeros(ne, 4)\nfor k = 1:ne\n    ct = GeometryTypes.Cylinder{3, Float32}(\n        Point3f0(pts[edges[k, 1], 1], pts[edges[k, 1], 2], pts[edges[k, 1], 3]),\n        Point3f0(pts[edges[k, 2], 1], pts[edges[k, 2], 2], pts[edges[k, 2], 3]),\n        Float32(1)\n    )\n    Q = GeometryTypes.rotation(ct)\n    r = 0.5 * sqrt(1 + Q[1, 1] + Q[2, 2] + Q[3, 3]); Qlist[k, 4] = r\n    Qlist[k, 1] = (Q[3, 2] - Q[2, 3]) / (4 * r)\n    Qlist[k, 2] = (Q[1, 3] - Q[3, 1]) / (4 * r)\n    Qlist[k, 3] = (Q[2, 1] - Q[1, 2]) / (4 * r)\nend\nrotationsC = [Makie.Vec4f0(Qlist[i, 1], Qlist[i, 2], Qlist[i, 3], Qlist[i, 4]) for i = 1:ne]\n# plot\nhm = meshscatter!(\n    scene, pG[edges[:, 1]],\n    color = colorsC, marker = meshC,\n    markersize = sizesC,  rotations = rotationsC,\n)\nhp = meshscatter!(\n    scene, pG,\n    color = colorsp, marker = meshS, markersize = radius,\n)\n\n(Image: library lines 274:323)"
 },
 
 {
-    "location": "examples-meshscatter.html#\"Record-Video\"-1",
+    "location": "examples-meshscatter.html#Simple-meshscatter-1",
     "page": "meshscatter",
-    "title": "\"Record Video\"",
+    "title": "Simple meshscatter",
     "category": "section",
-    "text": "Tags: 3d, documentation, linesegment, meshscatter, record.using Makie\n\nscene = Scene()\n\nf(t, v, s) = (sin(v + t) * s, cos(v + t) * s, (cos(v + t) + sin(v)) * s)\nt = Node(Base.time()) # create a life signal\nlimits = FRect3D(Vec3f0(-1.5, -1.5, -3), Vec3f0(3, 3, 6))\np1 = meshscatter!(scene, lift(t-> f.(t, linspace(0, 2pi, 50), 1), t), markersize = 0.05)[end]\np2 = meshscatter!(scene, lift(t-> f.(t * 2.0, linspace(0, 2pi, 50), 1.5), t), markersize = 0.05)[end]\n\nlines = lift(p1[1], p2[1]) do pos1, pos2\n    map((a, b)-> (a, b), pos1, pos2)\nend\nlinesegments!(scene, lines, linestyle = :dot, limits = limits)\n# record a video\nN = 150\nrecord(scene, \"./docs/media/record_video.mp4\", 1:N) do i\n    push!(t, Base.time())\nend\n\n<video controls autoplay loop muted>\n  <source src=\"media\\record_video.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "Tags: 3d, meshscatter.using Makie\n\nlarge_sphere = Sphere(Point3f0(0), 1f0)\npositions = decompose(Point3f0, large_sphere)\nmeshscatter(positions, color = RGBAf0(0.9, 0.2, 0.4, 1), markersize = 0.05)\n\n(Image: library lines 348:350)"
+},
+
+{
+    "location": "examples-meshscatter.html#Type-recipe-for-molecule-simulation-1",
+    "page": "meshscatter",
+    "title": "Type recipe for molecule simulation",
+    "category": "section",
+    "text": "Tags: linesegments, meshscatter, molecules, recipe.using Makie\nimport AbstractPlotting: Plot, default_theme, plot!, to_value\nusing Makie\n\n\nstruct Simulation\n    grid::Vector{Point3f0}\nend\n# Probably worth having a macro for this!\nfunction default_theme(scene::SceneLike, ::Type{<: Plot(Simulation)})\n    Theme(\n        advance = 0,\n        molecule_sizes = [0.08, 0.04, 0.04],\n        molecule_colors = [:maroon, :deepskyblue2, :deepskyblue2]\n    )\nend\n\n# The recipe! - will get called for plot(!)(x::SimulationResult)\nfunction AbstractPlotting.plot!(p::Plot(Simulation))\n    sim = to_value(p[1]) # first argument is the SimulationResult\n    # when advance changes, get new positions from the simulation\n    mpos = lift(p[:advance]) do i\n        sim.grid .+ rand(Point3f0, length(sim.grid)) .* 0.01f0\n    end\n    # size shouldn\'t change, so we might as well get the value instead of signal\n    pos = to_value(mpos)\n    N = length(pos)\n    sizes = lift(p[:molecule_sizes]) do s\n        repeat(s, outer = N ÷ 3)\n    end\n    sizes = lift(p[:molecule_sizes]) do s\n        repeat(s, outer = N ÷ 3)\n    end\n    colors = lift(p[:molecule_colors]) do c\n        repeat(c, outer = N ÷ 3)\n    end\n    scene = meshscatter!(p, mpos, markersize = sizes, color = colors)\n    indices = Int[]\n    for i in 1:3:N\n        push!(indices, i, i + 1, i, i + 2)\n    end\n    meshplot = p.plots[end] # meshplot is the last plot we added to p\n    # meshplot[1] -> the positions (first argument) converted to points, so\n    # we don\'t do the conversion 2 times for linesegments!\n    linesegments!(p, lift(x-> view(x, indices), meshplot[1]))\nend\n\n# To write out a video of the whole simulation\nn = 5\ngrid = Point3f0.(linspace(-1, 1, n), reshape(linspace(-1, 1, n), (1, n, 1)), reshape(linspace(-1, 1, n), (1, 1, n)))\nmolecules = map(1:(n^3) * 3) do i\n    i3 = ((i - 1) ÷ 3) + 1\n    xy = 0.1; z = 0.08\n    i % 3 == 1 && return grid[i3]\n    i % 3 == 2 && return grid[i3] + Point3f0(xy, xy, z)\n    i % 3 == 0 && return grid[i3] + Point3f0(-xy, xy, z)\nend\nresult = Simulation(molecules)\nscene = plot(result)\nN = 100\nrecord(scene, \"./docs/media/type_recipe_for_molecule_simulation.mp4\", 1:100) do i\n    scene[end][:advance] = i\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\type_recipe_for_molecule_simulation.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
 },
 
 {
@@ -913,155 +1081,155 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "examples-scatter.html#\"scatter-colormap\"-1",
+    "location": "examples-scatter.html#Interaction-1",
     "page": "scatter",
-    "title": "\"scatter colormap\"",
+    "title": "Interaction",
     "category": "section",
-    "text": "Tags: 2d, colormap, scatter.using Makie\n\nscatter(rand(10), rand(10), color = rand(10))\n\n(Image: library lines 10:10)"
+    "text": "Tags: 2d, linesegment, record, scatter.using Makie\n\nscene = Scene(resolution = (500, 500))\n\nf(t, v, s) = (sin(v + t) * s, cos(v + t) * s)\ntime = Node(0.0)\np1 = scatter!(scene, lift(t-> f.(t, linspace(0, 2pi, 50), 1), time))[end]\np2 = scatter!(scene, lift(t-> f.(t * 2.0, linspace(0, 2pi, 50), 1.5), time))[end]\nlines = lift(p1[1], p2[1]) do pos1, pos2\n    map((a, b)-> (a, b), pos1, pos2)\nend\nlinesegments!(scene, lines)\nN = 150\nrecord(scene, \"./docs/media/interaction.mp4\", linspace(0, 10, N)) do i\n    push!(time, i)\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\interaction.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
 },
 
 {
-    "location": "examples-scatter.html#\"Subscenes\"-1",
+    "location": "examples-scatter.html#scatter-colormap-1",
     "page": "scatter",
-    "title": "\"Subscenes\"",
+    "title": "scatter colormap",
     "category": "section",
-    "text": "Tags: 2d, image, scatter, subscene.using Makie\n\nimg = rand(RGBAf0, 100, 100)\nscene = image(img, show_axis = false)\nsubscene = Scene(scene, IRect(100, 100, 300, 300))\nscatter!(subscene, rand(100) * 200, rand(100) * 200, markersize = 4)\nscene\n\n(Image: library lines 85:89)"
+    "text": "Tags: 2d, colormap, scatter.using Makie\n\nscatter(rand(10), rand(10), color = rand(10))\n\n(Image: library lines 48:48)"
 },
 
 {
-    "location": "examples-scatter.html#\"Animated-Scatter\"-1",
+    "location": "examples-scatter.html#Subscenes-1",
     "page": "scatter",
-    "title": "\"Animated Scatter\"",
+    "title": "Subscenes",
     "category": "section",
-    "text": "Tags: 2d, animated, record, scatter, updating.using Makie\n\nN = 10\nr = [(rand(7, 2) .- 0.5) .* 25 for i = 1:N]\nscene = scatter(r[1][:, 1], r[1][:, 2], markersize = 1, limits = FRect(-25/2, -25/2, 25, 25))\ns = scene[end] # last plot in scene\nrecord(scene, \"./docs/media/animated_scatter.mp4\", r) do m\n    s[1] = m[:, 1]\n    s[2] = m[:, 2]\nend\n\n<video controls autoplay loop muted>\n  <source src=\"media\\animated_scatter.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "Tags: 2d, image, scatter, subscene.using Makie\n\nimg = rand(RGBAf0, 100, 100)\nscene = image(img, show_axis = false)\nsubscene = Scene(scene, IRect(100, 100, 300, 300))\nscatter!(subscene, rand(100) * 200, rand(100) * 200, markersize = 4)\nscene\n\n(Image: library lines 123:127)"
 },
 
 {
-    "location": "examples-scatter.html#\"Connected-Sphere\"-1",
+    "location": "examples-scatter.html#Animated-Scatter-1",
     "page": "scatter",
-    "title": "\"Connected Sphere\"",
+    "title": "Animated Scatter",
     "category": "section",
-    "text": "Tags: 3d, axis, lines, scatter, views.using Makie\n\nlarge_sphere = Sphere(Point3f0(0), 1f0)\npositions = decompose(Point3f0, large_sphere)\nlinepos = view(positions, rand(1:length(positions), 1000))\nscene = lines(linepos, linewidth = 0.1, color = :black)\nscatter!(scene, positions, strokewidth = 10, strokecolor = :white, color = RGBAf0(0.9, 0.2, 0.4, 0.6))\nscene\n\n(Image: library lines 274:279)"
+    "text": "Tags: 2d, animated, record, scatter, updating.using Makie\n\nN = 10\nr = [(rand(7, 2) .- 0.5) .* 25 for i = 1:N]\nscene = scatter(r[1][:, 1], r[1][:, 2], markersize = 1, limits = FRect(-25/2, -25/2, 25, 25))\ns = scene[end] # last plot in scene\nrecord(scene, \"./docs/media/animated_scatter.mp4\", r) do m\n    s[1] = m[:, 1]\n    s[2] = m[:, 2]\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\animated_scatter.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
 },
 
 {
-    "location": "examples-scatter.html#\"image-scatter\"-1",
+    "location": "examples-scatter.html#scatter-2",
     "page": "scatter",
-    "title": "\"image scatter\"",
+    "title": "scatter",
     "category": "section",
-    "text": "Tags: 3d, image, scatter.using Makie\n\nscatter(\n    1:10, 1:10, rand(10, 10) .* 10,\n    rotations = normalize.(rand(Quaternionf0, 10*10)),\n    markersize = 1,\n    # can also be an array of images for each point\n    # need to be the same size for best performance, though\n    marker = Makie.logo()\n)\n\n(Image: library lines 282:282)"
+    "text": "Tags: 2d, 3d, scatter.using Makie\n\nscatter(rand(20), rand(20), markersize = 0.03)\n\n(Image: library lines 89:89)"
 },
 
 {
-    "location": "examples-scatter.html#\"Stars\"-1",
+    "location": "examples-scatter.html#Marker-sizes-1",
     "page": "scatter",
-    "title": "\"Stars\"",
+    "title": "Marker sizes",
     "category": "section",
-    "text": "Tags: 3d, camera, glow, scatter, update_cam!.using Makie\n\nstars = 100_000\nscene = Scene(backgroundcolor = :black)\nscatter!(\n    scene,\n    (rand(Point3f0, stars) .- 0.5) .* 10,\n    glowwidth = 0.005, glowcolor = :white, color = RGBAf0(0.8, 0.9, 0.95, 0.4),\n    markersize = rand(linspace(0.0001, 0.01, 100), stars),\n    show_axis = false\n)\nupdate_cam!(scene, FRect3D(Vec3f0(-2), Vec3f0(4)))\nscene\n\n(Image: library lines 332:342)"
+    "text": "Tags: 2d, 3d, scatter.using Makie\n\nscatter(rand(20), rand(20), markersize = rand(20)./20, color = to_colormap(:Spectral, 20))\n\n(Image: library lines 93:93)"
 },
 
 {
-    "location": "examples-scatter.html#\"Unicode-Marker\"-1",
+    "location": "examples-scatter.html#Connected-Sphere-1",
     "page": "scatter",
-    "title": "\"Unicode Marker\"",
+    "title": "Connected Sphere",
     "category": "section",
-    "text": "Tags: 3d, axis, marker, scatter.using Makie\n\nscene = Scene(resolution = (500, 500))\nscatter!(scene, Point3f0[(1,0,0), (0,1,0), (0,0,1)], marker = [:x, :circle, :cross])\n\n(Image: library lines 346:347)"
+    "text": "Tags: 3d, axis, lines, scatter, views.using Makie\n\nlarge_sphere = Sphere(Point3f0(0), 1f0)\npositions = decompose(Point3f0, large_sphere)\nlinepos = view(positions, rand(1:length(positions), 1000))\nscene = lines(linepos, linewidth = 0.1, color = :black)\nscatter!(scene, positions, strokewidth = 10, strokecolor = :white, color = RGBAf0(0.9, 0.2, 0.4, 0.6))\nscene\n\n(Image: library lines 330:335)"
 },
 
 {
-    "location": "examples-scatter.html#\"scatter\"-1",
+    "location": "examples-scatter.html#image-scatter-1",
     "page": "scatter",
-    "title": "\"scatter\"",
+    "title": "image scatter",
     "category": "section",
-    "text": "Tags: 2d, documentation, scatter.using Makie\n\nscatter(rand(20), rand(20), markersize = 0.03)\n\n(Image: library lines 536:536)"
+    "text": "Tags: 3d, image, scatter.using Makie\n\nscatter(\n    1:10, 1:10, rand(10, 10) .* 10,\n    rotations = normalize.(rand(Quaternionf0, 10*10)),\n    markersize = 1,\n    # can also be an array of images for each point\n    # need to be the same size for best performance, though\n    marker = Makie.logo()\n)\n\n(Image: library lines 338:338)"
 },
 
 {
-    "location": "examples-scatter.html#\"Marker-sizes\"-1",
+    "location": "examples-scatter.html#Stars-1",
     "page": "scatter",
-    "title": "\"Marker sizes\"",
+    "title": "Stars",
     "category": "section",
-    "text": "Tags: 2d, documentation, scatter.using Makie\n\nscatter(rand(20), rand(20), markersize = rand(20)./20, color = to_colormap(:Spectral, 20))\n\n(Image: library lines 540:540)"
+    "text": "Tags: 3d, camera, glow, scatter, update_cam!.using Makie\n\nstars = 100_000\nscene = Scene(backgroundcolor = :black)\nscatter!(\n    scene,\n    (rand(Point3f0, stars) .- 0.5) .* 10,\n    glowwidth = 0.005, glowcolor = :white, color = RGBAf0(0.8, 0.9, 0.95, 0.4),\n    markersize = rand(linspace(0.0001, 0.01, 100), stars),\n    show_axis = false\n)\nupdate_cam!(scene, FRect3D(Vec3f0(-2), Vec3f0(4)))\nscene\n\n(Image: library lines 389:399)"
 },
 
 {
-    "location": "examples-scatter.html#\"Interaction\"-1",
+    "location": "examples-scatter.html#Unicode-Marker-1",
     "page": "scatter",
-    "title": "\"Interaction\"",
+    "title": "Unicode Marker",
     "category": "section",
-    "text": "Tags: 2d, documentation, linesegment, record, scatter.using Makie\n\nscene = Scene(resolution = (500, 500))\n\nf(t, v, s) = (sin(v + t) * s, cos(v + t) * s)\ntime = Node(0.0)\np1 = scatter!(scene, lift(t-> f.(t, linspace(0, 2pi, 50), 1), time))[end]\np2 = scatter!(scene, lift(t-> f.(t * 2.0, linspace(0, 2pi, 50), 1.5), time))[end]\nlines = lift(p1[1], p2[1]) do pos1, pos2\n    map((a, b)-> (a, b), pos1, pos2)\nend\nlinesegments!(scene, lines)\nN = 150\nrecord(scene, \"./docs/media/interaction.mp4\", linspace(0, 10, N)) do i\n    push!(time, i)\nend\n\n<video controls autoplay loop muted>\n  <source src=\"media\\interaction.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "Tags: 3d, axis, marker, scatter.using Makie\n\nscene = Scene(resolution = (500, 500))\nscatter!(scene, Point3f0[(1,0,0), (0,1,0), (0,0,1)], marker = [:x, :circle, :cross])\n\n(Image: library lines 403:404)"
 },
 
 {
-    "location": "examples-scatter.html#\"Interaction-with-Mouse\"-1",
+    "location": "examples-scatter.html#Interaction-with-Mouse-1",
     "page": "scatter",
-    "title": "\"Interaction with Mouse\"",
+    "title": "Interaction with Mouse",
     "category": "section",
-    "text": "Tags: documentation, interactive, lines, marker, record, scatter.using Makie\n\nscene = Scene()\nr = linspace(0, 3, 4)\ncam2d!(scene)\ntime = Node(0.0)\npos = lift(scene.events.mouseposition, time) do mpos, t\n    map(linspace(0, 2pi, 60)) do i\n        circle = Point2f0(sin(i), cos(i))\n        mouse = to_world(scene, Point2f0(mpos))\n        secondary = (sin((i * 10f0) + t) * 0.09) * normalize(circle)\n        (secondary .+ circle) .+ mouse\n    end\nend\nscene = lines!(scene, pos, raw = true)\np1 = scene[end]\np2 = scatter!(\n    scene,\n    pos, markersize = 0.1f0,\n    marker = :star5,\n    color = p1[:color],\n    raw = true\n)[end]\nscene\ndisplay(Makie.global_gl_screen(), scene)\n\np1[:color] = RGBAf0(1, 0, 0, 0.1)\np2[:marker] = \'π\'\np2[:markersize] = 0.2\n\n# push a reasonable mouse position in case this is executed as part\n# of the documentation\npush!(scene.events.mouseposition, (250.0, 250.0))\nN = 50\nrecord(scene, \"./docs/media/interaction_with_mouse.mp4\", linspace(0.01, 0.4, N)) do i\n    push!(scene.events.mouseposition, (250.0, 250.0))\n    p2[:markersize] = i\n    push!(time, time[] + 0.1)\nend\n\n<video controls autoplay loop muted>\n  <source src=\"media\\interaction_with_mouse.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "Tags: interaction, interactive, lines, marker, record, scatter.using Makie\n\nscene = Scene()\nr = linspace(0, 3, 4)\ncam2d!(scene)\ntime = Node(0.0)\npos = lift(scene.events.mouseposition, time) do mpos, t\n    map(linspace(0, 2pi, 60)) do i\n        circle = Point2f0(sin(i), cos(i))\n        mouse = to_world(scene, Point2f0(mpos))\n        secondary = (sin((i * 10f0) + t) * 0.09) * normalize(circle)\n        (secondary .+ circle) .+ mouse\n    end\nend\nscene = lines!(scene, pos, raw = true)\np1 = scene[end]\np2 = scatter!(\n    scene,\n    pos, markersize = 0.1f0,\n    marker = :star5,\n    color = p1[:color],\n    raw = true\n)[end]\nscene\ndisplay(Makie.global_gl_screen(), scene)\n\np1[:color] = RGBAf0(1, 0, 0, 0.1)\np2[:marker] = \'π\'\np2[:markersize] = 0.2\n\n# push a reasonable mouse position in case this is executed as part\n# of the documentation\npush!(scene.events.mouseposition, (250.0, 250.0))\nN = 50\nrecord(scene, \"./docs/media/interaction_with_mouse.mp4\", linspace(0.01, 0.4, N)) do i\n    push!(scene.events.mouseposition, (250.0, 250.0))\n    p2[:markersize] = i\n    push!(time, time[] + 0.1)\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\interaction_with_mouse.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
 },
 
 {
-    "location": "examples-scatter.html#\"pong\"-1",
+    "location": "examples-scatter.html#Mouse-Picking-1",
     "page": "scatter",
-    "title": "\"pong\"",
+    "title": "Mouse Picking",
     "category": "section",
-    "text": "Tags: animated, documentation, scatter, updating.using Makie\n\nxyvec = rand(Point2f0, (2)) .* 5 .+ 1\nvelvec = rand(Point2f0, (2)) .* 10\n# define some other parameters\nt = 0\nts = 0.03\nballdiameter = 1\norigin = Point2f0(0, 0)\nxybounds = Point2f0(10, 10)\nN = 200\nscene = scatter(\n    xyvec,\n    markersize = balldiameter,\n    color = rand(RGBf0, 2),\n    limits = FRect(0, 0, xybounds)\n)\ns = scene[end] # last plot in scene\n\nrecord(scene, \"./docs/media/pong.mp4\", 1:N) do i\n    # calculate new ball position\n    global t = t + ts\n    global xyvec = xyvec .+ velvec .* ts\n    global velvec = map(xyvec, xybounds, origin, velvec) do p, b, o, vel\n        boolvec = ((p .+ balldiameter/2) .> b) .| ((p .- balldiameter/2) .< o)\n        velvec = map(boolvec, vel) do b, v\n            b ? -v : v\n        end\n    end\n    # plot\n    s[1] = xyvec\nend\n\n<video controls autoplay loop muted>\n  <source src=\"media\\pong.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "Tags: heatmap, interaction, interactive, scatter.using Makie\n\nimg = rand(100, 100)\nscene = Scene()\nheatmap!(scene, img, scale_plot = false)\nclicks = Node(Point2f0[(0,0)])\nforeach(scene.events.mousebuttons) do buttons\n   if ispressed(scene, Mouse.left)\n       pos = to_world(scene, Point2f0(scene.events.mouseposition[]))\n       push!(clicks, push!(clicks[], pos))\n   end\n   return\nend\nscatter!(scene, clicks, color = :red, marker = \'+\', markersize = 10, raw = true)\n\n(Image: library lines 44:55)"
 },
 
 {
-    "location": "examples-scatter.html#\"pulsing-marker\"-1",
+    "location": "examples-scatter.html#pong-1",
     "page": "scatter",
-    "title": "\"pulsing marker\"",
+    "title": "pong",
     "category": "section",
-    "text": "Tags: animated, documentation, markersize, scatter, updating.using Makie\n\nN = 100\nr = [cos(i)+1 for i = linspace(0, 10pi, N)] ./ 5 + 1\nscene = scatter([0], [0], marker = \'❤\', markersize = 0.5, color = :red, raw = true)\nscene\ns = scene[end] # last plot in scene\nrecord(scene, \"./docs/media/pulsing_marker.mp4\", r) do i\n    push!(s[:markersize], i)\nend\n\n<video controls autoplay loop muted>\n  <source src=\"media\\pulsing_marker.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "Tags: animated, documentation, scatter, updating.using Makie\n\nxyvec = rand(Point2f0, (2)) .* 5 .+ 1\nvelvec = rand(Point2f0, (2)) .* 10\n# define some other parameters\nt = 0\nts = 0.03\nballdiameter = 1\norigin = Point2f0(0, 0)\nxybounds = Point2f0(10, 10)\nN = 200\nscene = scatter(\n    xyvec,\n    markersize = balldiameter,\n    color = rand(RGBf0, 2),\n    limits = FRect(0, 0, xybounds)\n)\ns = scene[end] # last plot in scene\n\nrecord(scene, \"./docs/media/pong.mp4\", 1:N) do i\n    # calculate new ball position\n    global t = t + ts\n    global xyvec = xyvec .+ velvec .* ts\n    global velvec = map(xyvec, xybounds, origin, velvec) do p, b, o, vel\n        boolvec = ((p .+ balldiameter/2) .> b) .| ((p .- balldiameter/2) .< o)\n        velvec = map(boolvec, vel) do b, v\n            b ? -v : v\n        end\n    end\n    # plot\n    s[1] = xyvec\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\pong.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
 },
 
 {
-    "location": "examples-scatter.html#\"Viridis-scatter\"-1",
+    "location": "examples-scatter.html#pulsing-marker-1",
     "page": "scatter",
-    "title": "\"Viridis scatter\"",
+    "title": "pulsing marker",
     "category": "section",
-    "text": "Tags: 2d, color, colormap, documentation, scatter, viridis.using Makie\n\nN = 30\nscatter(1:N, 1:N, markersize = 2, color = to_colormap(:viridis, N))\n\n(Image: library lines 773:774)"
+    "text": "Tags: animated, documentation, markersize, scatter, updating.using Makie\n\nN = 100\nscene = scatter([0], [0], marker = \'❤\', markersize = 0.5, color = :red, raw = true)\ns = scene[end] # last plot in scene\nrecord(scene, \"./docs/media/pulsing_marker.mp4\", linspace(0, 10pi, N)) do i\n    s[:markersize] = (cos(i) + 1) / (5 + 1)\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\pulsing_marker.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
 },
 
 {
-    "location": "examples-scatter.html#\"Viridis-meshscatter\"-1",
+    "location": "examples-scatter.html#Viridis-scatter-1",
     "page": "scatter",
-    "title": "\"Viridis meshscatter\"",
+    "title": "Viridis scatter",
     "category": "section",
-    "text": "Tags: 3d, color, colormap, documentation, scatter, viridis.using Makie\n\nN = 30\nR = 2\ntheta = 4pi\nh = 5\nx = [R .* (t/3) .* cos(t) for t = linspace(0, theta, N)]\ny = [R .* (t/3) .* sin(t) for t = linspace(0, theta, N)]\nz = linspace(0, h, N)\nmeshscatter(x, y, z, markersize = 0.5, color = to_colormap(:viridis, N))\n\n(Image: library lines 778:785)"
+    "text": "Tags: 2d, color, colormap, documentation, scatter, viridis.using Makie\n\nN = 30\nscatter(1:N, 1:N, markersize = 2, color = to_colormap(:viridis, N))\n\n(Image: library lines 63:64)"
 },
 
 {
-    "location": "examples-scatter.html#\"Marker-sizes-Marker-colors\"-1",
+    "location": "examples-scatter.html#Viridis-meshscatter-1",
     "page": "scatter",
-    "title": "\"Marker sizes + Marker colors\"",
+    "title": "Viridis meshscatter",
     "category": "section",
-    "text": "Tags: 2d, color, documentation, markersize, scatter.using Makie\n\nscatter(\n    rand(20), rand(20),\n    markersize = rand(20) ./20 + 0.02,\n    color = rand(RGBf0, 20)\n)\n\n(Image: library lines 789:789)"
+    "text": "Tags: 3d, color, colormap, documentation, scatter, viridis.using Makie\n\nN = 30\nR = 2\ntheta = 4pi\nh = 5\nx = [R .* (t/3) .* cos(t) for t = linspace(0, theta, N)]\ny = [R .* (t/3) .* sin(t) for t = linspace(0, theta, N)]\nz = linspace(0, h, N)\nmeshscatter(x, y, z, markersize = 0.5, color = to_colormap(:viridis, N))\n\n(Image: library lines 68:75)"
 },
 
 {
-    "location": "examples-scatter.html#\"Marker-offset\"-1",
+    "location": "examples-scatter.html#Marker-sizes-Marker-colors-1",
     "page": "scatter",
-    "title": "\"Marker offset\"",
+    "title": "Marker sizes + Marker colors",
     "category": "section",
-    "text": "Tags: documentation, marker_offset, scatter.using Makie\n\nscene = Scene(resolution = (500, 500))\npoints = Point2f0[(0,0), (1,1), (2,2)]\noffset = rand(Point2f0, 3)./5\nscatter!(scene, points)\nscatter!(scene, points, marker_offset = offset, color = :red)\n\n(Image: library lines 797:801)"
+    "text": "Tags: 2d, color, documentation, markersize, scatter.using Makie\n\nscatter(\n    rand(20), rand(20),\n    markersize = rand(20) ./20 + 0.02,\n    color = rand(RGBf0, 20)\n)\n\n(Image: library lines 79:79)"
 },
 
 {
-    "location": "examples-scatter.html#\"Mouse-Picking\"-1",
+    "location": "examples-scatter.html#Marker-offset-1",
     "page": "scatter",
-    "title": "\"Mouse Picking\"",
+    "title": "Marker offset",
     "category": "section",
-    "text": "Tags: documentation, heatmap, interactive, scatter.using Makie\n\nimg = rand(100, 100)\nscene = Scene()\nheatmap!(scene, img, scale_plot = false)\nclicks = Node(Point2f0[(0,0)])\nforeach(scene.events.mousebuttons) do buttons\n   if ispressed(scene, Mouse.left)\n       pos = to_world(scene, Point2f0(scene.events.mouseposition[]))\n       push!(clicks, push!(clicks[], pos))\n   end\n   return\nend\nscatter!(scene, clicks, color = :red, marker = \'+\', markersize = 10, raw = true)\n\n(Image: library lines 858:869)"
+    "text": "Tags: documentation, marker_offset, scatter.using Makie\n\nscene = Scene(resolution = (500, 500))\npoints = Point2f0[(0,0), (1,1), (2,2)]\noffset = rand(Point2f0, 3)./5\nscatter!(scene, points)\nscatter!(scene, points, marker_offset = offset, color = :red)\n\n(Image: library lines 87:91)"
 },
 
 {
-    "location": "examples-scatter.html#\"Theming\"-1",
+    "location": "examples-scatter.html#Theming-1",
     "page": "scatter",
-    "title": "\"Theming\"",
+    "title": "Theming",
     "category": "section",
-    "text": "Tags: documentation, scatter, set_theme, surface, theme.using Makie\n\nnew_theme = Theme(\n    resolution = (500, 500),\n    linewidth = 3,\n    colormap = :RdYlGn,\n    color = :red,\n    scatter = Theme(\n        marker = \'⊝\',\n        markersize = 0.03,\n        strokecolor = :black,\n        strokewidth = 0.1,\n    ),\n)\nAbstractPlotting.set_theme!(new_theme)\nscene2 = scatter(rand(100), rand(100))\nnew_theme[:color] = :blue\nnew_theme[:scatter, :marker] = \'◍\'\nnew_theme[:scatter, :markersize] = 0.05\nnew_theme[:scatter, :strokewidth] = 0.1\nnew_theme[:scatter, :strokecolor] = :green\nscene2 = scatter(rand(100), rand(100))\nscene2[end][:marker] = \'π\'\n\nr = linspace(-0.5pi, pi + pi/4, 100)\n\nAbstractPlotting.set_theme!(new_theme)\nscene = surface(r, r, (x, y)-> sin(2x) + cos(2y))\nscene[end][:colormap] = :PuOr\nscene\nsurface!(r + 2pi - pi/4, r, (x, y)-> sin(2x) + cos(2y))\nAbstractPlotting.set_theme!(resolution = (500, 500))\nsurface(r + 2pi - pi/4, r, (x, y)-> sin(2x) + cos(2y))\n\n(Image: library lines 873:903)"
+    "text": "Tags: documentation, scatter, set_theme, surface, theme.using Makie\n\nnew_theme = Theme(\n    resolution = (500, 500),\n    linewidth = 3,\n    colormap = :RdYlGn,\n    color = :red,\n    scatter = Theme(\n        marker = \'⊝\',\n        markersize = 0.03,\n        strokecolor = :black,\n        strokewidth = 0.1,\n    ),\n)\nAbstractPlotting.set_theme!(new_theme)\nscene = scatter(rand(100), rand(100))\nst = Stepper(scene, \"./docs/media/theming\")\nstep!(st)\nnew_theme[:color] = :blue\nstep!(st)\nnew_theme[:scatter, :marker] = \'◍\'\nstep!(st)\nnew_theme[:scatter, :markersize] = 0.05\nstep!(st)\nnew_theme[:scatter, :strokewidth] = 0.1\nstep!(st)\nnew_theme[:scatter, :strokecolor] = :green\nstep!(st)\nempty!(scene)\nscene = scatter!(rand(100), rand(100))\nstep!(st)\nscene[end][:marker] = \'π\'\nstep!(st)\n\nr = linspace(-0.5pi, pi + pi/4, 100)\nAbstractPlotting.set_theme!(new_theme)\nempty!(scene)\n@show scene.theme\nscene = surface!(r, r, (x, y)-> sin(2x) + cos(2y))\nstep!(st)\nscene[end][:colormap] = :PuOr\nstep!(st)\nsurface!(r + 2pi - pi/4, r, (x, y)-> sin(2x) + cos(2y))\nstep!(st)\nAbstractPlotting.set_theme!(resolution = (500, 500))\nempty!(scene)\nsurface!(r + 2pi - pi/4, r, (x, y)-> sin(2x) + cos(2y))\nstep!(st)\n\n\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 1<br><img src=\"media/theming/thumb-theming-1.jpg\" alt=\"Step 1<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 2<br><img src=\"media/theming/thumb-theming-2.jpg\" alt=\"Step 2<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 3<br><img src=\"media/theming/thumb-theming-3.jpg\" alt=\"Step 3<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 4<br><img src=\"media/theming/thumb-theming-4.jpg\" alt=\"Step 4<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 5<br><img src=\"media/theming/thumb-theming-5.jpg\" alt=\"Step 5<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 6<br><img src=\"media/theming/thumb-theming-6.jpg\" alt=\"Step 6<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 7<br><img src=\"media/theming/thumb-theming-7.jpg\" alt=\"Step 7<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 8<br><img src=\"media/theming/thumb-theming-8.jpg\" alt=\"Step 8<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 9<br><img src=\"media/theming/thumb-theming-9.jpg\" alt=\"Step 9<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 10<br><img src=\"media/theming/thumb-theming-10.jpg\" alt=\"Step 10<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 11<br><img src=\"media/theming/thumb-theming-11.jpg\" alt=\"Step 11<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 12<br><img src=\"media/theming/thumb-theming-12.jpg\" alt=\"Step 12<br>\" /></p></div>"
 },
 
 {
@@ -1081,67 +1249,75 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "examples-surface.html#\"Axis-Surface\"-1",
+    "location": "examples-surface.html#Wireframe-of-a-Surface-1",
     "page": "surface",
-    "title": "\"Axis + Surface\"",
+    "title": "Wireframe of a Surface",
     "category": "section",
-    "text": "Tags: 3d, axis, interaction, manipulation, surface.using Makie\n\nvx = -1:0.01:1\nvy = -1:0.01:1\n\nf(x, y) = (sin(x*10) + cos(y*10)) / 4\nscene = Scene(resolution = (500, 500))\n# One way to style the axis is to pass a nested dictionary to it.\nsurface!(scene, vx, vy, f, axis = NT(framestyle = NT(linewidth = 2.0)))\npsurf = scene[end] # the surface we last plotted to scene\n# One can also directly get the axis object and manipulate it\naxis = scene[Axis] # get axis\n\n# You can access nested attributes likes this:\naxis[:titlestyle, :axisnames] = (\"\\\\bf{ℜ}[u]\", \"\\\\bf{𝕴}[u]\", \" OK\\n\\\\bf{δ}\\n γ\")\ntstyle = axis[:titlestyle] # or just get the nested attributes and work directly with them\n\ntstyle[:textsize] = 10\ntstyle[:textcolor] = (:red, :green, :black)\ntstyle[:font] = \"helvetica\"\n\n\npsurf[:colormap] = :RdYlBu\nwh = widths(scene)\nt = text!(\n    campixel(scene),\n    \"Multipole Representation of first resonances of U-238\",\n    position = (wh[1] / 2.0, wh[2] - 20.0),\n    align = (:center,  :center),\n    textsize = 20,\n    font = \"helvetica\",\n    raw = :true\n)\nc = lines!(scene, Circle(Point2f0(0.1, 0.5), 0.1f0), color = :red, offset = Vec3f0(0, 0, 1))\nscene\n#update surface\n# TODO explain and improve the situation here\npsurf.converted[3][] = f.(vx .+ 0.5, (vy .+ 0.5)\')\nscene\n\n(Image: library lines 178:214)"
+    "text": "Tags: 3d, surface, wireframe.using Makie\n\nfunction xy_data(x, y)\n    r = sqrt(x^2 + y^2)\n    r == 0.0 ? 1f0 : (sin(r)/r)\nend\nN = 30\nlspace = linspace(-10, 10, N)\nz = Float32[xy_data(x, y) for x in lspace, y in lspace]\nrange = linspace(0, 3, N)\nwireframe(range, range, z)\n\n(Image: library lines 35:43)"
 },
 
 {
-    "location": "examples-surface.html#\"Animated-surface-and-wireframe\"-1",
+    "location": "examples-surface.html#Surface-1",
     "page": "surface",
-    "title": "\"Animated surface and wireframe\"",
+    "title": "Surface",
     "category": "section",
-    "text": "Tags: 3d, animated, axis, record, surface, video, wireframe.using Makie\n\nscene = Scene();\nfunction xy_data(x, y)\n    r = sqrt(x^2 + y^2)\n    r == 0.0 ? 1f0 : (sin(r)/r)\nend\n\nr = linspace(-2, 2, 50)\nsurf_func(i) = [Float32(xy_data(x*i, y*i)) for x = r, y = r]\nz = surf_func(20)\nsurf = surface!(scene, r, r, z)[end]\n\nwf = wireframe!(scene, r, r, Makie.lift(x-> x .+ 1.0, surf[3]),\n    linewidth = 2f0, color = Makie.lift(x-> to_colormap(x)[5], surf[:colormap])\n)\nN = 150\nrecord(scene, \"./docs/media/animated_surface_and_wireframe.mp4\", linspace(5, 40, N)) do i\n    surf[3] = surf_func(i)\nend\n\n<video controls autoplay loop muted>\n  <source src=\"media\\animated_surface_and_wireframe.mp4\" type=\"video/mp4\">\n  Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n</video>"
+    "text": "Tags: 3d, surface.using Makie\n\nN = 30\nfunction xy_data(x, y)\n    r = sqrt(x^2 + y^2)\n    r == 0.0 ? 1f0 : (sin(r)/r)\nend\nlspace = linspace(-10, 10, N)\nz = Float32[xy_data(x, y) for x in lspace, y in lspace]\nrange = linspace(0, 3, N)\nsurface(\n    range, range, z,\n    colormap = :Spectral\n)\n\n(Image: library lines 46:54)"
 },
 
 {
-    "location": "examples-surface.html#\"Wireframe-of-a-Surface\"-1",
+    "location": "examples-surface.html#Surface-with-image-1",
     "page": "surface",
-    "title": "\"Wireframe of a Surface\"",
+    "title": "Surface with image",
     "category": "section",
-    "text": "Tags: 3d, documentation, surface, wireframe.using Makie\n\nfunction xy_data(x, y)\n    r = sqrt(x^2 + y^2)\n    r == 0.0 ? 1f0 : (sin(r)/r)\nend\nN = 30\nlspace = linspace(-10, 10, N)\nz = Float32[xy_data(x, y) for x in lspace, y in lspace]\nrange = linspace(0, 3, N)\nwireframe(range, range, z)\n\n(Image: library lines 482:490)"
+    "text": "Tags: 3d, image, surface.using Makie\n\nN = 30\nfunction xy_data(x, y)\n    r = sqrt(x^2 + y^2)\n    r == 0.0 ? 1f0 : (sin(r)/r)\nend\nr = linspace(-2, 2, N)\nsurf_func(i) = [Float32(xy_data(x*i, y*i)) for x = r, y = r]\nsurface(\n    r, r, surf_func(10),\n    color = rand(RGBAf0, 124, 124)\n)\n\n(Image: library lines 60:67)"
 },
 
 {
-    "location": "examples-surface.html#\"Surface\"-1",
+    "location": "examples-surface.html#Image-on-Surface-Sphere-1",
     "page": "surface",
-    "title": "\"Surface\"",
+    "title": "Image on Surface Sphere",
     "category": "section",
-    "text": "Tags: 3d, documentation, surface.using Makie\n\nN = 30\nfunction xy_data(x, y)\n    r = sqrt(x^2 + y^2)\n    r == 0.0 ? 1f0 : (sin(r)/r)\nend\nlspace = linspace(-10, 10, N)\nz = Float32[xy_data(x, y) for x in lspace, y in lspace]\nrange = linspace(0, 3, N)\nsurface(\n    range, range, z,\n    colormap = :Spectral\n)\n\n(Image: library lines 493:501)"
+    "text": "Tags: 3d, image, sphere, surface.using Makie\n\nn = 20\nθ = [0;(0.5:n-0.5)/n;1]\nφ = [(0:2n-2)*2/(2n-1);2]\nx = [cospi(φ)*sinpi(θ) for θ in θ, φ in φ]\ny = [sinpi(φ)*sinpi(θ) for θ in θ, φ in φ]\nz = [cospi(θ) for θ in θ, φ in φ]\nrand([-1f0, 1f0], 3)\npts = vec(Point3f0.(x, y, z))\nsurface(x, y, z, color = Makie.logo())\n\n(Image: library lines 172:180)"
 },
 
 {
-    "location": "examples-surface.html#\"Surface-with-image\"-1",
+    "location": "examples-surface.html#Arrows-on-Sphere-1",
     "page": "surface",
-    "title": "\"Surface with image\"",
+    "title": "Arrows on Sphere",
     "category": "section",
-    "text": "Tags: 3d, documentation, image, surface.using Makie\n\nN = 30\nfunction xy_data(x, y)\n    r = sqrt(x^2 + y^2)\n    r == 0.0 ? 1f0 : (sin(r)/r)\nend\nr = linspace(-2, 2, N)\nsurf_func(i) = [Float32(xy_data(x*i, y*i)) for x = r, y = r]\nsurface(\n    r, r, surf_func(10),\n    image = rand(RGBAf0, 124, 124)\n)\n\n(Image: library lines 507:514)"
+    "text": "Tags: 3d, arrows, sphere, surface.using Makie\n\nn = 20\nf   = (x,y,z) -> x*exp(cos(y)*z)\n∇f  = (x,y,z) -> Point3f0(exp(cos(y)*z), -sin(y)*z*x*exp(cos(y)*z), x*cos(y)*exp(cos(y)*z))\n∇ˢf = (x,y,z) -> ∇f(x,y,z) - Point3f0(x,y,z)*dot(Point3f0(x,y,z), ∇f(x,y,z))\n\nθ = [0;(0.5:n-0.5)/n;1]\nφ = [(0:2n-2)*2/(2n-1);2]\nx = [cospi(φ)*sinpi(θ) for θ in θ, φ in φ]\ny = [sinpi(φ)*sinpi(θ) for θ in θ, φ in φ]\nz = [cospi(θ) for θ in θ, φ in φ]\n\npts = vec(Point3f0.(x, y, z))\n∇ˢF = vec(∇ˢf.(x, y, z)) .* 0.1f0\nsurface(x, y, z)\narrows!(\n    pts, ∇ˢF,\n    arrowsize = 0.03, linecolor = (:white, 0.6), linewidth = 3\n)\n\n(Image: library lines 184:198)"
 },
 
 {
-    "location": "examples-surface.html#\"Image-on-Surface-Sphere\"-1",
+    "location": "examples-surface.html#surface-contour3d-1",
     "page": "surface",
-    "title": "\"Image on Surface Sphere\"",
+    "title": "surface + contour3d",
     "category": "section",
-    "text": "Tags: 3d, documentation, image, sphere, surface.using Makie\n\nn = 20\nθ = [0;(0.5:n-0.5)/n;1]\nφ = [(0:2n-2)*2/(2n-1);2]\nx = [cospi(φ)*sinpi(θ) for θ in θ, φ in φ]\ny = [sinpi(φ)*sinpi(θ) for θ in θ, φ in φ]\nz = [cospi(θ) for θ in θ, φ in φ]\nrand([-1f0, 1f0], 3)\npts = vec(Point3f0.(x, y, z))\nsurface(x, y, z, image = Makie.logo())\n\n(Image: library lines 634:642)"
+    "text": "Tags: 3d, contour3d, subscene, surface.using Makie\n\nvx = -1:0.01:1\nvy = -1:0.01:1\n\nf(x, y) = (sin(x*10) + cos(y*10)) / 4\n\np1 = surface(vx, vy, f)\np2 = contour3d(vx, vy, (x, y) -> f(x,y), levels = 15, linewidth = 3)\n\nscene = AbstractPlotting.vbox(p1, p2)\ntext!(campixel(p1), \"surface\", position = widths(p1) .* Vec(0.5, 1), align = (:center, :top), raw = true)\ntext!(campixel(p2), \"contour3d\", position = widths(p2) .* Vec(0.5, 1), align = (:center, :top), raw = true)\nscene\n\n(Image: library lines 205:216)"
 },
 
 {
-    "location": "examples-surface.html#\"Arrows-on-Sphere\"-1",
+    "location": "examples-surface.html#Axis-Surface-1",
     "page": "surface",
-    "title": "\"Arrows on Sphere\"",
+    "title": "Axis + Surface",
     "category": "section",
-    "text": "Tags: 3d, arrows, documentation, sphere, surface.using Makie\n\nn = 20\nf   = (x,y,z) -> x*exp(cos(y)*z)\n∇f  = (x,y,z) -> Point3f0(exp(cos(y)*z), -sin(y)*z*x*exp(cos(y)*z), x*cos(y)*exp(cos(y)*z))\n∇ˢf = (x,y,z) -> ∇f(x,y,z) - Point3f0(x,y,z)*dot(Point3f0(x,y,z), ∇f(x,y,z))\n\nθ = [0;(0.5:n-0.5)/n;1]\nφ = [(0:2n-2)*2/(2n-1);2]\nx = [cospi(φ)*sinpi(θ) for θ in θ, φ in φ]\ny = [sinpi(φ)*sinpi(θ) for θ in θ, φ in φ]\nz = [cospi(θ) for θ in θ, φ in φ]\n\npts = vec(Point3f0.(x, y, z))\n∇ˢF = vec(∇ˢf.(x, y, z)) .* 0.1f0\nsurface(x, y, z)\n# TODO arrows seem pretty wrong\narrows!(\n    pts, ∇ˢF,\n    arrowsize = 0.03, linecolor = :white, linewidth = 3\n)\n\n(Image: library lines 645:660)"
+    "text": "Tags: 3d, axis, interaction, manipulation, surface.using Makie\n\nvx = -1:0.01:1\nvy = -1:0.01:1\n\nf(x, y) = (sin(x*10) + cos(y*10)) / 4\nscene = Scene(resolution = (500, 500))\n# One way to style the axis is to pass a nested dictionary / named tuple to it.\nsurface!(scene, vx, vy, f, axis = NT(frame = NT(linewidth = 2.0)))\npsurf = scene[end] # the surface we last plotted to scene\n# One can also directly get the axis object and manipulate it\naxis = scene[Axis] # get axis\n\n# You can access nested attributes likes this:\naxis[:names, :axisnames] = (\"\\\\bf{ℜ}[u]\", \"\\\\bf{𝕴}[u]\", \" OK\\n\\\\bf{δ}\\n γ\")\ntstyle = axis[:names] # or just get the nested attributes and work directly with them\n\ntstyle[:textsize] = 10\ntstyle[:textcolor] = (:red, :green, :black)\ntstyle[:font] = \"helvetica\"\n\n\npsurf[:colormap] = :RdYlBu\nwh = widths(scene)\nt = text!(\n    campixel(scene),\n    \"Multipole Representation of first resonances of U-238\",\n    position = (wh[1] / 2.0, wh[2] - 20.0),\n    align = (:center,  :center),\n    textsize = 20,\n    font = \"helvetica\",\n    raw = :true\n)\nc = lines!(scene, Circle(Point2f0(0.1, 0.5), 0.1f0), color = :red, offset = Vec3f0(0, 0, 1))\nscene\n#update surface\n# TODO explain and improve the situation here\npsurf.converted[3][] = f.(vx .+ 0.5, (vy .+ 0.5)\')\nscene\n\n(Image: library lines 234:270)"
 },
 
 {
-    "location": "examples-surface.html#\"Theming\"-1",
+    "location": "examples-surface.html#Animated-surface-and-wireframe-1",
     "page": "surface",
-    "title": "\"Theming\"",
+    "title": "Animated surface and wireframe",
     "category": "section",
-    "text": "Tags: documentation, scatter, set_theme, surface, theme.using Makie\n\nnew_theme = Theme(\n    resolution = (500, 500),\n    linewidth = 3,\n    colormap = :RdYlGn,\n    color = :red,\n    scatter = Theme(\n        marker = \'⊝\',\n        markersize = 0.03,\n        strokecolor = :black,\n        strokewidth = 0.1,\n    ),\n)\nAbstractPlotting.set_theme!(new_theme)\nscene2 = scatter(rand(100), rand(100))\nnew_theme[:color] = :blue\nnew_theme[:scatter, :marker] = \'◍\'\nnew_theme[:scatter, :markersize] = 0.05\nnew_theme[:scatter, :strokewidth] = 0.1\nnew_theme[:scatter, :strokecolor] = :green\nscene2 = scatter(rand(100), rand(100))\nscene2[end][:marker] = \'π\'\n\nr = linspace(-0.5pi, pi + pi/4, 100)\n\nAbstractPlotting.set_theme!(new_theme)\nscene = surface(r, r, (x, y)-> sin(2x) + cos(2y))\nscene[end][:colormap] = :PuOr\nscene\nsurface!(r + 2pi - pi/4, r, (x, y)-> sin(2x) + cos(2y))\nAbstractPlotting.set_theme!(resolution = (500, 500))\nsurface(r + 2pi - pi/4, r, (x, y)-> sin(2x) + cos(2y))\n\n(Image: library lines 873:903)"
+    "text": "Tags: 3d, animated, axis, record, surface, video, wireframe.using Makie\n\nscene = Scene();\nfunction xy_data(x, y)\n    r = sqrt(x^2 + y^2)\n    r == 0.0 ? 1f0 : (sin(r)/r)\nend\n\nr = linspace(-2, 2, 50)\nsurf_func(i) = [Float32(xy_data(x*i, y*i)) for x = r, y = r]\nz = surf_func(20)\nsurf = surface!(scene, r, r, z)[end]\n\nwf = wireframe!(scene, r, r, Makie.lift(x-> x .+ 1.0, surf[3]),\n    linewidth = 2f0, color = Makie.lift(x-> to_colormap(x)[5], surf[:colormap])\n)\nN = 150\nscene\nrecord(scene, \"./docs/media/animated_surface_and_wireframe.mp4\", linspace(5, 40, N)) do i\n    surf[3] = surf_func(i)\nend\n\n    <video controls autoplay loop muted>\n      <source src=\"media\\animated_surface_and_wireframe.mp4\" type=\"video/mp4\">\n      Your browser does not support mp4. Please use a modern browser like Chrome or Firefox.\n    </video>"
+},
+
+{
+    "location": "examples-surface.html#Theming-1",
+    "page": "surface",
+    "title": "Theming",
+    "category": "section",
+    "text": "Tags: documentation, scatter, set_theme, surface, theme.using Makie\n\nnew_theme = Theme(\n    resolution = (500, 500),\n    linewidth = 3,\n    colormap = :RdYlGn,\n    color = :red,\n    scatter = Theme(\n        marker = \'⊝\',\n        markersize = 0.03,\n        strokecolor = :black,\n        strokewidth = 0.1,\n    ),\n)\nAbstractPlotting.set_theme!(new_theme)\nscene = scatter(rand(100), rand(100))\nst = Stepper(scene, \"./docs/media/theming\")\nstep!(st)\nnew_theme[:color] = :blue\nstep!(st)\nnew_theme[:scatter, :marker] = \'◍\'\nstep!(st)\nnew_theme[:scatter, :markersize] = 0.05\nstep!(st)\nnew_theme[:scatter, :strokewidth] = 0.1\nstep!(st)\nnew_theme[:scatter, :strokecolor] = :green\nstep!(st)\nempty!(scene)\nscene = scatter!(rand(100), rand(100))\nstep!(st)\nscene[end][:marker] = \'π\'\nstep!(st)\n\nr = linspace(-0.5pi, pi + pi/4, 100)\nAbstractPlotting.set_theme!(new_theme)\nempty!(scene)\n@show scene.theme\nscene = surface!(r, r, (x, y)-> sin(2x) + cos(2y))\nstep!(st)\nscene[end][:colormap] = :PuOr\nstep!(st)\nsurface!(r + 2pi - pi/4, r, (x, y)-> sin(2x) + cos(2y))\nstep!(st)\nAbstractPlotting.set_theme!(resolution = (500, 500))\nempty!(scene)\nsurface!(r + 2pi - pi/4, r, (x, y)-> sin(2x) + cos(2y))\nstep!(st)\n\n\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 1<br><img src=\"media/theming/thumb-theming-1.jpg\" alt=\"Step 1<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 2<br><img src=\"media/theming/thumb-theming-2.jpg\" alt=\"Step 2<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 3<br><img src=\"media/theming/thumb-theming-3.jpg\" alt=\"Step 3<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 4<br><img src=\"media/theming/thumb-theming-4.jpg\" alt=\"Step 4<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 5<br><img src=\"media/theming/thumb-theming-5.jpg\" alt=\"Step 5<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 6<br><img src=\"media/theming/thumb-theming-6.jpg\" alt=\"Step 6<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 7<br><img src=\"media/theming/thumb-theming-7.jpg\" alt=\"Step 7<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 8<br><img src=\"media/theming/thumb-theming-8.jpg\" alt=\"Step 8<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 9<br><img src=\"media/theming/thumb-theming-9.jpg\" alt=\"Step 9<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 10<br><img src=\"media/theming/thumb-theming-10.jpg\" alt=\"Step 10<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 11<br><img src=\"media/theming/thumb-theming-11.jpg\" alt=\"Step 11<br>\" /></p></div>\n<div style=\"display:inline-block\"><p style=\"display:inline-block; text-align: center\">Step 12<br><img src=\"media/theming/thumb-theming-12.jpg\" alt=\"Step 12<br>\" /></p></div>"
 },
 
 {
@@ -1161,19 +1337,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "examples-text.html#\"Text-Annotation\"-1",
+    "location": "examples-text.html#Text-Annotation-1",
     "page": "text",
-    "title": "\"Text Annotation\"",
+    "title": "Text Annotation",
     "category": "section",
-    "text": "Tags: 2d, align, text.using Makie\n\ntext(\n    \". This is an annotation!\",\n    position = (300, 200),\n    align = (:center,  :center),\n    textsize = 60,\n    font = \"Blackchancery\"\n)\n\n(Image: library lines 134:134)"
+    "text": "Tags: 2d, align, text.using Makie\n\ntext(\n    \". This is an annotation!\",\n    position = (300, 200),\n    align = (:center,  :center),\n    textsize = 60,\n    font = \"Blackchancery\"\n)\n\n(Image: library lines 172:172)"
 },
 
 {
-    "location": "examples-text.html#\"Text-rotation\"-1",
+    "location": "examples-text.html#Text-rotation-1",
     "page": "text",
-    "title": "\"Text rotation\"",
+    "title": "Text rotation",
     "category": "section",
-    "text": "Tags: 2d, rotation, text.using Makie\n\nscene = Scene(resolution = (500, 500))\npos = (500, 500)\nposis = Point2f0[]\nfor r in linspace(0, 2pi, 20)\n    p = pos .+ (sin(r)*100.0, cos(r) * 100)\n    push!(posis, p)\n    t = text!(\n        scene, \"test\",\n        position = p,\n        textsize = 50,\n        rotation = 1.5pi - r,\n        align = (:center, :center)\n    )\nend\nscatter!(scene, posis, markersize = 10)\n\n(Image: library lines 144:158)"
+    "text": "Tags: 2d, rotation, text.using Makie\n\nscene = Scene(resolution = (500, 500))\npos = (500, 500)\nposis = Point2f0[]\nfor r in linspace(0, 2pi, 20)\n    p = pos .+ (sin(r)*100.0, cos(r) * 100)\n    push!(posis, p)\n    t = text!(\n        scene, \"test\",\n        position = p,\n        textsize = 50,\n        rotation = 1.5pi - r,\n        align = (:center, :center)\n    )\nend\nscatter!(scene, posis, markersize = 10)\n\n(Image: library lines 182:196)"
 },
 
 {
@@ -1193,19 +1369,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "examples-volume.html#\"Volume-Function\"-1",
+    "location": "examples-volume.html#Volume-Function-1",
     "page": "volume",
-    "title": "\"Volume Function\"",
+    "title": "Volume Function",
     "category": "section",
-    "text": "Tags: 3d, documentation, volume.using Makie\n\nvolume(rand(32, 32, 32), algorithm = :mip)\n\n(Image: library lines 452:452)"
+    "text": "Tags: 3d, volume.using Makie\n\nvolume(rand(32, 32, 32), algorithm = :mip)\n\n(Image: library lines 5:5)"
 },
 
 {
-    "location": "examples-volume.html#\"3D-Contour-with-2D-contour-slices\"-1",
+    "location": "examples-volume.html#D-Contour-with-2D-contour-slices-1",
     "page": "volume",
-    "title": "\"3D Contour with 2D contour slices\"",
+    "title": "3D Contour with 2D contour slices",
     "category": "section",
-    "text": "Tags: 3d, contour, documentation, heatmap, transformation, volume.using Makie\n\nfunction test(x, y, z)\n    xy = [x, y, z]\n    ((xy\') * eye(3, 3) * xy) / 20\nend\nx = linspace(-2pi, 2pi, 100)\nscene = Scene()\nc = contour!(scene, x, x, x, test, levels = 10)[end]\nxm, ym, zm = minimum(scene.limits[])\n# c[4] == fourth argument of the above plotting command\ncontour!(scene, x, x, map(v-> v[1, :, :], c[4]), transformation = (:xy, zm))\nheatmap!(scene, x, x, map(v-> v[:, 1, :], c[4]), transformation = (:xz, ym))\ncontour!(scene, x, x, map(v-> v[:, :, 1], c[4]), fillrange = true, transformation = (:yz, xm))\n\n(Image: library lines 582:593)"
+    "text": "Tags: 3d, contour, heatmap, transformation, volume.using Makie\n\nfunction test(x, y, z)\n    xy = [x, y, z]\n    ((xy\') * eye(3, 3) * xy) / 20\nend\nx = linspace(-2pi, 2pi, 100)\nscene = Scene()\nc = contour!(scene, x, x, x, test, levels = 6, alpha = 0.3)[end]\nxm, ym, zm = minimum(scene.limits[])\n# c[4] == fourth argument of the above plotting command\ncontour!(scene, x, x, map(v-> v[1, :, :], c[4]), transformation = (:xy, zm), linewidth = 10)\nheatmap!(scene, x, x, map(v-> v[:, 1, :], c[4]), transformation = (:xz, ym))\ncontour!(scene, x, x, map(v-> v[:, :, 1], c[4]), fillrange = true, transformation = (:yz, xm))\n\n(Image: library lines 119:130)"
 },
 
 {
@@ -1225,27 +1401,123 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "examples-contour.html#\"Contour-Function\"-1",
+    "location": "examples-contour.html#Contour-Function-1",
     "page": "contour",
-    "title": "\"Contour Function\"",
+    "title": "Contour Function",
     "category": "section",
-    "text": "Tags: 2d, contour.using Makie\n\nr = linspace(-10, 10, 512)\nz = ((x, y)-> sin(x) + cos(y)).(r, r\')\ncontour(r, r, z, levels = 5, color = :RdYlBu)\n\n(Image: library lines 107:109)"
+    "text": "Tags: 2d, contour.using Makie\n\nr = linspace(-10, 10, 512)\nz = ((x, y)-> sin(x) + cos(y)).(r, r\')\ncontour(r, r, z, levels = 5, color = :viridis, linewidth = 3)\n\n(Image: library lines 145:147)"
 },
 
 {
-    "location": "examples-contour.html#\"contour\"-1",
+    "location": "examples-contour.html#contour-2",
     "page": "contour",
-    "title": "\"contour\"",
+    "title": "contour",
     "category": "section",
-    "text": "Tags: 2d, contour.using Makie\n\ny = linspace(-0.997669, 0.997669, 23)\ncontour(linspace(-0.99, 0.99, 23), y, rand(23, 23), levels = 10)\n\n(Image: library lines 114:115)"
+    "text": "Tags: 2d, contour.using Makie\n\ny = linspace(-0.997669, 0.997669, 23)\ncontour(linspace(-0.99, 0.99, 23), y, rand(23, 23), levels = 10)\n\n(Image: library lines 152:153)"
 },
 
 {
-    "location": "examples-contour.html#\"3D-Contour-with-2D-contour-slices\"-1",
+    "location": "examples-contour.html#D-Contour-with-2D-contour-slices-1",
     "page": "contour",
-    "title": "\"3D Contour with 2D contour slices\"",
+    "title": "3D Contour with 2D contour slices",
     "category": "section",
-    "text": "Tags: 3d, contour, documentation, heatmap, transformation, volume.using Makie\n\nfunction test(x, y, z)\n    xy = [x, y, z]\n    ((xy\') * eye(3, 3) * xy) / 20\nend\nx = linspace(-2pi, 2pi, 100)\nscene = Scene()\nc = contour!(scene, x, x, x, test, levels = 10)[end]\nxm, ym, zm = minimum(scene.limits[])\n# c[4] == fourth argument of the above plotting command\ncontour!(scene, x, x, map(v-> v[1, :, :], c[4]), transformation = (:xy, zm))\nheatmap!(scene, x, x, map(v-> v[:, 1, :], c[4]), transformation = (:xz, ym))\ncontour!(scene, x, x, map(v-> v[:, :, 1], c[4]), fillrange = true, transformation = (:yz, xm))\n\n(Image: library lines 582:593)"
+    "text": "Tags: 3d, contour, heatmap, transformation, volume.using Makie\n\nfunction test(x, y, z)\n    xy = [x, y, z]\n    ((xy\') * eye(3, 3) * xy) / 20\nend\nx = linspace(-2pi, 2pi, 100)\nscene = Scene()\nc = contour!(scene, x, x, x, test, levels = 6, alpha = 0.3)[end]\nxm, ym, zm = minimum(scene.limits[])\n# c[4] == fourth argument of the above plotting command\ncontour!(scene, x, x, map(v-> v[1, :, :], c[4]), transformation = (:xy, zm), linewidth = 10)\nheatmap!(scene, x, x, map(v-> v[:, 1, :], c[4]), transformation = (:xz, ym))\ncontour!(scene, x, x, map(v-> v[:, :, 1], c[4]), fillrange = true, transformation = (:yz, xm))\n\n(Image: library lines 119:130)"
+},
+
+{
+    "location": "examples-arrows.html#",
+    "page": "arrows",
+    "title": "arrows",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "examples-arrows.html#arrows-1",
+    "page": "arrows",
+    "title": "arrows",
+    "category": "section",
+    "text": ""
+},
+
+{
+    "location": "examples-arrows.html#quiver-1",
+    "page": "arrows",
+    "title": "quiver",
+    "category": "section",
+    "text": "Tags: 2d, arrows, gradiend, quiver, vectorfield.using Makie\nusing ImageFiltering\n\nx = linspace(-2, 2, 21)\ny = x\nz = x .* exp.(-x .^ 2 .- (y\') .^ 2)\nscene = contour(x, y, z, levels = 10, linewidth = 3)\nu, v = ImageFiltering.imgradients(z, KernelFactors.ando3)\narrows!(x, y, u, v, arrowsize = 0.05)\n\n(Image: library lines 32:38)"
+},
+
+{
+    "location": "examples-arrows.html#Arrows-3D-1",
+    "page": "arrows",
+    "title": "Arrows 3D",
+    "category": "section",
+    "text": "Tags: 3d, arrows.using Makie\n\nfunction SphericalToCartesian(r::T,θ::T,ϕ::T) where T<:AbstractArray\n    x = @.r*sin(θ)*cos(ϕ)\n    y = @.r*sin(θ)*sin(ϕ)\n    z = @.r*cos(θ)\n    Point3f0.(x, y, z)\nend\nn = 100^2 #number of points to generate\nr = ones(n);\nθ = acos.(1 .- 2 .* rand(n))\nφ = 2π * rand(n)\npts = SphericalToCartesian(r,θ,φ)\narrows(pts, (normalize.(pts) .* 0.1f0), arrowsize = 0.02, linecolor = :green, arrowcolor = :darkblue)\n\n(Image: library lines 157:168)"
+},
+
+{
+    "location": "examples-arrows.html#Arrows-on-Sphere-1",
+    "page": "arrows",
+    "title": "Arrows on Sphere",
+    "category": "section",
+    "text": "Tags: 3d, arrows, sphere, surface.using Makie\n\nn = 20\nf   = (x,y,z) -> x*exp(cos(y)*z)\n∇f  = (x,y,z) -> Point3f0(exp(cos(y)*z), -sin(y)*z*x*exp(cos(y)*z), x*cos(y)*exp(cos(y)*z))\n∇ˢf = (x,y,z) -> ∇f(x,y,z) - Point3f0(x,y,z)*dot(Point3f0(x,y,z), ∇f(x,y,z))\n\nθ = [0;(0.5:n-0.5)/n;1]\nφ = [(0:2n-2)*2/(2n-1);2]\nx = [cospi(φ)*sinpi(θ) for θ in θ, φ in φ]\ny = [sinpi(φ)*sinpi(θ) for θ in θ, φ in φ]\nz = [cospi(θ) for θ in θ, φ in φ]\n\npts = vec(Point3f0.(x, y, z))\n∇ˢF = vec(∇ˢf.(x, y, z)) .* 0.1f0\nsurface(x, y, z)\narrows!(\n    pts, ∇ˢF,\n    arrowsize = 0.03, linecolor = (:white, 0.6), linewidth = 3\n)\n\n(Image: library lines 184:198)"
+},
+
+{
+    "location": "examples-barplot.html#",
+    "page": "barplot",
+    "title": "barplot",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "examples-barplot.html#barplot-1",
+    "page": "barplot",
+    "title": "barplot",
+    "category": "section",
+    "text": ""
+},
+
+{
+    "location": "examples-barplot.html#barplot-2",
+    "page": "barplot",
+    "title": "barplot",
+    "category": "section",
+    "text": "Tags: 2d, barplot.using Makie\n\nbarplot(rand(10), color = rand(10))\n# barplot(rand(3), color = [:red, :blue, :green])\n\n(Image: library lines 28:28)"
+},
+
+{
+    "location": "examples-poly.html#",
+    "page": "poly",
+    "title": "poly",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "examples-poly.html#poly-1",
+    "page": "poly",
+    "title": "poly",
+    "category": "section",
+    "text": ""
+},
+
+{
+    "location": "examples-poly.html#FEM-polygon-2D-1",
+    "page": "poly",
+    "title": "FEM polygon 2D",
+    "category": "section",
+    "text": "Tags: 2d, fem, poly.using Makie\n\ncoordinates = [\n    0.0 0.0;\n    0.5 0.0;\n    1.0 0.0;\n    0.0 0.5;\n    0.5 0.5;\n    1.0 0.5;\n    0.0 1.0;\n    0.5 1.0;\n    1.0 1.0;\n]\nconnectivity = [\n    1 2 5;\n    1 4 5;\n    2 3 6;\n    2 5 6;\n    4 5 8;\n    4 7 8;\n    5 6 9;\n    5 8 9;\n]\ncolor = [0.0, 0.0, 0.0, 0.0, -0.375, 0.0, 0.0, 0.0, 0.0]\npoly(coordinates, connectivity, color = color, strokecolor = (:black, 0.6), strokewidth = 4)\n\n(Image: library lines 51:73)"
+},
+
+{
+    "location": "examples-poly.html#Polygons-1",
+    "page": "poly",
+    "title": "Polygons",
+    "category": "section",
+    "text": "Tags: 2d, linesegments, poly, polygon.using Makie\nusing GeometryTypes\n\nscene = Scene(resolution = (500, 500))\npoints = decompose(Point2f0, Circle(Point2f0(50), 50f0))\npol = poly!(scene, points, color = :gray, strokewidth = 10, strokecolor = :red)\n# Optimized forms\npoly!(scene, [Circle(Point2f0(50+300), 50f0)], color = :gray, strokewidth = 10, strokecolor = :red)\npoly!(scene, [Circle(Point2f0(50+i, 50+i), 10f0) for i = 1:100:400], color = :red)\npoly!(scene, [Rectangle{Float32}(50+i, 50+i, 20, 20) for i = 1:100:400], strokewidth = 2, strokecolor = :green)\nlinesegments!(scene,\n    [Point2f0(50 + i, 50 + i) => Point2f0(i + 70, i + 70) for i = 1:100:400], linewidth = 8, color = :purple\n)\n\n(Image: library lines 131:139)"
 },
 
 ]}
