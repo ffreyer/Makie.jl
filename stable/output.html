@@ -38,9 +38,9 @@ st
             scene.plots[:color] = ...# animate scene
             recordframe!(io) # record a new frame
         end
-    end</code></pre></div><a class="source-link" target="_blank" href="https://github.com/JuliaPlots/Makie.jl/blob/dbf5ec9494832fcb9ccfdcecefb9858c0b991398/src/video_io.jl#L92-L103">source</a><div><pre><code class="language-none">record(func, scene, path, iter)</code></pre><p>usage:</p><pre><code class="language-example">    record(scene, &quot;test.gif&quot;, 1:100) do i
+    end</code></pre></div><a class="source-link" target="_blank" href="https://github.com/JuliaPlots/Makie.jl/blob/e2aa52fd12e187d191f0e3bfd5b01d72c22bf3c1/src/video_io.jl#L92-L103">source</a><div><pre><code class="language-none">record(func, scene, path, iter)</code></pre><p>usage:</p><pre><code class="language-example">    record(scene, &quot;test.gif&quot;, 1:100) do i
         scene.plots[:color] = ...# animate scene
-    end</code></pre></div><a class="source-link" target="_blank" href="https://github.com/JuliaPlots/Makie.jl/blob/dbf5ec9494832fcb9ccfdcecefb9858c0b991398/src/video_io.jl#L110-L118">source</a></section><p>For recording of videos (either as .mp4 or .gif), you can do:</p><pre><code class="language-julia">record(scene, &quot;video.mp4&quot;, itr) do i
+    end</code></pre></div><a class="source-link" target="_blank" href="https://github.com/JuliaPlots/Makie.jl/blob/e2aa52fd12e187d191f0e3bfd5b01d72c22bf3c1/src/video_io.jl#L110-L118">source</a></section><p>For recording of videos (either as .mp4 or .gif), you can do:</p><pre><code class="language-julia">record(scene, &quot;video.mp4&quot;, itr) do i
     func(i) # or some other animation in scene
 end</code></pre><p>where <code>itr</code> is an iterator and <code>scene</code> is the scene handle.</p><p>It is also possible to <code>record</code> to gifs:</p><pre><code class="language-julia">record(scene, &quot;video.gif&quot;, itr) do i
     func(i) # or some other animation in scene
